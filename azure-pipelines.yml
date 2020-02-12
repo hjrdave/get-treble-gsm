@@ -14,4 +14,4 @@ steps:
   displayName: 'Install Node Packages'
 
 - script: npm run deploy
-  displayName: 'Deployment Complete!'
+  displayName: 'Deploy Repo'
