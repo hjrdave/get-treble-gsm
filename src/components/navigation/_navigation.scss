@@ -1,0 +1,15 @@
+@import '../variables';
+
+.navigation{
+  .navbar-nav{
+    a{
+      color: white !important;
+      font-weight: $font-weight-bold + 100;
+      margin: 0px 5px 0px 5px;
+      font-size: $font-size-base + .1;
+      &:hover{
+        color: white;
+      }
+    }
+  }
+}
