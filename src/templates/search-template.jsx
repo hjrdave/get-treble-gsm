@@ -2,12 +2,7 @@ import React from "react";
 import PageContainer from '../components/page-container';
 import PageContent from '../components/page-content';
 
-interface Props {
-
-}
-
-
-function SearchTemplate({ }: Props) {
+function SearchTemplate({ }) {
 
   return (
     <>

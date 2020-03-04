@@ -6,7 +6,7 @@ import PageContent from '../components/page-content';
 
 
 
-function BlogPage({ data: { allMarkdownRemark: { edges } } }: any) {
+function BlogPage({ data: { allMarkdownRemark: { edges } } }) {
 
   return (
     <>
@@ -15,8 +15,8 @@ function BlogPage({ data: { allMarkdownRemark: { edges } } }: any) {
           <h1>Blog</h1>
           <h3 className='pt-4'>Recent Posts</h3>
           {
-            edges.filter((edge: any) => !!edge.node.frontmatter.date)
-              .map((edge: any) => {
+            edges.filter((edge) => !!edge.node.frontmatter.date)
+              .map((edge) => {
                 return <PostLink key={edge.node.id} post={edge.node} />
               })
           }

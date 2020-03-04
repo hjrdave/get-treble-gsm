@@ -4,5 +4,16 @@ only library css should be added to this.  App specific css shouldnt be written 
 */
 
 /*Global Custom Styles*/
+body{
+    background-color: #F2F3F3;
+    main{
+        
+        p{
+            font-size: $font-size-base + .25rem;
+            font-weight: 300;
+        }
+    }
+}
+
 
 //Overwrite Global Bootstrap Classes

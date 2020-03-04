@@ -1,0 +1,18 @@
+@import '../variables';
+
+.info-card{
+    height: 100%;
+    .card-title{
+        font-size: $font-size-base + .35rem;
+    }
+    .card-body{
+        .gatsby-image-wrapper{
+           width: 90px;
+        }
+        p{
+            text-align: center;
+            font-size: $font-size-base + .15rem;
+        }
+    }
+    
+}

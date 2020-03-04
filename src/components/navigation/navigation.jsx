@@ -6,15 +6,7 @@ import uniqid from 'uniqid';
 import './_navigation.scss';
 // import Search from '../searchContainer.js'
 
-interface Props {
-  navItems: {
-    path: string,
-    text: string
-  }[]
-}
-
-
-function Navigation({ navItems }: Props) {
+function Navigation({ navItems }) {
 
   return (
     <>

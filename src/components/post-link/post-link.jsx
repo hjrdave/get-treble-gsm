@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby";
 import Card from 'react-bootstrap/Card';
 
-function PostLink({ post }: any) {
+function PostLink({ post }) {
 
   return (
     <>

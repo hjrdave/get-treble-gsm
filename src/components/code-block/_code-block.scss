@@ -1,0 +1,33 @@
+@import '../variables';
+.code-block{
+    
+    @import '~prismjs/themes/prism-twilight.css';
+
+    .code-block-title{
+        background-color: #9A30AD;
+        border-radius: 5px 5px 0px 0px;
+        p{
+            color: white;
+        }
+        .code-block-copy-code{
+            cursor: pointer;
+            opacity: .7;
+            transition: opacity .2s;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    pre{
+        border-radius: 0px 0px 5px 5px;
+        border:none;
+        code{
+            font-size: $font-size-base - .1!important;
+            line-height: 1.4rem;
+        }
+
+    }
+    pre.code-block-no-toolbar{
+        border-radius: 5px;
+    }
+}

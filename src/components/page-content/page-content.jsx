@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface Props {
-  children: JSX.Element | JSX.Element[]
-}
-
-function PageContent({ children }: Props) {
+function PageContent({ children }) {
   return (
     <>
       <div className='container-fluid pt-4'>

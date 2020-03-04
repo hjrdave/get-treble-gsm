@@ -13,11 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-interface Props {
-  name: string
-}
-
-const Image = ({ name }: Props) => {
+const Image = ({ name }) => {
 
 
   const data = useStaticQuery(graphql`
@@ -31,31 +27,31 @@ const Image = ({ name }: Props) => {
       }
     }
 
-    slide1: file(relativePath: { eq: "slide-1.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-
-    slide2: file(relativePath: { eq: "slide-2.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-
-    slide3: file(relativePath: { eq: "slide-3.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-
     logoTrebleGsm: file(relativePath: { eq: "logo-treble-gsm.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    iconSetup: file(relativePath: { eq: "icon-setup.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    iconApi: file(relativePath: { eq: "icon-api.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    iconGlobal: file(relativePath: { eq: "icon-global.png" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid

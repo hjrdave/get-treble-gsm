@@ -4,11 +4,7 @@ import './_header.scss';
 import Image from '../../images/register';
 import MainNav from '../../widgets/main-nav';
 
-interface Props {
-  siteTitle: string
-}
-
-const Header = ({ siteTitle }: Props) => (
+const Header = ({ siteTitle }) => (
   <header className='p-4 d-flex justify-content-between align-content-center'>
     <div className='d-flex ml-4'>
       <div className='header-logo'>

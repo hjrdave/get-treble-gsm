@@ -7,16 +7,11 @@
 
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-
 import Header from "../header";
 import Footer from "../footer";
 import "./_layout.scss";
 
-interface Props {
-  children: JSX.Element | JSX.Element[]
-}
-
-const Layout = ({ children }: Props) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

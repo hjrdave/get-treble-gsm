@@ -4,11 +4,7 @@ import Img from 'gatsby-image';
 import PageContainer from '../components/page-container';
 import PageContent from '../components/page-content';
 
-interface Props {
-  data: any
-}
-
-export default function Template({ data, }: Props) {
+export default function Template({ data, }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   const { title, date, featuredImage } = frontmatter;
