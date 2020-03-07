@@ -1,0 +1,18 @@
+@import '../variables';
+.doc-nav{
+    width: 300px;
+    background-color: white;
+    border-right: 1px solid #dee2e6;
+    // box-shadow: $shadow-3;
+    .doc-nav-section{
+        font-size: $font-size-base + .1rem;
+    }
+    a{
+        font-size: $font-size-base;
+        color: black;
+        &:hover{
+            text-decoration: none;
+            opacity: .7;
+        }
+    }
+}

@@ -14,7 +14,6 @@ const Header = ({ siteTitle }) => (
       <Link to="/" ><h4 className='pl-2'>Treble</h4></Link>
       </div>
     </div>
-
     <MainNav />
   </header>
 )

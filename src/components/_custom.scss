@@ -17,3 +17,13 @@ body{
 
 
 //Overwrite Global Bootstrap Classes
+
+pre{
+    background-color: #292B32;
+    padding: 10px;
+    border-radius: 3px;
+    code{
+        
+        color: white;
+    }
+}

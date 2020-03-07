@@ -1,11 +1,11 @@
 import React from 'react';
 
-function PageContent({ children }) {
+function PageContent({ children, docs }) {
   return (
     <>
-      <div className='container-fluid pt-4'>
-        <div className='row d-flex justify-content-center'>
-          <div className='col-8'>
+      <div className='container-fluid pt-4 pb-4'>
+        <div className={`row d-flex ${(docs) ? 'justify-content-start pl-4' : 'justify-content-center'}`}>
+          <div className={`${(docs) ? 'col-9' : 'col-8'}`}>
             <>
               {children}
             </>

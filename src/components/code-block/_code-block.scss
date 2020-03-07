@@ -19,6 +19,7 @@
         }
     }
     pre{
+        
         border-radius: 0px 0px 5px 5px;
         border:none;
         code{
@@ -26,6 +27,12 @@
             line-height: 1.4rem;
         }
 
+    }
+    code[class*="language-"]{
+        background-color: #282A32!important;
+    }
+    pre[class*="language-"]{
+        background-color: #282A32!important;
     }
     pre.code-block-no-toolbar{
         border-radius: 5px;

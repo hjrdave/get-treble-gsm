@@ -13,16 +13,8 @@ function MainNav() {
       <Navigation
         navItems={[
           {
-            path: '/docs',
+            path: '/docs/getting-started',
             text: 'Docs'
-          },
-          {
-            path: 'https://mediafish.io',
-            text: 'About Me'
-          },
-          {
-            path: '/docs',
-            text: 'Support'
           }
         ]}
       />

@@ -1,26 +1,31 @@
-import React from "react"
-import { graphql } from "gatsby";
+import React, {Fragment, useEffect} from "react"
+import { graphql, Link } from "gatsby";
 import Img from 'gatsby-image';
 import PageContainer from '../components/page-container';
 import PageContent from '../components/page-content';
+import DocNav from '../components/doc-nav';
+import uniqid from 'uniqid';
 
 export default function Template({ data, }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
-  const { title, date, featuredImage } = frontmatter;
+  const { title, date, path } = frontmatter;
 
+  useEffect(() => {
+
+  },[])
   return (
     <>
       <PageContainer title={title}>
-        <PageContent>
-          <Img fluid={featuredImage.childImageSharp.fluid} />
-          <h1 className='pt-4'>{title}</h1>
-          <p>{date}</p>
-          <div
-            className="blog-post-content pt-4"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+        <div className='d-flex'>
+        <DocNav/>
+        <PageContent docs={true}>
+        <div
+              className="blog-post-content pt-4"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
         </PageContent>
+        </div>
       </PageContainer>
     </>
   )
@@ -35,13 +40,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 600) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }

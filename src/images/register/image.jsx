@@ -58,6 +58,22 @@ const Image = ({ name }) => {
         }
       }
     }
+
+    logoGithub: file(relativePath: { eq: "Octocat.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    logoMediafishIconOnly: file(relativePath: { eq: "logo-mediafish-icon-only.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
    
   }`);
 
