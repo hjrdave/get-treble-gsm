@@ -4,7 +4,6 @@ import PageContent from '../../components/page-content';
 import Image from '../../images/register';
 import Button from 'react-bootstrap/Button';
 import InfoCard from '../../components/info-card';
-import CodeBlock from '../../components/code-block';
 import ContentCard from '../../components/content-card';
 import './_home.scss';
 
@@ -68,24 +67,27 @@ function HomePage() {
               <p>Create a file in your folder structure called <code>Store.js</code>. Import <code>createStore</code> from treble-gsm and assign it to a variable called Store. The Store variable will store an array of objects. Each object will have an action and state property.  The <code>action</code> property will be a string that is used to tell Treble which state to update.  The <code>state</code> property will hold the global state.</p>
             </div>
             <div className='col-6'>
-              <CodeBlock type='Javascript' toolBar={false}>
-                {`
+              <pre>
+                <code>
+                  {`
 import { createStore } from 'treble-gsm';
-
 const Store = createStore([
     {
         action: 'updatePokemon',
         state: { pokemon: 'Mewtwo' }
     }
 ],);
-              `}
-              </CodeBlock>
+                  `}
+
+                </code>
+              </pre>
             </div>
           </div>
           <div className='row pt-4 mt-4'>
             <div className='col-6'>
-              <CodeBlock type='Javascript' toolBar={false}>
-                {`
+                <pre>
+                  <code>
+                    {`
 import  Treble  from  'treble-gsm';
 import  Store  from  './Store';
 
@@ -96,8 +98,9 @@ const App = () => {
         </Treble>
     );
 }
-              `}
-              </CodeBlock>
+                    `}
+                  </code>
+                </pre>
             </div>
             <div className='col-6'>
               <h3>Treble Container</h3>
@@ -112,8 +115,9 @@ const App = () => {
               <p>Import the <code>useTreble</code> hook into your component and get access to the Store state variables.  Import <code>updateStore</code> and use where ever you want to update global state.  The <code>updateStore</code> function takes an action that tells Treble which state you want to update, a value that Treble will replace the targeted state with, and a dispatch function that is provided by the <code>useTreble</code> hook so Treble knows which Store to update.</p>
             </div>
             <div className='col-6'>
-              <CodeBlock type='Javascript' toolBar={false}>
-                {`
+              <pre>
+                <code>
+                  {`
 const [{ pokemon, pokemonGame }, dispatch] = useTreble();
 
 updateStore(action, value, dispatch);
@@ -123,9 +127,9 @@ updateStore(action, value, dispatch);
 
 updateStore('updatePokemon', 'Pikachu', dispatch)
 //render: Pikachu is my favorite Pokemon!
-              `}
-              </CodeBlock>
-
+                  `}
+                </code>
+              </pre>
             </div>
 
           </div>

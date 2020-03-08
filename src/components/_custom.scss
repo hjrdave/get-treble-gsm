@@ -18,12 +18,19 @@ body{
 
 //Overwrite Global Bootstrap Classes
 
-pre{
-    background-color: #292B32;
-    padding: 10px;
-    border-radius: 3px;
-    code{
+// pre{
+//     background-color: #292B32!important;
+//     padding: 10px;
+//     border-radius: 3px;
+//     code{
         
-        color: white;
-    }
+//         color: white;
+//     }
+// }
+
+//Overwrite Primsjs styles
+.language-text{
+    background-color: darken(#F2F3F3, 8%)!important;
+    font-size: $font-size-base!important;
+    color: black!important;
 }

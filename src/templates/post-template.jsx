@@ -6,6 +6,7 @@ import PageContent from '../components/page-content';
 import DocNav from '../components/doc-nav';
 import uniqid from 'uniqid';
 
+
 export default function Template({ data, }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
