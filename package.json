@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "babel-plugin-prismjs": "^2.0.1",
+    "babel-preset-gatsby": "^0.2.31",
     "bootstrap": "^4.4.1",
     "gatsby": "^2.19.7",
     "gatsby-background-image": "^0.10.0",

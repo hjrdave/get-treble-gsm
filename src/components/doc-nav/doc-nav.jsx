@@ -7,7 +7,7 @@ import Sticky from 'react-stickynode';
 export default function DocNav() {
     return (
         <>
-            <div className='doc-nav mr-4'>
+            <div className='doc-nav mr-4 pb-4'>
                 <Sticky enabled={true} top={0}>
                     <Nav className="flex-column pl-4 pt-4">
                         <Link to={'/docs/getting-started'} className='doc-nav-section font-weight-bold pt-3 mb-0'>Getting Started</Link>

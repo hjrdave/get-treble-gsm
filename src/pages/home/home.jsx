@@ -1,14 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import PageContainer from '../../components/page-container';
 import PageContent from '../../components/page-content';
 import Image from '../../images/register';
 import Button from 'react-bootstrap/Button';
 import InfoCard from '../../components/info-card';
 import ContentCard from '../../components/content-card';
+import Prism from "prismjs";
 import './_home.scss';
 
 function HomePage() {
-
+  useEffect(() => {
+    // call the highlightAll() function to style our code blocks
+    Prism.highlightAll()
+  },[])
   return (
     <>
       <PageContainer title={'Home'}>
@@ -18,13 +22,13 @@ function HomePage() {
               <div className='col-2'>
                 <div className='home-banner-logo'>
                   <Image name={'logoTrebleGsm'} />
-                  <h1 className='text-center' style={{opacity: '.7'}}>Treble</h1>
+                  <h1 className='text-center' style={{ opacity: '.7' }}>Treble</h1>
                 </div>
               </div>
             </div>
             <div className='row d-flex justify-content-center'>
               <div className='col-4'>
-                <p className='text-center' style={{opacity: '.7'}}>Simple Global State for React.js Apps</p>
+                <p className='text-center' style={{ opacity: '.7' }}>Simple Global State for React.js Apps</p>
               </div>
             </div>
             <div className='row d-flex justify-content-center'>
@@ -67,9 +71,10 @@ function HomePage() {
               <p>Create a file in your folder structure called <code>Store.js</code>. Import <code>createStore</code> from treble-gsm and assign it to a variable called Store. The Store variable will store an array of objects. Each object will have an action and state property.  The <code>action</code> property will be a string that is used to tell Treble which state to update.  The <code>state</code> property will hold the global state.</p>
             </div>
             <div className='col-6'>
+              <div className='language-javascript'>
               <pre>
-                <code>
-                  {`
+                  <code>
+                    {`
 import { createStore } from 'treble-gsm';
 const Store = createStore([
     {
@@ -79,15 +84,17 @@ const Store = createStore([
 ],);
                   `}
 
-                </code>
-              </pre>
+                  </code>
+                </pre>
+              </div>
             </div>
           </div>
           <div className='row pt-4 mt-4'>
             <div className='col-6'>
-                <pre>
-                  <code>
-                    {`
+            <div className='language-javascript'>
+              <pre>
+                <code>
+                  {`
 import  Treble  from  'treble-gsm';
 import  Store  from  './Store';
 
@@ -99,8 +106,9 @@ const App = () => {
     );
 }
                     `}
-                  </code>
-                </pre>
+                </code>
+              </pre>
+              </div>
             </div>
             <div className='col-6'>
               <h3>Treble Container</h3>
@@ -115,6 +123,7 @@ const App = () => {
               <p>Import the <code>useTreble</code> hook into your component and get access to the Store state variables.  Import <code>updateStore</code> and use where ever you want to update global state.  The <code>updateStore</code> function takes an action that tells Treble which state you want to update, a value that Treble will replace the targeted state with, and a dispatch function that is provided by the <code>useTreble</code> hook so Treble knows which Store to update.</p>
             </div>
             <div className='col-6'>
+            <div className='language-javascript'>
               <pre>
                 <code>
                   {`
@@ -130,20 +139,21 @@ updateStore('updatePokemon', 'Pikachu', dispatch)
                   `}
                 </code>
               </pre>
+              </div>
             </div>
 
           </div>
           <div className='row pt-4 mt-4 mb-4 d-flex justify-content-center'>
             <div className='col-12'>
-            {/* <ContentCard> */}
-               <div className='home-logo-github d-flex justify-content-center'>
+              {/* <ContentCard> */}
+              <div className='home-logo-github d-flex justify-content-center'>
                 <Image name={'logoGithub'} />
               </div>
               <h5 className='pt-3 text-center'>Want to Support this Project?</h5>
               <div className='d-flex justify-content-center'>
-              <Button className='px-4 py-2 mt-3' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}>Contribute</Button>
+                <Button className='px-4 py-2 mt-3' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}>Contribute</Button>
               </div>
-            {/* </ContentCard> */}
+              {/* </ContentCard> */}
             </div>
           </div>
         </PageContent>
