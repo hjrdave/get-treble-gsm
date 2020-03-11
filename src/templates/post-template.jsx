@@ -5,6 +5,7 @@ import PageContainer from '../components/page-container';
 import PageContent from '../components/page-content';
 import DocNav from '../components/doc-nav';
 import uniqid from 'uniqid';
+import './_post-template.scss';
 
 
 export default function Template({ data, }) {

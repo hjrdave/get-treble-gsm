@@ -4,7 +4,7 @@ date: "2019-05-04"
 title: "Setup Treble"
 ---
 # Setup Treble
-One of Treble's goals is for quick and easy setup in React apps.  Below are the steps needed to get Treble up and running and getting your app managing global state like a boss.
+It is Treble's goal to provide and easy and quick setup.  Below are the steps need to get Treble setup in your app, so you can start to managing state like a boss.
 
 ### Install Treble
 First install Treble in your app.  You can get more information about this package from [npm](https://www.npmjs.com/package/treble-gsm) or [yarn](https://classic.yarnpkg.com/en/package/treble-gsm).
@@ -30,7 +30,7 @@ export default Store;
 
 ### Add State Objects to Store
 The `createStore` function holds an array of objects.  Each object will have an `action` property and a `state` property. 
-The `action` property takes a string value that will be used by Treble to identify which state to update.  The `state` property takes an object key value pair that will be hold the global state. Example below.
+The `action` property takes a string value that lets Treble identify which state to update.  The `state` property takes an object key value pair that will hold the global state. Example below.
 
 ```javascript
 import { createStore } from 'treble-gsm';
@@ -50,14 +50,14 @@ export default Store;
 ```
 
 ### Setup Treble Container
-The `Treble` component container is the provider that provides nested components access to global state. Import `Treble` into your `App.js` or `Index.js` and wrap around components. `Treble` has a prop called `store`. Import `Store` into the page and pass it to the `store` prop.  Now your app has global state. Happy coding! Example Below.
+The `Treble` component container is the context provider that gives nested components access to global state. Import `Treble` into your `App.js` or `Index.js` and wrap around components. `Treble` has a prop called `store`. Import `Store` from `Store.js` into the page and pass it to the `store` prop.  Now your app has global state. Happy coding! Example Below.
 
-```javascript
+```jsx
 import  React  from  'react';
 import  Treble  from  'treble-gsm';
-import  Store  from  './_store';
+import  Store  from  './Store';
 
-const App = () => {
+function App(){
     return (
         <Treble store={Store}>
             {/* Components */}

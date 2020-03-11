@@ -4,7 +4,7 @@ date: "2019-05-04"
 title: "History"
 ---
 # History
-Treble provides an easy way to get the previous state value and reset state to the its default value.
+Treble provides an easy way to get the previous state value and to get the original state.
 
 Delcare the `history` object in the `useTreble` destructured array.
 ```javascript
@@ -23,7 +23,7 @@ history.prev.pokemon
 ```
 
 ## Reset State
-You can also reset state values to their default state by calling `history.reset['name']`.
+You can also get the original state values by calling `history.reset['name']`.
 
 ```javascript
 //object literal

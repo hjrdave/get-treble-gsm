@@ -14,7 +14,7 @@ export default function DocNav() {
                         <Link to={'/docs/setup-treble'} className='pt-1'>Setup Treble</Link>
                         <Link to={'/docs/subscribe-and-update'} className='pt-1'>Subscribe and Update</Link>
 
-                        <Link to={'/docs/advanced'} className='doc-nav-section font-weight-bold pt-3 mb-0'>Advanced</Link>
+                        <div className='doc-nav-section font-weight-bold pt-3 mb-0'>Advanced</div>
                         <Link to={'/docs/scoped-global-state'} className='pt-1'>Scoped Global State</Link>
                         <Link to={'/docs/history'} className='pt-1'>History</Link>
                         <Link to={'/docs/state-persistence'} className='pt-1'>State Persistence</Link>

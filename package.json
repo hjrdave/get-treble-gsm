@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "get-treble-gsm",
+  "private": false,
+  "description": "Offical website for Treble",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "David A. Sanders <dsanders@mediafish.io>",
   "dependencies": {
     "babel-plugin-prismjs": "^2.0.1",
     "babel-preset-gatsby": "^0.2.31",
@@ -60,9 +60,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/hjrdave/get-treble-gsm"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/hjrdave/get-treble-gsm/issues"
   }
 }

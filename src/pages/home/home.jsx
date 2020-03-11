@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import {Link} from 'gatsby';
 import PageContainer from '../../components/page-container';
 import PageContent from '../../components/page-content';
 import Image from '../../images/register';
@@ -34,7 +35,7 @@ function HomePage() {
             <div className='row d-flex justify-content-center'>
 
               <div className='pt-3'>
-                <Button className='px-4 py-2' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}>Getting Started</Button>
+                <Link to={'./docs/getting-started'}><Button className='px-4 py-2' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}>Getting Started</Button></Link>
               </div>
             </div>
           </div>
