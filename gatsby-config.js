@@ -1,11 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Get Treble-GSM`,
-    description: `Treble-GSM docs`,
+    title: `Get Treble`,
+    description: `A Simple Global State Management Library for React Apps.`,
+    url: "https://hjrdave.github.io/get-treble-gsm",
     author: `David A. Sanders`,
+    image: "/src/images/snape.jpg",
+    twitterUsername: '@hjr_dave'
   },
-  pathPrefix: `/get-treble-gsm`,
-  assetPrefix: `https://hjrdave.github.io`,
+  pathPrefix: `get-treble-gsm`,
+  assetPrefix: `https://hjrdave.github.io/`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,

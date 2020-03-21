@@ -12,7 +12,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <script src="https://kit.fontawesome.com/bc8edc6f62.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/bc8edc6f62.js" crossOrigin="anonymous"></script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}

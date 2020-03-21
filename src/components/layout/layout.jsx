@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Header from "../header";
 import Footer from "../footer";
 import "./_layout.scss";
+import SEO from '../seo';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,7 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-
+      <SEO/>
       <Header siteTitle={'Protrans'} />
       <main>
         {children}
