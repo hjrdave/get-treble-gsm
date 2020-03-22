@@ -20,7 +20,7 @@ function HomePage() {
         <div className='home-banner d-flex align-items-center'>
           <div className='col-12'>
             <div className='row d-flex justify-content-center'>
-              <div className='col-4 col-3 col-lg-2'>
+              <div className='col-6 col-md-4 col-lg-2'>
                 <div className='home-banner-logo'>
                   <Image name={'logoTrebleGsm'} />
                   <h1 className='text-center' style={{ opacity: '.7' }}>Treble</h1>
@@ -28,7 +28,7 @@ function HomePage() {
               </div>
             </div>
             <div className='row d-flex justify-content-center'>
-              <div className='col-4'>
+              <div className='col-12 col-lg-4'>
                 <p className='text-center' style={{ opacity: '.7' }}>Simple Global State for React.js Apps</p>
               </div>
             </div>
@@ -145,7 +145,7 @@ updateStore('updatePokemon', 'Pikachu', dispatch)
 
           </div>
           <div className='row pt-4 mt-4 mb-4 d-flex justify-content-center'>
-            <div className='col-12'>
+            <div className='col-8 col-lg-12'>
               {/* <ContentCard> */}
               <div className='home-logo-github d-flex justify-content-center'>
                 <Image name={'logoGithub'} />

@@ -5,17 +5,18 @@
 
 .info-card{
     height: 100%;
+    box-shadow: $shadow-1;
     .card-title{
         font-size: $font-size-base + .35rem;
         @include media-breakpoint-down(lg) {
-            font-size: $font-size-base + .7rem;
+            font-size: $font-size-base + .6rem;
           }
     }
     .card-body{
         .gatsby-image-wrapper{
            width: 90px;
            @include media-breakpoint-down(lg) {
-            width: 110px;
+            width: 100px;
           }
         }
         p{
