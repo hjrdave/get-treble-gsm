@@ -74,6 +74,14 @@ const Image = ({ name }) => {
         }
       }
     }
+
+    bannerReadme: file(relativePath: { eq: "banner-readme.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
    
   }`);
 

@@ -1,28 +1,72 @@
-import React from 'react';
+import React, {useEffect, Fragment} from 'react';
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'gatsby';
 import './_doc-nav.scss';
 import Sticky from 'react-stickynode';
+import { updateStore, useTreble } from 'treble-gsm';
+import uniqid from 'uniqid';
 
-export default function DocNav() {
+export default function DocNav({navItems}) {
+
+    const [{ mobileDocNavState, activeNavPath }, dispatch] = useTreble();
+
+    //if page changes mobilenav will be closed
+    useEffect(() => {
+        updateStore('updateMobileDocNavState', false, dispatch);
+    }, [activeNavPath]);
+
     return (
         <>
-            <div className='doc-nav mr-4 pb-4'>
+            <div className='doc-nav mr-4'>
                 <Sticky enabled={true} top={0}>
-                    <Nav className="flex-column pl-4 pt-4">
-                        <Link to={'/docs/getting-started'} className='doc-nav-section font-weight-bold pt-3 mb-0'>Getting Started</Link>
-                        <Link to={'/docs/setup-treble'} className='pt-1'>Setup Treble</Link>
-                        <Link to={'/docs/subscribe-and-update'} className='pt-1'>Subscribe and Update</Link>
-
-                        <div className='doc-nav-section font-weight-bold pt-3 mb-0'>Advanced</div>
-                        <Link to={'/docs/scoped-global-state'} className='pt-1'>Scoped Global State</Link>
-                        <Link to={'/docs/history'} className='pt-1'>History</Link>
-                        <Link to={'/docs/state-persistence'} className='pt-1'>State Persistence</Link>
-
-                        <Link to={'/docs/support'} className='doc-nav-section font-weight-bold pt-3 mb-0'>Support</Link>
+                <Nav className="flex-column pl-4 pt-4">
+                    {
+                        navItems.map(({path, text, section}) => {
+                            return(
+                                <Fragment key={uniqid()}>
+                                    {
+                                        (section) ?
+                                        (path) ? <Link to={path} className='doc-nav-section font-weight-bold pt-3 mb-0'>{text}</Link>
+                                        : <div className='doc-nav-section font-weight-bold pt-3 mb-0'>{text}</div>
+                                        : <Link to={path} className='pt-1'>{text}</Link>
+                                    }
+                                </Fragment>
+                            )
+                        })
+                    }
                     </Nav>
+                    
+                    <div className='doc-nav-mobile-icon-container d-flex justify-content-between d-lg-none'>
+                        <div></div>
+                        <div className='doc-nav-mobile-icon px-4 d-flex align-items-center'>
+                            <i className="fas fa-bars" onClick={() => updateStore('updateMobileDocNavState', true, dispatch)}></i>
+                        </div>
+                    </div>
                 </Sticky>
+                <div className={`doc-nav-mobile-menu ${(mobileDocNavState) ? 'doc-nav-mobile-menu-open' : ''}`}>
+                    <div className='d-flex justify-content-between align-items-center'>
+                        <h4 className='pt-4 pl-4'>Treble Docs</h4>
+                        <i className="fas fa-times pt-4 pr-4" onClick={() => updateStore('updateMobileDocNavState', false, dispatch)}></i>
+                    </div>
+                    <Nav className="flex-column pl-4 pt-4">
+                    {
+                        navItems.map(({path, text, section}) => {
+                            return(
+                                <Fragment key={uniqid()}>
+                                    {
+                                        (section) ?
+                                        (path) ? <Link to={path} className='doc-nav-section font-weight-bold pt-3 mb-0'>{text}</Link>
+                                        : <div className='doc-nav-section font-weight-bold pt-3 mb-0'>{text}</div>
+                                        : <Link to={path} className='pt-1'>{text}</Link>
+                                    }
+                                </Fragment>
+                            )
+                        })
+                    }
+                    </Nav>
+                </div>
             </div>
+
         </>
     )
 }

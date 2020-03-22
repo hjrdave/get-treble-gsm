@@ -1,12 +1,58 @@
 @import '../variables';
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/breakpoints';
 .doc-nav{
+    
     width: 300px;
     background-color: white;
     border-right: 1px solid #dee2e6;
+    
     // box-shadow: $shadow-3;
-    .doc-nav-section{
-        font-size: $font-size-base + .1rem;
-    }
+    
+    @include media-breakpoint-down(md) {
+        width: 100%;
+        
+        border-right: none;
+      }
+      .sticky-inner-wrapper{
+          z-index: 100;
+         
+            @include media-breakpoint-down(md) {
+                background-color: white;
+                height: 75px;
+                box-shadow: $shadow-2;
+            }
+        .nav{
+            @include media-breakpoint-down(md) {
+                display:none;
+              }
+            
+                
+                .doc-nav-section{
+                    font-size: $font-size-base + .1rem;
+                    
+                }
+          
+            
+          }
+          .doc-nav-mobile-icon-container{
+            height: 100%;
+
+            .doc-nav-mobile-icon{
+                font-size: 2.2rem;
+                i{
+                    &:hover{
+                        cursor: pointer;
+                        opacity: .7;
+                    }
+                }
+            }
+          }
+          
+      }
+
+    
     a{
         font-size: $font-size-base;
         color: black;
@@ -14,5 +60,48 @@
             text-decoration: none;
             opacity: .7;
         }
+        // @include media-breakpoint-down(md) {
+        //     display:none;
+        //   }
+    }
+    .doc-nav-mobile-menu{
+        box-shadow: $shadow-4;
+        position: fixed;
+        z-index: 101;
+        background-color: #20222A;
+        height: 100vh;
+        top: 0;
+        width: 250px;
+        transform: translateX(-250px);
+        transition: transform .3s;
+        div{
+            h4{
+                font-size: $font-size-base + .6rem;
+                color: white;
+                opacity: .7;
+            }
+            i{
+                font-size: $font-size-base + .6rem;
+                color: white;
+                opacity: .7;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        .doc-nav-section{
+            color: white;
+            opacity: .7;
+            font-size: $font-size-base + .2rem;
+        }
+        a{
+            font-size: $font-size-base + .1rem;
+            color: white;
+            opacity: .7;
+        }
+        
+    }
+    .doc-nav-mobile-menu-open{
+        transform: translateX(0px);
     }
 }

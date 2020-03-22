@@ -3,12 +3,12 @@ import { graphql, Link } from "gatsby";
 import Img from 'gatsby-image';
 import PageContainer from '../components/page-container';
 import PageContent from '../components/page-content';
-import DocNav from '../components/doc-nav';
+import DocNav from '../widgets/doc-nav';
 import uniqid from 'uniqid';
 import './_post-template.scss';
 
 
-export default function Template({ data, }) {
+export default function Template({ data, location}) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   const { title, date, path } = frontmatter;
@@ -18,8 +18,8 @@ export default function Template({ data, }) {
   },[])
   return (
     <>
-      <PageContainer title={title}>
-        <div className='d-flex'>
+      <PageContainer title={title} activePath={location}>
+        <div className='d-lg-flex'>
         <DocNav/>
         <PageContent docs={true}>
         <div

@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <SEO/>
-      <Header siteTitle={'Protrans'} />
+      <Header siteTitle={'Get Treble GSM'} />
       <main>
         {children}
       </main>
