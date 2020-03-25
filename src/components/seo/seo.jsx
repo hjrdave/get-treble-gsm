@@ -30,6 +30,7 @@ function SEO({ description, lang, meta, title, thumbnail, path }) {
 
   const metaDescription = description || site.siteMetadata.description;
   const siteUrl = `${(path) ? `${site.siteMetadata.siteUrl}${path}` : site.siteMetadata.siteUrl}`;
+  const metaTitle = `${site.siteMetadata.title} - ${title}`;
 
   return (
     <Helmet
@@ -49,7 +50,7 @@ function SEO({ description, lang, meta, title, thumbnail, path }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -77,7 +78,7 @@ function SEO({ description, lang, meta, title, thumbnail, path }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:site`,
