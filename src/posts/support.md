@@ -3,7 +3,7 @@ path: "/docs/support"
 date: "2019-05-04"
 title: "Support"
 ---
-# Support
+
 
 If you would like to support, contribute, or [submit issues and feature requests](https://github.com/hjrdave/treble-gsm/issues). please do! :)
 

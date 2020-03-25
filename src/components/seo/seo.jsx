@@ -5,12 +5,14 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
+import LargeSocialImage from './../../images/og-image-treble-gsm-lg.png';
+import socialImage from './../../images/og-image-treble-gsm.png';
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, thumbnail, path }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,25 +21,31 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
+  const siteUrl = `${(path) ? `${site.siteMetadata.siteUrl}${path}` : site.siteMetadata.siteUrl}`;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={site.siteMetadata.title}
+      titleTemplate={`${title} | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: socialImage,
         },
         {
           property: `og:title`,
@@ -48,20 +56,32 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          property: `og:url`,
+          content: siteUrl,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
         },
         {
+          name: `twitter:image`,
+          content: LargeSocialImage,
+        },
+        {
           name: `twitter:title`,
           content: title,
+        },
+        {
+          name: `twitter:site`,
+          content: site.siteMetadata.siteUrl,
         },
         {
           name: `twitter:description`,

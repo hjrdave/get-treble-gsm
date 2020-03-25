@@ -22,7 +22,7 @@ const SearchPage = ({ location }) => {
 
   return (
     <>
-      <PageContainer title={'Search'}>
+      <PageContainer>
         <PageContent>
           <h1>Search Site</h1>
           <SearchForm query={searchQuery} />

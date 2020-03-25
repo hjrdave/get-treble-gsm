@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import SEO from "../seo";
 import { useTreble, updateStore } from 'treble-gsm';
 
 function PageContainer({ children, title, id, activePath }) {
@@ -13,7 +12,6 @@ function PageContainer({ children, title, id, activePath }) {
 
   return (
     <>
-      <SEO title={title} />
       <div id={id}>
         {children}
       </div>

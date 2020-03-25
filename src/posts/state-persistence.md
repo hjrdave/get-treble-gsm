@@ -3,7 +3,7 @@ path: "/docs/state-persistence"
 date: "2019-05-04"
 title: "State Persistence"
 ---
-# State Persistence
+
 
 Treble allows the Store to save state to browser local storage if specified. In the optional `features` parameter, in the Store state object, set `persist` to `true`. See example below.
 

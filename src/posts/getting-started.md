@@ -3,7 +3,6 @@ path: "/docs/getting-started"
 date: "2020-03-06"
 title: "Getting Started"
 ---
-# Getting Started
 
 As React apps scale, managing state can become complicated and hard to maintain. Even though React.js manages local state well, when state needs to be shared amongst components, methods like prop-drilling must be used.  Prop-drilling causes huge performance issues as every component the prop (drills) passes through is re-rendered when state changes.
 

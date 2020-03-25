@@ -3,7 +3,7 @@ path: "/docs/scoped-global-state"
 date: "2019-05-04"
 title: "Scoped Global State"
 ---
-# Scoped Global State
+
 The primary goal of Treble is to provide a quick setup and easy way to manage global state.  That being said there will always be scenerios where more advance functionality will be needed.  One of these scenerios would be having the ability to scope global state to specific components.  An example of this is a complex UI component that has many child components that need to share state.  Treble allows this to easily be done with it's Scoped Global State feature.  Setup is similar to setting up global state for the app, with a couple extra steps.
 
 ## Create Store

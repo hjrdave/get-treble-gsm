@@ -3,7 +3,7 @@ path: "/docs/setup-treble"
 date: "2019-05-04"
 title: "Setup Treble"
 ---
-# Setup Treble
+
 It is Treble's goal to provide and easy and quick setup.  Below are the steps need to get Treble setup in your app, so you can start to managing state like a boss.
 
 ### Install Treble

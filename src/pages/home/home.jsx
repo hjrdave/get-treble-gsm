@@ -5,7 +5,7 @@ import PageContent from '../../components/page-content';
 import Image from '../../images/register';
 import Button from 'react-bootstrap/Button';
 import InfoCard from '../../components/info-card';
-import ContentCard from '../../components/content-card';
+import SEO from '../../components/seo';
 import Prism from "prismjs";
 import './_home.scss';
 
@@ -16,7 +16,10 @@ function HomePage() {
   },[])
   return (
     <>
-      <PageContainer title={'Home'}>
+    <SEO
+      title={'Home'}
+    />
+      <PageContainer>
         <div className='home-banner d-flex align-items-center'>
           <div className='col-12'>
             <div className='row d-flex justify-content-center'>

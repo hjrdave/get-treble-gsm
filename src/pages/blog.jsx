@@ -10,7 +10,7 @@ function BlogPage({ data: { allMarkdownRemark: { edges } } }) {
 
   return (
     <>
-      <PageContainer title={'Blog'}>
+      <PageContainer>
         <PageContent>
           <h1>Blog</h1>
           <h3 className='pt-4'>Recent Posts</h3>
