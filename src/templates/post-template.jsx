@@ -1,36 +1,44 @@
-import React, {Fragment, useEffect} from "react"
-import { graphql, Link } from "gatsby";
+import React, { Fragment, useEffect } from "react";
+import { graphql } from "gatsby";
 import PageContainer from '../components/page-container';
 import PageContent from '../components/page-content';
 import DocNav from '../widgets/doc-nav';
+import DocPostMenu from '../components/doc-post-menu';
 import SEO from '../components/seo';
 import './_post-template.scss';
 
 
-export default function Template({ data, location}) {
+export default function Template({ data, location }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html, excerpt } = markdownRemark;
   const { title, date, path } = frontmatter;
 
   useEffect(() => {
 
-  },[])
+  }, [])
   return (
     <>
-    <SEO
-      title={title}
-      description={excerpt}
-    />
+      <SEO
+        title={title}
+        description={excerpt}
+      />
       <PageContainer activePath={location}>
         <div className='d-lg-flex'>
-        <DocNav/>
-        <PageContent docs={true}>
-          <h1 className='pt-4'>{title}</h1>
-          <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-        </PageContent>
+          <DocNav />
+          <PageContent docs={true}>
+            <div className='d-flex'>
+              <div>
+                <h1 className='pt-4'>{title}</h1>
+                <div
+                  className="doc-post-content pr-lg-4"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              </div>
+              <DocPostMenu/>
+            </div>
+
+          </PageContent>
+
         </div>
       </PageContainer>
     </>
