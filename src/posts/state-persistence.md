@@ -3,10 +3,8 @@ path: "/docs/state-persistence"
 date: "2019-05-04"
 title: "State Persistence"
 subMenu: 
-  - text: 'foo' 
-    path: '#foo'
-  - text: 'fooBar' 
-    path: '#fooBar'
+  - text: '' 
+    path: ''
 ---
 
 
