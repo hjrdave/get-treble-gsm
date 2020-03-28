@@ -2,6 +2,9 @@
 path: "/docs/history"
 date: "2019-05-04"
 title: "History"
+subMenu: 
+  - text: '' 
+    path: ''
 ---
 
 Treble provides an easy way to get the previous state value and to get the original state.

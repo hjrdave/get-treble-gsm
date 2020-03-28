@@ -155,7 +155,7 @@ updateStore('updatePokemon', 'Pikachu', dispatch)
               </div>
               <h5 className='pt-3 text-center'>Want to Support this Project?</h5>
               <div className='d-flex justify-content-center'>
-                <Button className='px-4 py-2 mt-3' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}>Contribute</Button>
+                <Button className='px-4 py-2 mt-3' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}><a href='https://github.com/hjrdave/treble-gsm' target='_blank' style={{color: 'white', textDecoration: 'none'}}>Contribute</a></Button>
               </div>
               {/* </ContentCard> */}
             </div>

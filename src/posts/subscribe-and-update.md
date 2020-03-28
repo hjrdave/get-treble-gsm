@@ -2,6 +2,13 @@
 path: "/docs/subscribe-and-update"
 date: "2019-05-04"
 title: "Subscribe and Update"
+subMenu: 
+  - text: 'Summary' 
+    path: ''
+  - text: 'Subscribing to Store'
+    path: '#subscribing-to-the-store'
+  - text: 'Updating Store'
+    path: '#updating-the-store'
 ---
 
 Once global state is setup in your app, we will want our components to be able to read and manipulate the state from the Treble Store. Treble has a simple and straightforward API for subscribing to and updating state in the Store.

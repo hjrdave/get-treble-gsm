@@ -3,13 +3,17 @@
     .list-group{
         border-left:1px solid rgba(0, 0, 0, 0.125);
         height: 100%;
-        width: 200px;
+        width: 250px;
         .list-group-item{
             background: none!important;
             border: none!important;
             padding: .25rem 0px .25rem 1.5rem;
             font-size: $font-size-base - .1rem;
             opacity: .7;
+            a{
+                color: black;
+                text-decoration: none;
+            }
         }
     }
 }

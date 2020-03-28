@@ -11,7 +11,7 @@ import './_post-template.scss';
 export default function Template({ data, location }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html, excerpt } = markdownRemark;
-  const { title, date, path } = frontmatter;
+  const { title, date, path, subMenu } = frontmatter;
 
   useEffect(() => {
 
@@ -34,7 +34,7 @@ export default function Template({ data, location }) {
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
               </div>
-              <DocPostMenu/>
+              <DocPostMenu subMenu={subMenu} path={path}/>
             </div>
 
           </PageContent>
@@ -55,6 +55,10 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        subMenu {
+          text
+          path
+        }
       }
     }
   }
