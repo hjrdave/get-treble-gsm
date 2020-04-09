@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import PageContainer from '../components/page-container';
-import PageContent from '../components/page-content';
-import SearchForm from '../components/search-form';
-import SearchResults from '../components/search-results';
+import PageContainer from '../../components/page-container';
+import PageContent from '../../components/page-content';
+import SearchForm from '../../components/search-form';
+import SearchResults from '../../components/search-results';
 
 
 const SearchPage = ({ location }) => {

@@ -1,19 +1,17 @@
 ---
-path: "/docs/subscribe-and-update"
+path: "/docs/manage-state"
 date: "2019-05-04"
-title: "Subscribe and Update"
+title: "Manage State"
 subMenu: 
-  - text: 'Summary' 
-    path: ''
-  - text: 'Subscribing to Store'
-    path: '#subscribing-to-the-store'
-  - text: 'Updating Store'
-    path: '#updating-the-store'
+  - text: 'Subscribe to Store'
+    path: '#subscribe-to-store'
+  - text: 'Update Store'
+    path: '#update-store'
 ---
 
 Once global state is setup in your app, we will want our components to be able to read and manipulate the state from the Treble Store. Treble has a simple and straightforward API for subscribing to and updating state in the Store.
 
-## Subscribing to the Store
+## Subscribe to Store
 Every component that is wrapped inside the `Treble` container component has access to the `useTreble` hook. This hook is used to get access to the state variable from the Store. 
 
 First we need to import the `useTreble` hook into our component.
@@ -38,7 +36,7 @@ You can now use each store variable in your component like you would with local 
 
 > Hooks MUST be called inside functional components. For more information read [Rules of Hooks](https://reactjs.org/docs/hooks-rules.html).
 
-## Updating the Store
+## Update Store
 Treble provides a simple utility function called `updateStore` that can be called inside your component to update state in the Store.
 
 Import `updateStore` into your component.

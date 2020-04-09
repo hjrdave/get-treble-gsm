@@ -12,19 +12,21 @@ export default function DocNav() {
     <>
       <APINav
         navItems={[
-
             {
-                path: '/docs/getting-started',
-                text: 'Getting Started',
-                section: true
+              text: 'Getting Started',
+              section: true
             },
             {
-                path: '/docs/setup-treble',
-                text: 'Setup Treble'
+              path: '/docs/about-treble',
+              text: 'About Treble'
             },
             {
-                path: '/docs/subscribe-and-update',
-                text: 'Subscribe and Update'
+                path: '/docs/setup',
+                text: 'Setup'
+            },
+            {
+              path: '/docs/manage-state',
+              text: 'Manage State'
             },
             {
                 text: 'Advanced',
@@ -41,6 +43,18 @@ export default function DocNav() {
             {
                 path: '/docs/state-persistence',
                 text: 'State Persistence'
+            },
+            {
+              path: '/docs/toggle-state',
+              text: 'Toggle State'
+            },
+            {
+              path: '/docs/middleware',
+              text: 'Middleware'
+            },
+            {
+              path: '/docs/class-components',
+              text: 'Class Components'
             },
             {
                 path: '/docs/support',

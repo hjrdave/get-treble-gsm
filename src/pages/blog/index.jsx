@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import PostLink from "../components/post-link";
-import PageContainer from '../components/page-container';
-import PageContent from '../components/page-content';
+import PostLink from "../../components/post-link";
+import PageContainer from '../../components/page-container';
+import PageContent from '../../components/page-content';
 
 
 

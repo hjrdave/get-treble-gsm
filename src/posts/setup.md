@@ -1,14 +1,14 @@
 ---
-path: "/docs/setup-treble"
+path: "/docs/setup"
 date: "2019-05-04"
-title: "Setup Treble"
+title: "Setup"
 subMenu: 
-  - text: 'Setup Treble' 
-    path: ''
-  - text: 'Create Store' 
-    path: '#create-store'
-  - text: 'Setup Treble Container'
-    path: '#setup-treble-container'  
+  - text: 'Install' 
+    path: '#install'
+  - text: 'Treble Store'
+    path: '#treble-store'  
+  - text: 'Treble Container'
+    path: '#treble-container'
 ---
 
 It is Treble's goal to provide and easy and quick setup.  Below are the steps need to get Treble setup in your app, so you can start to managing state like a boss.
