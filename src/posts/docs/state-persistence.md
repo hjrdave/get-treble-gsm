@@ -8,7 +8,7 @@ subMenu:
 ---
 
 
-Treble allows the Store to save state to browser local storage if specified. In the optional `features` parameter, in the Store state object, set `persist` to `true`. See example below.
+Treble allows the Store to save state to the browser's local storage if specified. In the optional `features` parameter, in the Store state object, set `persist` to `true`. See example below.
 
 ```javascript
 
@@ -23,7 +23,7 @@ Treble allows the Store to save state to browser local storage if specified. In 
 
 Now whenever the browser is refreshed Treble will make sure the last state persists on render.
 
-## Clearing Local Storage
+#### Clearing Local Storage
 There might be some cases where you need the persited state to reset. You can do this by calling the `clearPersist` function.
 
 ```javascript
