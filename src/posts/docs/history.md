@@ -9,7 +9,7 @@ subMenu:
 
 Treble provides an easy way to get previous and original state values. Every Store has a built in History object that tracks state changes. 
 > ##### Note About the History Object
-The word ***history*** is reserved in Treble and should not be used as an identifier for other state. Neither should the `action` string `'updateHistory'` be used as a key identifier. Breaking this will throw errors.
+The word ***history*** is reserved in Treble and should not be used as an identifier for other state. Neither should the `action` string `'updateHistory'` be used as a key identifier.
 
 Delcare the `history` object in an `useTreble` destructured array.
 ```javascript
@@ -28,7 +28,7 @@ history.prev.pokemon
 ```
 
 #### Reset State
-You can also get the original state values by calling `history.reset['name']`.
+You can also get the original state values by calling `history.reset['stateName']`.
 
 ```javascript
 //object literal

@@ -3,22 +3,26 @@ path: "/docs/scoped-global-state"
 date: "2019-05-04"
 title: "Scoped Global State"
 subMenu: 
-  - text: 'Summary'
-    path: ''
-  - text: 'Create Scoped Context' 
-    path: '#create-scoped-context'
-  - text: 'Create Custom Treble Hook' 
-    path: '#create-custom-treble-hook'
+  - text: 'Create Scoped Store' 
+    path: '#create-scoped-store'
+  - text: 'Create Scoped useTreble Hook' 
+    path: '#create-scoped-usetreble-hook'
   - text: 'Subscribing to Multiple Stores' 
     path: '#subscribing-to-multiple-stores'
   - text: 'Updating Multiple Stores' 
     path: '#updating-multiple-stores'
 ---
 
-The primary goal of Treble is to provide a quick setup and easy way to manage global state.  That being said there will always be scenerios where more advance functionality will be needed.  One of these scenerios would be having the ability to scope global state to specific components.  An example of this is a complex UI component that has many child components that need to share state.  Treble allows this to easily be done with it's Scoped Global State feature.  Setup is similar to setting up global state for the app, with a couple extra steps.
+Creating complex React components like widgets can make state hard to maintain.  Especially when there are many nested components that need to pass state data to each other. Treble was created with the idea that the best part of React is it's component architecture. Putting local state into global state can defeat the purpose of working with components. With this in mind Treble has a way to scope global state to a component.
 
-## Create Store
-Create a `Store.js` file in the desired component folder structure. Unlike our initial Store setup we will add the options parameter to this one. Example below.
+Imagine having a data grid component that displays rows and has search functionality.  The data grid has a main component which is made up of a table header row, data rows, and search inputs.  Each one of those are seperate components that live within the main component.  They all need to share some state and pass data between each other.  If only local state is used, then prop drilling and lifting up state create a component full of spagetti code.  If the state is put into the App's global state then you have a bunch of state that is only used by one component which bloats your App's global state. With scoped global state we can set up a Store within a component that will only allow that component and it's nested components to subscribe to it. Allowing the component to be what it was meant to be... a component!
+
+#### Create Scoped Store
+To create a scoped global state in our component a new instance of React Context will need to be created.
+
+>Treble uses React's native [Context API](https://reactjs.org/docs/context.html) to manage global state under the hood. This means each instance of the Treble container has to utilize a unique instance of React Context. When no custom Context is passed to Treble it utilizes its default Context instance.  Scoped Treble components need a custom Context to work correctly.
+
+Create a `Store.js` file in the desired component folder structure. You can learn more about creating a Treble Store by going [here](/docs/setup#treble-store). Along with our state object array parameter, an object with the options property will need to be added to the `createStore()` function as a second parameter. Example below.
 
 ```javascript
 //scoped store
@@ -42,11 +46,11 @@ const Store = createStore([
 
 export default Store;
 ```
-## Create Scoped Context
 
-Treble uses React's native [Context API](https://reactjs.org/docs/context.html) to manage global state under the hood. This means each instance of the Treble container has to utilize a unique instance of React Context. When no custom Context is passed to Treble it utilizes its default Context instance.  Scoped Treble components need a custom Context to work correctly.
 
-You can create a scoped Context for the new `Store.js` by importing the `useScopedTreble` hook into the Store. Example below.
+
+
+You can create a new Context instance by importing the `useScopedTreble` hook into the Store. Example below.
 
 ```javascript
 import { useScopedTreble } from 'treble-gsm';
@@ -58,7 +62,7 @@ In your `Store.js` file assign `useScopedTreble` to a variable.
 const scopedContext = useScopedTreble();
 ```
 
-Pass the `scopedContext` variable to the `Store` component's `options.context` parameter.
+Pass the `scopedContext` variable to the `Store` component's `options.context` property.
 
 ```javascript
 //scoped store
@@ -85,13 +89,13 @@ const Store = createStore([
 export default Store; 
 ```
 
-The new `Store.js` is now set up as a scoped Store.
+The Store is now a scoped Store.
 
-## Create Custom Treble Hook
+#### Create Scoped useTreble Hook
 
-Now that a scoped Store is set up a custom Treble hook must be created.  This hook will only subscribe to this scoped Store.
+Now that a scoped Store is set up, a custom useTreble hook must be created.  This hook will only subscribe to this scoped Store.
 
-Import `useTreble` hook into your new scoped `Store.js`.
+Import the `useTreble` hook into `Store.js`.
 
 ```javascript
 import { useTreble } from 'treble-gsm';
@@ -103,7 +107,7 @@ Assign `useTreble` to a new custom hook variable and pass the `scopedContext` va
 const useNewTreble = () => useTreble(scopedContext);
 ```
 
->You can call the new hook anything you want, BUT it must start with *use*. See [Building Your Own Hooks](https://reactjs.org/docs/hooks-custom.html)
+>You can call the new hook anything you want, **BUT** it must start with *use*. See [Building Your Own Hooks](https://reactjs.org/docs/hooks-custom.html)
 
 You will then need to export the custom Hook from your `Store.js` file so it is accessible to the rest of the component. Final `Store.js` should look like below.
 
@@ -134,19 +138,19 @@ export { useNewTreble };
 export default Store; 
 ```
 
-## Wrap Components with the Treble Container
 
+#### Wrap Treble Container Around Components
 This step is the same as setting up a normal Treble container.  The only difference is the scoped `Store` component will be passed to the `Treble` component's `store` prop.  To set up the Treble container [read here](./setup-treble).
 
-## Subscribe to Scoped Store
-
+#### Subscribe to Store
 This is the same as subscribing to the main `Store.js`. The difference is you will call the custom hook `useNewTreble` instead of the default `useTreble` hook. To subscribe to the Treble Store [read here](./subscribe-and-update).
 
-## Subscribing to Multiple Stores
-If your component is utilizing a scoped Treble there still might be a case where you also want to utilize the main App Store state. This can be done by calling both hooks.  Example below.
+#### Subscribing to Multiple Stores
+If your component is utilizing scoped global state there still might be a scenario where your component needs to subscribe to the App's global state as well. All that needs to be done in this scenario is to import the default `useTreble` hook and destructure the state objects. Example below.
+.
 
 ```jsx
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useTreble } from 'treble-gsm';
 import { useNewTreble } from './Store';
 
@@ -166,8 +170,8 @@ function NestedComp(){
 export default NestedComp;
 ```
 
-## Updating Multiple Stores
-This can be done easily by giving the `dispatch` function a unique name.
+#### Updating Multiple Stores
+This can easily be accomplished by giving the `dispatch` function a unique name, and passing that function to the appropriate `updateStore` function. Example below.
 
 ```javascript
 const [{ pokemon }, dispatch] = useTreble();
@@ -178,5 +182,5 @@ updateStore('updatePokemonTrainer', 'Psyduck', dispatch2);
 
 ```
 
-Now your component has scoped global state and you can subscribe and update this state like you would the main App gobal state.  I can feel the power!
+Now your component has scoped global state and you can subscribe and update this state like you would with the App's gobal state.  Can you feel the power?!
 

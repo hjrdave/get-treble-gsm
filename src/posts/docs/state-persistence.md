@@ -3,12 +3,17 @@ path: "/docs/state-persistence"
 date: "2019-05-04"
 title: "State Persistence"
 subMenu: 
-  - text: '' 
-    path: ''
+  - text: 'Set State Persistence' 
+    path: '#set-state-persistence'
+  - text: 'Clear Local Storage'
+    path: '#clear-local-storage'
 ---
 
+React state only exists in the initial instance of your app.  If your app reloads then state is reset to its default value. This can cause issues when state needs to be saved outside of the app instance.  Treble allows the Store to save state to the browser's local storage when specified.
 
-Treble allows the Store to save state to the browser's local storage if specified. In the optional `features` parameter, in the Store state object, set `persist` to `true`. See example below.
+#### Set State Persistence
+
+Create a new property called `features` in the Store object you want to persist state.  Assign `features` an object with a property of `persist`.  If you set `persist` to `true` it will save that Store object's state to browser local storage everytime it changes. See example below.
 
 ```javascript
 
@@ -23,7 +28,7 @@ Treble allows the Store to save state to the browser's local storage if specifie
 
 Now whenever the browser is refreshed Treble will make sure the last state persists on render.
 
-#### Clearing Local Storage
+#### Clear Local Storage
 There might be some cases where you need the persited state to reset. You can do this by calling the `clearPersist` function.
 
 ```javascript
@@ -37,3 +42,5 @@ clearPersist(string);
 ```jsx
 <button onClick={() => clearPersist('pokemon')}>Clear from Local Storage</button>
 ````
+
+When this function is called it will delete the browser local storage instance of that state.
