@@ -1,5 +1,5 @@
 ---
-path: "/docs/manage-state"
+path: "/api/manage-state"
 date: "2019-05-04"
 title: "Manage State"
 subMenu: 

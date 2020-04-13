@@ -1,5 +1,5 @@
 ---
-path: "/docs/toggle-state"
+path: "/api/toggle-state"
 date: "2020-03-06"
 title: "Toggle State"
 subMenu: 

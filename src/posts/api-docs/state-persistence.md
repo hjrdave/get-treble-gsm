@@ -1,5 +1,5 @@
 ---
-path: "/docs/state-persistence"
+path: "/api/state-persistence"
 date: "2019-05-04"
 title: "State Persistence"
 subMenu: 

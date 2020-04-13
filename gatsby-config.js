@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Get Treble`,
+    title: `Treble`,
     description: `Treble is a global state management library built on React Hooks and Context API. Treble's goal is to provide a simple way to manage global state in your React app by providing an easy setup, little boilerplate, and a straight forward API.`,
     siteUrl: "https://hjrdave.github.io/get-treble-gsm",
     author: `David A. Sanders`,

@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import { graphql } from "gatsby";
 import PageContainer from '../components/page-container';
 import PageContent from '../components/page-content';
-import DocNav from '../widgets/doc-nav';
+import APINav from '../widgets/api-nav';
 import DocPostMenu from '../components/doc-post-menu';
 import SEO from '../components/seo';
 import './_post-template.scss';
@@ -24,7 +24,7 @@ export default function Template({ data, location }) {
       />
       <PageContainer activePath={location}>
         <div className='d-lg-flex'>
-          <DocNav />
+          <APINav />
           <PageContent docs={true}>
             <div className='d-flex'>
               <div>

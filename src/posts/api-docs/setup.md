@@ -1,5 +1,5 @@
 ---
-path: "/docs/setup"
+path: "/api/setup"
 date: "2019-05-04"
 title: "Setup"
 subMenu: 
@@ -26,7 +26,7 @@ yarn add treble-gsm
 ### Treble Store
 The Store is a file that will act as the central place for shared state in your app. 
 
-> ##### A Note About Treble Global State Best Practices
+> ##### A Note About Treble Global State Principles
 There are different schools of thought on what should be put into global state.  Some popular libraries like Redux suggest putting all state into the global state.  Though there are advantages to doing this, it is my opinion that only state that needs to be shared amongst components should be put in the global state.  React does local state well and if that state is only used by that component then it should stay in that component.  Putting all state into the global state can make global state get huge and defeat the purpose of having component based architecture. Treble works with the idea that app state is best managed as a combination of local and global state.
 
 #### Create Store

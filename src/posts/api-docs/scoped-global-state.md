@@ -1,5 +1,5 @@
 ---
-path: "/docs/scoped-global-state"
+path: "/api/scoped-global-state"
 date: "2019-05-04"
 title: "Scoped Global State"
 subMenu: 
@@ -22,7 +22,7 @@ To create a scoped global state in our component a new instance of React Context
 
 >Treble uses React's native [Context API](https://reactjs.org/docs/context.html) to manage global state under the hood. This means each instance of the Treble container has to utilize a unique instance of React Context. When no custom Context is passed to Treble it utilizes its default Context instance.  Scoped Treble components need a custom Context to work correctly.
 
-Create a `Store.js` file in the desired component folder structure. You can learn more about creating a Treble Store by going [here](/docs/setup#treble-store). Along with our state object array parameter, an object with the options property will need to be added to the `createStore()` function as a second parameter. Example below.
+Create a `Store.js` file in the desired component folder structure. You can learn more about creating a Treble Store by going [here](/api/setup#treble-store). Along with our state object array parameter, an object with the options property will need to be added to the `createStore()` function as a second parameter. Example below.
 
 ```javascript
 //scoped store

@@ -4,60 +4,60 @@
 */
 
 import React from 'react';
-import {default as APINav} from '../../components/doc-nav';
+import APINavItems from '../../components/api-nav-items';
 
-export default function DocNav() {
+export default function APINav() {
 
   return (
     <>
-      <APINav
+      <APINavItems
         navItems={[
             {
               text: 'Getting Started',
               section: true
             },
             {
-              path: '/docs/about-treble',
-              text: 'About Treble'
+              path: '/api/introduction',
+              text: 'Introduction'
             },
             {
-                path: '/docs/setup',
+                path: '/api/setup',
                 text: 'Setup'
             },
             {
-              path: '/docs/manage-state',
+              path: '/api/manage-state',
               text: 'Manage State'
             },
             {
                 text: 'Advanced',
                 section: true
             },
+            // {
+            //     path: '/api/history',
+            //     text: 'History'
+            // },
             {
-                path: '/docs/history',
-                text: 'History'
-            },
-            {
-                path: '/docs/scoped-global-state',
+                path: '/api/scoped-global-state',
                 text: 'Scoped Global State'
             },
             {
-                path: '/docs/state-persistence',
+                path: '/api/state-persistence',
                 text: 'State Persistence'
             },
             {
-              path: '/docs/toggle-state',
+              path: '/api/toggle-state',
               text: 'Toggle State'
             },
             {
-              path: '/docs/middleware',
+              path: '/api/middleware',
               text: 'Middleware'
             },
             {
-              path: '/docs/class-components',
+              path: '/api/class-components',
               text: 'Class Components'
             },
             {
-                path: '/docs/support',
+                path: '/api/support',
                 text: 'Support',
                 section: true
             },

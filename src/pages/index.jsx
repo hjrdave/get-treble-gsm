@@ -17,7 +17,8 @@ function HomePage() {
   return (
     <>
     <SEO
-      title={'Home'}
+      title={'Treble - Simple global state for React.js apps'}
+      homePage={true}
     />
       <PageContainer>
         <div className='home-banner d-flex align-items-center'>
@@ -38,7 +39,7 @@ function HomePage() {
             <div className='row d-flex justify-content-center'>
 
               <div className='pt-3'>
-                <Link to={'./docs/about-treble'}><Button className='px-4 py-2' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}>Getting Started</Button></Link>
+                <Link to={'./api/introduction'}><Button className='px-4 py-2' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}>Getting Started</Button></Link>
               </div>
             </div>
           </div>
@@ -63,7 +64,7 @@ function HomePage() {
               <InfoCard
                 iconName={'iconGlobal'}
                 title={'Powerful Global State'}
-                bodyText={'Manage state with powerful utilties like scoped global state, data persistence, and state history.'}
+                bodyText={'Manage state with powerful utilties like scoped global state, data persistence, and middleware.'}
               />
             </div>
           </div>

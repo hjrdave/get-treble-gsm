@@ -9,6 +9,6 @@ const Store = createStore([
         action: 'updateMobileDocNavState',
         state: { mobileDocNavState: false }
     }
-], {});
+]);
 
 export default Store;

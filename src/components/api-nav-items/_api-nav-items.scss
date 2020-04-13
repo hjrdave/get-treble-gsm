@@ -2,7 +2,7 @@
 @import '~bootstrap/scss/_functions';
 @import '~bootstrap/scss/_variables';
 @import '~bootstrap/scss/mixins/breakpoints';
-.doc-nav{
+.api-nav-items{
     
     width: 300px;
     background-color: white;
@@ -29,17 +29,17 @@
               }
             
                 
-                .doc-nav-section{
+                .api-nav-items-section{
                     font-size: $font-size-base + .1rem;
                     
                 }
           
             
           }
-          .doc-nav-mobile-icon-container{
+          .api-nav-items-mobile-icon-container{
             height: 100%;
 
-            .doc-nav-mobile-icon{
+            .api-nav-items-mobile-icon{
                 font-size: 2.2rem;
                 i{
                     &:hover{
@@ -64,7 +64,7 @@
         //     display:none;
         //   }
     }
-    .doc-nav-mobile-menu{
+    .api-nav-items-mobile-menu{
         box-shadow: $shadow-4;
         position: fixed;
         z-index: 101;
@@ -89,7 +89,7 @@
                 }
             }
         }
-        .doc-nav-section{
+        .api-nav-items-section{
             color: white;
             opacity: .7;
             font-size: $font-size-base + .2rem;
@@ -101,7 +101,7 @@
         }
         
     }
-    .doc-nav-mobile-menu-open{
+    .api-nav-items-mobile-menu-open{
         transform: translateX(0px);
     }
 }

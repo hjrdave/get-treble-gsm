@@ -13,8 +13,8 @@ function MainNav() {
       <Navigation
         navItems={[
           {
-            path: '/docs/about-treble',
-            text: 'Docs'
+            path: '/api/about-treble',
+            text: 'API'
           }
         ]}
       />

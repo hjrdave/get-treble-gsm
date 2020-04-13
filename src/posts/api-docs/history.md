@@ -1,5 +1,5 @@
 ---
-path: "/docs/history"
+path: "/api/history"
 date: "2019-05-04"
 title: "History"
 subMenu: 

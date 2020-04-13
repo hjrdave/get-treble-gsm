@@ -1,5 +1,5 @@
 ---
-path: "/docs/support"
+path: "/api/support"
 date: "2019-05-04"
 title: "Support"
 subMenu: 

@@ -1,7 +1,8 @@
 ---
-path: "/docs/about-treble"
+path: "/api/introduction"
 date: "2020-03-06"
-title: "About Treble"
+title: "Introduction
+"
 subMenu: 
   - text: '' 
     path: ''
@@ -21,5 +22,5 @@ Treble is a global state management library inspired by a [blog post](https://me
 
 > #### Class Support
 > Treble is a React hook based global state management library.  This means React functional components and React Hook API is what Treble targets in 
-> functionality.  That being said Treble does come with Class component support.  The API and setup is a little more complex then with functional 
-> components though. Most Treble features are compatible.  Click [here](/docs/class-components) to learn more.
+> functionality.  That being said Treble does come with class component support.  The API and setup is a little more complex then with functional 
+> components though. Most Treble features are compatible.  Click [here](/api/class-components) to learn more.

@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import LargeSocialImage from './../../images/og-image-treble-gsm-lg.png';
 import socialImage from './../../images/og-image-treble-gsm.png';
 
-function SEO({ description, lang, meta, title, thumbnail, path }) {
+function SEO({ description, lang, meta, title, thumbnail, path, homePage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -38,7 +38,7 @@ function SEO({ description, lang, meta, title, thumbnail, path }) {
         lang,
       }}
       title={site.siteMetadata.title}
-      titleTemplate={`${title} | ${site.siteMetadata.title}`}
+      titleTemplate={(homePage) ? title : `${title} | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
