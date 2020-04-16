@@ -26,15 +26,17 @@ export default function Template({ data, location }) {
         <div className='d-lg-flex'>
           <APINav />
           <PageContent docs={true}>
-            <div className='d-flex'>
-              <div>
+            <div className='row'>
+              <div className='col-12 col-lg-9'>
                 <h1 className='pt-4'>{title}</h1>
                 <div
                   className="doc-post-content pr-lg-4"
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
               </div>
-              <DocPostMenu subMenu={subMenu} path={path}/>
+              <div className='col-3 d-none d-lg-block'>
+                <DocPostMenu subMenu={subMenu} path={path}/>
+              </div>
             </div>
 
           </PageContent>

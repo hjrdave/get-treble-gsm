@@ -25,6 +25,8 @@
         }
     }
     pre{
+        //display:none;
+        overflow: hidden;
         @include media-breakpoint-down(md) {
             font-size: $font-size-base - .1rem!important;
         }
