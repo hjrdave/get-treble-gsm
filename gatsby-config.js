@@ -7,7 +7,6 @@ module.exports = {
     twitterHandler: '@hjr_dave'
   },
   pathPrefix: `get-treble-gsm`,
-  assetPrefix: `https://hjrdave.github.io`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
