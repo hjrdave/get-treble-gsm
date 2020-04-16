@@ -57,6 +57,11 @@ export default function APINav() {
               text: 'Class Components'
             },
             {
+              path: '/api/changelog',
+              text: 'Changelog',
+              section: true
+          },
+            {
                 path: '/api/support',
                 text: 'Support',
                 section: true
