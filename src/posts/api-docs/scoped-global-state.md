@@ -7,6 +7,8 @@ subMenu:
     path: '#create-scoped-store'
   - text: 'Create Scoped useTreble Hook' 
     path: '#create-scoped-usetreble-hook'
+  - text: 'Connect Component to Store'
+    path: '#connect-component-to-store'
   - text: 'Subscribing to Multiple Stores' 
     path: '#subscribing-to-multiple-stores'
   - text: 'Updating Multiple Stores' 
@@ -22,7 +24,7 @@ To create a scoped global state in our component a new instance of React Context
 
 >Treble uses React's native [Context API](https://reactjs.org/docs/context.html) to manage global state under the hood. This means each instance of the Treble container has to utilize a unique instance of React Context. When no custom Context is passed to Treble it utilizes its default Context instance.  Scoped Treble components need a custom Context to work correctly.
 
-Create a `Store.js` file in the desired component folder structure. You can learn more about creating a Treble Store by going [here](/api/setup#treble-store). Along with our state object array parameter, an object with the options property will need to be added to the `createStore()` function as a second parameter. Example below.
+Create a `Store.js` file in the desired component folder structure. You can learn more about creating a Treble Store by going [here](/api/setup#treble-store). `createStore` takes an optional option object as a second parameter. The `context` property will need to be added to this object. Example below.
 
 ```javascript
 //scoped store
@@ -39,9 +41,7 @@ const Store = createStore([
     }
 
 ],{
-    options: {
-        context: //scoped context
-    }
+    context: //scoped context
 });
 
 export default Store;
@@ -62,7 +62,7 @@ In your `Store.js` file assign `useScopedTreble` to a variable.
 const scopedContext = useScopedTreble();
 ```
 
-Pass the `scopedContext` variable to the `Store` component's `options.context` property.
+Pass the `scopedContext` variable to the `Store` component's `context` property.
 
 ```javascript
 //scoped store
@@ -81,9 +81,7 @@ const Store = createStore([
     }
 
 ],{
-    options: {
-        context: scopedContext
-    }
+    context: scopedContext
 });
 
 export default Store; 
@@ -129,9 +127,7 @@ const Store = createStore([
     }
 
 ],{
-    options: {
-        context: scopedContext
-    }
+    context: scopedContext
 });
 
 export { useNewTreble };
@@ -139,11 +135,13 @@ export default Store;
 ```
 
 
-#### Wrap Treble Container Around Components
-This step is the same as setting up a normal Treble container.  The only difference is the scoped `Store` component will be passed to the `Treble` component's `store` prop.  To set up the Treble container [read here](./setup-treble).
+#### Connect Component to Store
+In order to connect a component to the Store, it will need to be wrapped by `withTreble`.  The `withTreble` function takes an options object parameter.  You will need to add a `store` property and pass the `Store` to it. Once this is set up the wrapped component and its children components will have access to the `Store`. Example below.
 
-#### Subscribe to Store
-This is the same as subscribing to the main `Store.js`. The difference is you will call the custom hook `useNewTreble` instead of the default `useTreble` hook. To subscribe to the Treble Store [read here](./subscribe-and-update).
+```javascript
+const SomeScopedComp = withTreble(SomeComp, { store: Store })
+export default SomeScopedComp;
+```
 
 #### Subscribing to Multiple Stores
 If your component is utilizing scoped global state there still might be a scenario where your component needs to subscribe to the App's global state as well. All that needs to be done in this scenario is to import the default `useTreble` hook and destructure the state objects. Example below.
