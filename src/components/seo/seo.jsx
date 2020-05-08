@@ -38,7 +38,7 @@ function SEO({ description, lang, meta, title, thumbnail, path, homePage }) {
         lang,
       }}
       title={site.siteMetadata.title}
-      titleTemplate={(homePage) ? title : `${title} | ${site.siteMetadata.title}`}
+      titleTemplate={(homePage) ? `${site.siteMetadata.title} - ${title}` : `${title} | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
