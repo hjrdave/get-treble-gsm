@@ -17,7 +17,7 @@ function HomePage() {
   return (
     <>
     <SEO
-      title={'Treble - Simple global state for React.js apps'}
+      title={'Simple global state for React.js apps'}
       homePage={true}
     />
       <PageContainer>
