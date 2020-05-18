@@ -57,16 +57,23 @@ export default function APINav() {
               text: 'Class Components'
             },
             {
+              path: '/api/list-management',
+              text: 'List Management'
+            },
+            {
+              path: '/api/extend-store',
+              text: 'Extend Store'
+            },
+            {
               path: '/api/changelog',
               text: 'Changelog',
               section: true
-          },
+            },
             {
                 path: '/api/support',
                 text: 'Support',
                 section: true
-            },
-
+            }
         ]}
       />
     </>
