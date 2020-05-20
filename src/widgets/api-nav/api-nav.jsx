@@ -61,8 +61,8 @@ export default function APINav() {
               text: 'List Management'
             },
             {
-              path: '/api/extend-store',
-              text: 'Extend Store'
+              path: '/api/extending-the-store',
+              text: 'Extending the Store'
             },
             {
               path: '/api/changelog',

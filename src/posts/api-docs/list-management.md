@@ -84,7 +84,7 @@ const newTodo = {
   title: 'Time to finish all the Foo',
   dueDate: 'Friday'
 }
-<button onClick={() => updateStore('updateTodos', newTodo, dispatch: {prepend: true})}>Add Todo</button>
+<button onClick={() => updateStore('updateTodos', newTodo, dispatch, {prepend: true})}>Add Todo</button>
 ```
 The `newTodo` is now prepended to our todo list. The new output will look like below.
 ```javascript
@@ -117,11 +117,12 @@ Along with appending and prepending state to a list you can set a limit on the l
 updateStore('updateTodos', newTodo, dispatch,{append: true, limit: 3});
 
 //state objects with the highest index will be removed when limit is reached.
-updateSTore('updateTodos', newTodo, dispatch, {prepend: true, limit: 3}) 
+updateStore('updateTodos', newTodo, dispatch, {prepend: true, limit: 3}) 
 ```
 
 #### Remove State
-Removing a state object from a list is super easy with the `remove` option. This action is different from `append` and `prepend` in that the dispatched value is what will be removed from the list. The API for this is `updateStore(action, dispatchValue = value to be removed, dispatch, options)`. Example below.
+Removing a state object from a list is super easy with the `remove` option. This action is different from `append` and `prepend` in that the dispatched value is what will be removed from the list. The API for this is `updateStore(action, [value to be removed], dispatch, options)`. Example below.
+
 ```javascript
 //Current Todos state
 /*
@@ -148,7 +149,7 @@ const removeTodo = {
   title: 'Time to update the Foo',
   dueDate: 'Tomorrow'
 }
-<button onClick={() => updateStore('updateTodos)', removeTodo, dispatch, {remove: true}}>Remove Todo</button>
+<button onClick={() => updateStore('updateTodos', removeTodo, dispatch, {remove: true}}>Remove Todo</button>
 ```
 
 When the button is clicked it will take the `removeTodo` object and see if it can find a match in the Todos list. When it finds a match it will remove that object from the Todos list.

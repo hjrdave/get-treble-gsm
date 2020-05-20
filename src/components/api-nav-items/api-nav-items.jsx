@@ -17,7 +17,7 @@ export default function APINavItems({navItems}) {
 
     return (
         <>
-            <div className='api-nav-items mr-4'>
+            <div className='api-nav-items mr-4 pb-4'>
                 <Sticky enabled={true} top={0}>
                 <Nav className="flex-column pl-4 pt-4">
                     {
