@@ -7,18 +7,18 @@ subMenu:
     path: '#call'
   - text: 'Check' 
     path: '#check'
-  - text: 'Convert' 
-    path: '#convert'
+  - text: 'Process' 
+    path: '#process'
   - text: 'Disable Middleware' 
     path: '#disable-middleware'
 ---
 
 Middleware provides a way for 3rd party functions to be called after state is dispatched and before it is saved back to the Store. You can use it for calling API's, logging, transforming state, or even to check dispatched state values before they are updated in the Store. This is a very powerful feature when dealing with global state and allows for a lot of possibilities. 
 
-Treble can take three types of middleware functions `call`, `check`, and `convert`.  Each are declared as a `features` property in a Store object.
+Treble can take three types of middleware functions `call`, `check`, and `process`.  Each are declared as a `features` property in a Store object.
 
 > **Middleware Firing Order**  
-Though the middleware types are independent of each other, they do have a firing order after state is dispatched. The `call` middleware type is asyncronous and will fire immediately.  The `check` middleware type fires right after state is dispatched. Once `check` runs then the `convert` middlware type will fire. Each can run independent of each other.
+Though the middleware types are independent of each other, they do have a firing order after state is dispatched. The `call` middleware type is asyncronous and will fire immediately.  The `check` middleware type fires right after state is dispatched. Once `check` runs then the `process` middlware type will fire. Each can run independent of each other.
 
 
 
@@ -62,10 +62,10 @@ const Store = createStore([
 ]);
 ```
 
-#### Convert
-The `convert` middleware takes a function that converts or transforms the dispatched state to something else and then outputs the converted state to the Store.
+#### Process
+The `process` middleware takes a function that processes or transforms the dispatched state to something else and then outputs the processed state to the Store.
 
-In the example below the `convert` middleware function prepends a string to the dispatched state and then outputs it to the Store.
+In the example below the `process` middleware function prepends a string to the dispatched state and then outputs it to the Store.
 
 ```javascript
 
@@ -74,7 +74,7 @@ const Store = createStore([
         action: 'updatePokemon',
         state: { pokemon: 'Charizard' },
         features: {
-          convert: (state) => return `Mega ${state}`
+          process: (state) => return `Mega ${state}`
         }
     }
 ]);
