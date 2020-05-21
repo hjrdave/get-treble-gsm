@@ -60,10 +60,10 @@ export default function APINav() {
               path: '/api/list-management',
               text: 'List Management'
             },
-            {
-              path: '/api/extending-the-store',
-              text: 'Extending the Store'
-            },
+            // {
+            //   path: '/api/extending-the-store',
+            //   text: 'Extending the Store'
+            // },
             {
               path: '/api/changelog',
               text: 'Changelog',
