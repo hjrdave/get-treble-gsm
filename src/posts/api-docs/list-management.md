@@ -11,6 +11,8 @@ subMenu:
     path: '#limit-list-length'
   - text: 'Remove State'
     path: '#remove-state'
+  - text: 'Sort State'
+    path: '#sort-state'
 ---
 
 Often state will hold an array of state that will be used to render UI lists or other types of data lists. I believe it is important to have a simple and easy way to manage groups of data without having to rewrite code everytime functionality is needed. List management is a middleware module that is built into Treble that will handle arrays of state through a simple api.
@@ -121,7 +123,7 @@ updateStore('updateTodos', newTodo, dispatch, {prepend: true, limit: 3})
 ```
 
 #### Remove State
-Removing a state object from a list is super easy with the `remove` option. This action is different from `append` and `prepend` in that the dispatched value is what will be removed from the list. The API for this is `updateStore(action, [value to be removed], dispatch, options)`. Example below.
+Removing a state object from a list is super easy with the `remove` option. This action is different from `append` and `prepend` in that the dispatched value is what will be removed from the list. The API for this is `updateStore(action, [value to be removed], dispatch, {remove: true})`. Example below.
 
 ```javascript
 //Current Todos state
@@ -170,6 +172,61 @@ When the button is clicked it will take the `removeTodo` object and see if it ca
 ]
 */
 ```
-> #### A Note on Removing State
-> The `remove` state option is a very handy feature, but there is caveat. The list items must all be unique. Treble compares the entire object property values and if there 
-> is a match that state will be removed. There needs to be at least one unique value in each object. This could an unique id or key.
+
+
+#### Sort State
+Sorting state alphabeticly has never been easier. The `updateStore` option `orderBy` supports two types of sorting. *Ascending* `asc` and *Descending* `desc`. The API for this is `updateStore(action, [target property to sort], dispatch, {orderBy: 'asc' | 'desc'})`. Example Below.
+```javascript
+
+//My favorite deserts ranked
+/*
+[
+    {
+      rank: 4,
+      title: 'German Chocolate'
+    },
+    {
+      rank: 2,
+      title: 'Apple Pie'
+    },
+    {
+      rank: 1,
+      title: 'Zucchini bread'
+    },
+    {
+      rank: 3,
+      title: 'Red Velvet'
+    },  
+]
+*/
+
+<button onClick={() => updateStore('updateTodos', 'title', dispatch, {orderBy: 'asc' }}>
+  Sort list Alphabetically
+</button>
+```
+
+Sorted output below.
+```javascript
+//My favorite deserts in alphabetical order (A-Z)
+/*
+[
+  {
+    rank: 2,
+    title: 'Apple Pie'
+  },
+  {
+    rank: 4,
+    title: 'German Chocolate'
+  },
+  {
+    rank: 3,
+    title: 'Red Velvet'
+  }, 
+  {
+    rank: 1,
+    title: 'Zucchini bread'
+  }
+]
+*/
+```
+>The `orderBy` is smart enough to sort in numerical order if the sort targets properties with integers.

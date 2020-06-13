@@ -5,6 +5,8 @@ title: "Changelog"
 subMenu: 
   - text: 'v1.1.2'
     path: '#v112'
+  - text: 'v1.3.0-beta.x'
+    path: '#v130beta'
 ---
 
 ## v1.1.2
@@ -12,3 +14,10 @@ Release Notes:
 - Middleware support
 - Class component support
 - Toggle state
+
+## v1.3.0-beta
+Release Notes:
+- List Management module
+- Extending Store
+- Small API changes
+- Bug fixes
