@@ -37,6 +37,7 @@ You can now use each store variable in your component like you would with local 
 > Hooks **MUST** be called inside functional components. For more information read [Rules of Hooks](https://reactjs.org/docs/hooks-rules.html).
 
 #### Update Store
+
 Treble provides a simple utility function called `updateStore` that can be called inside your component to update state in the Store.
 
 Import `updateStore` into your component.
@@ -66,6 +67,9 @@ updateStore('updatePokemon', 'Pikachu', dispatch);
 When the `updateStore` function is called with the appropriate parameters it will update the Store.
 
 And tada your app now has global state management and is easily managed. Happy Coding!
+
+>**TrebleGSM V2 updateStore deprecation**  
+The `updateStore` function will be deprecated in TrebleGSM V2 in favor of the new [SubcribeAPI](/api/subscribe-api). This new api is available as an experimental feature in V1.3.0. TrebleGSM V2 will remove `updateStore` completely in favor of the new API.
 
 
 

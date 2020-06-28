@@ -65,6 +65,14 @@ export default function APINav() {
             //   text: 'Extending the Store'
             // },
             {
+              text: 'Experimental',
+              section: true
+            },
+            {
+              path: '/api/subscribe-api',
+              text: 'SubscribeAPI'
+            },
+            {
               path: '/api/changelog',
               text: 'Changelog',
               section: true

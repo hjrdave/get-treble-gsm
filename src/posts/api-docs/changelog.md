@@ -7,6 +7,8 @@ subMenu:
     path: '#v112'
   - text: 'v1.3.0-beta.x'
     path: '#v130beta'
+  - text: 'v1.3.0'
+    path: '#v130'
 ---
 
 ## v1.1.2
@@ -21,3 +23,8 @@ Release Notes:
 - Extending Store
 - Small API changes
 - Bug fixes
+
+## v1.3.0
+Release Notes:
+- Experimental SubscribeAPI
+- updateStore deprecation warning
