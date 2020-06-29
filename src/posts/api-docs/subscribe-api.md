@@ -1,5 +1,5 @@
 ---
-path: "/api/subscribe-api"
+path: "/api/experimental/subscribe-api"
 date: "2020-27-06"
 title: "SubscribeAPI"
 subMenu: 
@@ -24,7 +24,7 @@ You can access the **SubscribeAPI** object with the useTreble hook.
 const [{}, dispatch, Store] = useTreble();
 ```
 
-SubscribeAPI actually breaks up **updateStore** into 5 methods. Examples below.
+SubscribeAPI actually breaks up **updateStore** into 6 methods. Examples below.
 
 ####Store.update
 This method is used to update a state value in the Store with a new value.

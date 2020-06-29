@@ -69,7 +69,7 @@ export default function APINav() {
               section: true
             },
             {
-              path: '/api/subscribe-api',
+              path: '/api/experimental/subscribe-api',
               text: 'SubscribeAPI'
             },
             {
