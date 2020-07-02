@@ -169,14 +169,14 @@ export default NestedComp;
 ```
 
 #### Updating Multiple Stores
-This can easily be accomplished by giving the `dispatch` function a unique name, and passing that function to the appropriate `updateStore` function. Example below.
+This can easily be accomplished by giving the useTreble `Store` object a unique name. Example below.
 
 ```javascript
-const [{ pokemon }, dispatch] = useTreble();
-const [{ pokemonTrainer }, dispatch2] = useNewTreble();
+const [{ pokemon }, Store] = useTreble();
+const [{ pokemonTrainer }, NewStore] = useNewTreble();
 
-updateStore('updatePokemon', 'Misty', dispatch);
-updateStore('updatePokemonTrainer', 'Psyduck', dispatch2);
+Store.update('updatePokemon', 'Misty');
+Store.update('updatePokemonTrainer', 'Psyduck');
 
 ```
 

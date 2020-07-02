@@ -83,8 +83,8 @@ const Store = createStore([
 If the dispatched state value is say `'Mewtwo'` then it will be updated to the Store as `'Mega Mewtwo'`.
 
 #### Disable Middleware
-In some cases you might want to bypass the Middleware pipeline when updating global state. This is easily done by adding the `enableMiddleware` option to the 4th parameter of the `updateStore` function and setting it's value to `false`.  The default value of `enableMiddlware` is set to `true`. Example below.
+In some cases you might want to bypass the Middleware pipeline when updating global state. This is easily done by adding the `disableMiddleware` property to the option parameter of the `Store.update` method and setting it's value to `true`. Example below.
 
 ```javascript
-updateStore('updatePokemon', 'Pikachu', dispatch, { enableMiddleware: false });
+Store.update('updatePokemon','Pikachu',{ disableMiddleware: true });
 ```

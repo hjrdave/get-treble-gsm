@@ -7,8 +7,8 @@ subMenu:
     path: '#with-treble'
   - text: 'Subscribe to Store' 
     path: '#subscribe-to-store'
-  - text: 'Update Store' 
-    path: '#update-store'
+  - text: 'Store.update' 
+    path: '#storeupdate'
 ---
 
 Even though Treble was created with React Hooks and functional components in mind, it is still important to provide support for class components. 
@@ -57,19 +57,19 @@ const TrebleClassExample = withTreble(ClassExample);
 export default TrebleClassExample;
 ```
 
-#### Update Store
+#### Store.update
 After the initial setup of connecting our class component to our Treble Store, updating the store in a class component is the same as updating the store in a functional component.  Example below.
 
 ```javascript
 import React, { Component } from 'react';
-import { withTreble, updateStore } from 'treble-gsm';
+import { withTreble } from 'treble-gsm';
 
 class ClassExample extends Component{
    render(){
-      const [{pokemon, pokemonGame}, dispatch] = this.props.getTreble;
+      const [{pokemon, pokemonGame}, Store] = this.props.getTreble;
        return(
          <p>{`My favorite pokemon in the game ${pokemonGame} is ${pokemon}`}</p>
-         <button onClick={() => updateStore('updatePokemon', 'Pikachu', dispatch)}>My Actual Favorite Pokemon</button>
+         <button onClick={() => Store.update('updatePokemon', 'Pikachu')}>My Actual Favorite Pokemon</button>
        )
    }
 }

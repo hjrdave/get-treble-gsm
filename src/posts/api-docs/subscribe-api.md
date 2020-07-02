@@ -1,6 +1,6 @@
 ---
-path: "/api/experimental/subscribe-api"
-date: "2020-27-06"
+path: "/api/index/subscribe-api"
+date: "2020-02-07"
 title: "SubscribeAPI"
 subMenu: 
   - text: 'Store.update' 
@@ -17,7 +17,10 @@ subMenu:
     path: '#storetoggle'
 ---
 
-TrebleGSM V2 will introduce a new api for subscribing to the Store. **SubscribeAPI** will allow for a cleaner interface, better error handling, and a more robust feature set then what **updateStore** could offer.
+The TrebleGSM **SubscribeAPI** was introduced in V2 to access and manage state in the Store.
+
+>**V1.3 and down**  
+Versions prior to V2 use the `updateStore` utility function to manage state. For documentation on this go [here](/api/deprecated#update-store).
 
 You can access the **SubscribeAPI** object with the useTreble hook.
 ```javascript

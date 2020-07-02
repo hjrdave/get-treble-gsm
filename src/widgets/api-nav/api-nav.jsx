@@ -37,6 +37,14 @@ export default function APINav() {
             //     text: 'History'
             // },
             {
+              path: '/api/managing-lists',
+              text: 'Managing Lists'
+            },
+            {
+              path: '/api/middleware',
+              text: 'Middleware'
+            },
+            {
                 path: '/api/scoped-global-state',
                 text: 'Scoped Global State'
             },
@@ -49,27 +57,19 @@ export default function APINav() {
               text: 'Toggle State'
             },
             {
-              path: '/api/middleware',
-              text: 'Middleware'
-            },
-            {
               path: '/api/class-components',
               text: 'Class Components'
-            },
-            {
-              path: '/api/list-management',
-              text: 'List Management'
             },
             // {
             //   path: '/api/extending-the-store',
             //   text: 'Extending the Store'
             // },
             {
-              text: 'Experimental',
+              text: 'API Index',
               section: true
             },
             {
-              path: '/api/experimental/subscribe-api',
+              path: '/api/index/subscribe-api',
               text: 'SubscribeAPI'
             },
             {
