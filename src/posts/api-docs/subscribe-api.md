@@ -7,6 +7,8 @@ subMenu:
     path: '#storeupdate'
   - text: 'Store.remove'
     path: '#storeremove'
+  # - text: 'Store.edit'
+  #   path: '#storeedit'
   - text: 'Store.append'
     path: '#storeappend'
   - text: 'Store.prepend'
@@ -15,6 +17,8 @@ subMenu:
     path: '#storeorderby'
   - text: 'Store.toggle'
     path: '#storetoggle'
+  - text: 'Store.reset'
+    path: '#storereset'
 ---
 
 The TrebleGSM **SubscribeAPI** was introduced in V2 to access and manage state in the Store.
@@ -63,4 +67,10 @@ Store.orderBy(action, targetProperty, orderType: 'asc' | 'desc');
 Takes the current boolean state of a Store state object and toggles boolean values back and forth.
 ```javascript
 Store.toggle(action, currentState);
+```
+
+####Store.reset
+Takes a state action and then resets the store value to its initial value.
+```javascript
+Store.reset(action);
 ```

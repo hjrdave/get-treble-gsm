@@ -64,7 +64,7 @@ function HomePage() {
               <InfoCard
                 iconName={'iconGlobal'}
                 title={'Powerful Global State'}
-                bodyText={'Manage state with powerful utilties like scoped global state, data persistence, and middleware.'}
+                bodyText={'Manage state with powerful utilties like list management, data persistence, middleware, and more.'}
               />
             </div>
           </div>
@@ -117,7 +117,7 @@ const App = () => {
             </div>
             <div className='col-12 col-lg-6'>
               <h3 className='text-center text-lg-left'>Treble Container</h3>
-              <p className='pt-3 pt-lg-0'>Import the <code>Treble</code> container and <code>Store</code> components into your App.js or Index.js.  The <code>Treble</code> container provides access to the Store for all children components.  The container has a <code>store</code> prop that consumes the <code>Store</code> component. Your app now has Global state. Easy as Sugar Creme Pie!</p>
+              <p className='pt-3 pt-lg-0'>Import the <code>Treble</code> provider component and <code>Store</code> components into your App.js or Index.js.  The <code>Treble</code> provider gives access to the Store for all children components.  The provider component has a <code>store</code> prop that consumes the <code>Store</code> component. Your app now has Global state. Easy as Sugar Creme Pie!</p>
             </div>
 
           </div>
@@ -125,21 +125,21 @@ const App = () => {
           <div className='row pt-4 mt-4'>
             <div className='col-12 col-lg-6'>
               <h3 className='text-center text-lg-left'>Subscribe and Update</h3>
-              <p className='pt-3 pt-lg-0'>Import the <code>useTreble</code> hook into your component and get access to the Store state variables.  Import <code>updateStore</code> and use where ever you want to update global state.  The <code>updateStore</code> function takes an action that tells Treble which state you want to update, a value that Treble will replace the targeted state with, and a dispatch function that is provided by the <code>useTreble</code> hook so Treble knows which Store to update.</p>
+              <p className='pt-3 pt-lg-0'>Import the <code>useTreble</code> hook into your component and get access to Store state objects and Store subscribe methods.  Destructure both from the <code>useTreble</code> hook. Use <code>Store.update</code> to target the desired state in the Store by its action and dispatch the new value to the Store. Tada! That is it, you can now manage global state in your app like a boss!</p>
             </div>
             <div className='col-12 col-lg-6'>
             <div className='language-javascript'>
               <pre>
                 <code>
                   {`
-const [{ pokemon, pokemonGame }, dispatch] = useTreble();
+const [{ pokemon }, Store] = useTreble();
 
-updateStore(action, value, dispatch);
+Store.update(action, dispatchValue);
 
 <p>{ pokemon } is my favorite Pokemon!</p>
 //render: Mewtwo is my favorite Pokemon!
 
-updateStore('updatePokemon', 'Pikachu', dispatch)
+Store.update('updatePokemon', 'Pikachu')
 //render: Pikachu is my favorite Pokemon!
                   `}
                 </code>

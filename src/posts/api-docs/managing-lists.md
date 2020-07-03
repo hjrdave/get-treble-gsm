@@ -238,5 +238,5 @@ Along with appending and prepending state to a list you can set a limit on the l
 updateStore('updateTodos', newTodo, dispatch,{append: true, limit: 3});
 
 //state objects with the highest index will be removed when limit is reached.
-updateStore('updateTodos', newTodo, dispatch, {prepend: true, limit: 3})  -->
-```
+updateStore('updateTodos', newTodo, dispatch, {prepend: true, limit: 3})  
+``` -->
