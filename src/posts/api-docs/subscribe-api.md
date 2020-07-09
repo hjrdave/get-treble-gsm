@@ -19,19 +19,16 @@ subMenu:
     path: '#storetoggle'
   - text: 'Store.reset'
     path: '#storereset'
+  - text: 'Store.removeBatch'
+    path: '#storeremovebatch'
 ---
 
 The TrebleGSM **SubscribeAPI** was introduced in V2 to access and manage state in the Store.
 
->**V1.3 and down**  
-Versions prior to V2 use the `updateStore` utility function to manage state. For documentation on this go [here](/api/deprecated#update-store).
-
 You can access the **SubscribeAPI** object with the useTreble hook.
 ```javascript
-const [{}, dispatch, Store] = useTreble();
+const [StoreItems, Store] = useTreble();
 ```
-
-SubscribeAPI actually breaks up **updateStore** into 6 methods. Examples below.
 
 ####Store.update
 This method is used to update a state value in the Store with a new value.
@@ -74,3 +71,12 @@ Takes a state action and then resets the store value to its initial value.
 ```javascript
 Store.reset(action);
 ```
+
+####Store.removeBatch
+Removes an array of values from a Store state array.
+```javascript
+Store.removeBatch(action, targetBatch);
+```
+
+>**V1.3 and down**  
+Versions prior to V2 use the `updateStore` utility function to manage state. For documentation on this go [here](/api/deprecated#update-store).

@@ -18,7 +18,7 @@ Major release with breaking changes.
 Release Notes:
 - updateStore utility function deprecated and removed
 - New SubscribeAPI finalized
-- Methods Store.reset added
+- Methods Store.reset and Store.removeBatch added
 
 ## v1.3.0
 Release Notes:
