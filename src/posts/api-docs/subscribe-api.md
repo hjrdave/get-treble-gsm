@@ -41,7 +41,7 @@ Store.update(action, dispatchValue, options?);
 ```
 
 ####Store.edit
-Update a single object in a state object array. Uses the `trebleKey` property to find the object and replace it with the updated one. (Must have the [Keys feature](http://localhost:8000/api/managing-lists#statickeysfeature) set to true in the Store)
+Update a single object in a state object array. Uses the `trebleKey` property to find the object and replace it with the updated one. (Must have the [Keys feature](https://treblegsm.org/api/managing-lists#statickeysfeature) set to true in the Store)
 ```javascript
 Store.edit(action, updatedStateObject);
 ```
