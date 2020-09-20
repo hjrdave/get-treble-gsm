@@ -4,7 +4,7 @@ date: "2020-2-7"
 title: "Managing Lists"
 subMenu: 
   - text: 'Assigning Static Keys'
-    path: '#statickeysfeature'
+    path: 'statickeysfeature'
   - text: 'Store.append'
     path: '#storeappend'
   - text: 'Store.prepend'
