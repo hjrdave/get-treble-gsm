@@ -3,6 +3,8 @@ path: "/api/changelog"
 date: "2020-03-06"
 title: "Changelog"
 subMenu: 
+  - text: 'v2.1.0'
+    path: '#v210'
   - text: 'v2.0.0-beta.x'
     path: '#v200beta'
   - text: 'v1.3.0'
@@ -12,6 +14,12 @@ subMenu:
   - text: 'v1.1.2'
     path: '#v112'
 ---
+## v2.1.0
+Release Notes:
+- Added three new SubscribeAPI methods. 
+  - Store.edit
+  - Store.getActions
+  - Store.getStateKeys
 
 ## v2.0.0-beta
 Major release with breaking changes.  

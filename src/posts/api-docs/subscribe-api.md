@@ -5,10 +5,12 @@ title: "SubscribeAPI"
 subMenu: 
   - text: 'Store.update' 
     path: '#storeupdate'
+  - text: 'Store.edit'
+    path: '#storeedit'
   - text: 'Store.remove'
     path: '#storeremove'
-  # - text: 'Store.edit'
-  #   path: '#storeedit'
+  - text: 'Store.removeBatch'
+    path: '#storeremovebatch'
   - text: 'Store.append'
     path: '#storeappend'
   - text: 'Store.prepend'
@@ -19,15 +21,17 @@ subMenu:
     path: '#storetoggle'
   - text: 'Store.reset'
     path: '#storereset'
-  - text: 'Store.removeBatch'
-    path: '#storeremovebatch'
+  - text: 'Store.getActions'
+    path: '#storegetactions'
+  - text: 'Store.getStateKeys'
+    path: '#storegetstatekeys'
 ---
 
 The TrebleGSM **SubscribeAPI** was introduced in V2 to access and manage state in the Store.
 
 You can access the **SubscribeAPI** object with the useTreble hook.
 ```javascript
-const [StoreItems, Store] = useTreble();
+const [StoreItems, StoreMethods] = useTreble();
 ```
 
 ####Store.update
@@ -36,10 +40,22 @@ This method is used to update a state value in the Store with a new value.
 Store.update(action, dispatchValue, options?);
 ```
 
+####Store.edit
+Update a single object in a state object array. Uses the `trebleKey` property to find the object and replace it with the updated one.
+```javascript
+Store.edit(action, updatedStateObject);
+```
+
 ####Store.remove
 Targets a value in a Store state array and removes it.
 ```javascript
 Store.remove(action, targetValue);
+```
+
+####Store.removeBatch
+Removes an array of values from a Store state array.
+```javascript
+Store.removeBatch(action, targetBatch);
 ```
 
 ####Store.append
@@ -72,10 +88,16 @@ Takes a state action and then resets the store value to its initial value.
 Store.reset(action);
 ```
 
-####Store.removeBatch
-Removes an array of values from a Store state array.
+####Store.getActions
+Returns an array of all Store actions.
 ```javascript
-Store.removeBatch(action, targetBatch);
+Store.getActions();
+```
+
+####Store.getStateKeys
+Returns an array of all Store state keys.
+```javascript
+Store.getStateKeys();
 ```
 
 >**V1.3 and down**  
