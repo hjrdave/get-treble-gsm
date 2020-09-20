@@ -3,6 +3,8 @@ path: "/api/managing-lists"
 date: "2020-2-7"
 title: "Managing Lists"
 subMenu: 
+  - text: 'Assigning Static Keys'
+    path: '#statickeysfeature'
   - text: 'Store.append'
     path: '#storeappend'
   - text: 'Store.prepend'
@@ -16,6 +18,35 @@ subMenu:
 ---
 
 Often developers will need to manage an array of state that will be used to render UI lists or other types of data lists. I believe it is important to have a simple and easy way to manage groups of data without having to rewrite code everytime functionality is needed. Treble's **SubscribeAPI** has built-in methods for handling lists in an easy and efficient way.
+
+#### Static Keys Feature
+React uses keys on list items to help identify when an item has been updated or removed. (To learn more about keys click [here](https://reactjs.org/docs/lists-and-keys.html)). So static keys are essential when managing lists in React. Treble also uses keys to help it use certian list management methods like below. When using these methods it is important to set the state feature `keys` to `true`. This is a type of middleware that will automatically assign a property called `trebleKey` to each object in the array. This property can be used as a key for rendering lists.
+
+```javascript
+const Store = createStore([
+  {
+    action: 'updateTodos'
+    state: {
+      todos: [
+        {
+          id: 1234,
+          title: 'Time to update the Foo',
+          dueDate: 'Tomorrow'
+        },
+        {
+          id: 1235,
+          title: 'Time to update more Foo',
+          dueDate: 'Thursday'
+        }
+      ]
+    },
+    features: {
+      keys: true
+    }
+  }
+])
+```
+
 
 #### Store.append
 You might have an array of objects in state.  Lets say each object is a todo item. It has an id, title, and due date property.  We want to add another todo item to our todo list (array). Under normal circumstances we would need to get the entire todo list and append the new item to it and then `Store.update` the entire todo list (object array) to the store.  This works fine but doing this repetively thoughout our app can cause us to rewrite the same code over and over agian. 
@@ -44,6 +75,9 @@ const Store = createStore([
           dueDate: 'Thursday'
         }
       ]
+    },
+    features: {
+      keys: true
     }
   }
 ])
