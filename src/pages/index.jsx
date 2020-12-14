@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import {Link} from 'gatsby';
+import React, { useEffect } from "react";
+import { Link } from 'gatsby';
 import PageContainer from '../components/page-container';
 import PageContent from '../components/page-content';
 import Image from '../images/register';
@@ -13,13 +13,13 @@ function HomePage() {
   useEffect(() => {
     // call the highlightAll() function to style our code blocks
     Prism.highlightAll()
-  },[])
+  }, [])
   return (
     <>
-    <SEO
-      title={'Simple global state for React.js apps'}
-      homePage={true}
-    />
+      <SEO
+        title={'Simple global state for React.js apps'}
+        homePage={true}
+      />
       <PageContainer>
         <div className='home-banner d-flex align-items-center'>
           <div className='col-12'>
@@ -48,23 +48,49 @@ function HomePage() {
           <div className='row py-4 home-card-row'>
             <div className='col-12 col-lg-4'>
               <InfoCard
-                iconName={'iconSetup'}
-                title={'Easy Setup'}
-                bodyText={'Quickly setup global state inside your App in just a few simple steps.'}
-              />
-            </div>
-            <div className='col-12 col-lg-4 pt-4 pt-lg-0'>
-              <InfoCard
                 iconName={'iconApi'}
                 title={'Simple API'}
                 bodyText={"An easy to learn, and robust API to start managing your App's state with confidence."}
               />
             </div>
             <div className='col-12 col-lg-4 pt-4 pt-lg-0'>
+
               <InfoCard
                 iconName={'iconGlobal'}
-                title={'Powerful Global State'}
-                bodyText={'Manage state with powerful utilties like list management, data persistence, middleware, and more.'}
+                title={'Optimized'}
+                bodyText={'Double checks state agianst the previous state to prevent unnessary re-renders.'}
+              />
+            </div>
+            <div className='col-12 col-lg-4 pt-4 pt-lg-0'>
+              <InfoCard
+                iconName={'iconApi'}
+                title={'Scalable'}
+                bodyText={"Organize your state into multiple Stores and subscribe as if they were one."}
+              />
+
+            </div>
+          </div>
+          <div className='row mt-0 home-card-row'>
+            <div className='col-12 col-lg-4'>
+              <InfoCard
+                iconName={'iconGlobal'}
+                title={'Middleware'}
+                bodyText={'Automate tasks and pre process state before it reaches the Store.'}
+              />
+
+            </div>
+            <div className='col-12 col-lg-4 pt-4 pt-lg-0'>
+              <InfoCard
+                iconName={'iconApi'}
+                title={'Scoped State'}
+                bodyText={"Create high powered components with their own private global state."}
+              />
+            </div>
+            <div className='col-12 col-lg-4 pt-4 pt-lg-0'>
+              <InfoCard
+                iconName={'iconSetup'}
+                title={'Extendable'}
+                bodyText={'Extend TrebleGSM functionility with Treble Modules or create your own.'}
               />
             </div>
           </div>
@@ -77,7 +103,7 @@ function HomePage() {
             </div>
             <div className='col-12 col-lg-6'>
               <div className='language-javascript'>
-              <pre>
+                <pre>
                   <code>
                     {`
 import { createStore } from 'treble-gsm';
@@ -96,10 +122,10 @@ const Store = createStore([
           </div>
           <div className='row pt-4 mt-4 flex-column-reverse flex-lg-row'>
             <div className='col-12 col-lg-6'>
-            <div className='language-javascript'>
-              <pre>
-                <code>
-                  {`
+              <div className='language-javascript'>
+                <pre>
+                  <code>
+                    {`
 import  Treble  from  'treble-gsm';
 import  Store  from  './Store';
 
@@ -111,8 +137,8 @@ const App = () => {
     );
 }
                     `}
-                </code>
-              </pre>
+                  </code>
+                </pre>
               </div>
             </div>
             <div className='col-12 col-lg-6'>
@@ -128,10 +154,10 @@ const App = () => {
               <p className='pt-3 pt-lg-0'>Import the <code>useTreble</code> hook into your component and get access to Store state objects and Store subscribe methods.  Destructure both from the <code>useTreble</code> hook. Use <code>Store.update</code> to target the desired state in the Store by its action and dispatch the new value to the Store. Tada! That is it, you can now manage global state in your app like a boss!</p>
             </div>
             <div className='col-12 col-lg-6'>
-            <div className='language-javascript'>
-              <pre>
-                <code>
-                  {`
+              <div className='language-javascript'>
+                <pre>
+                  <code>
+                    {`
 const [{ pokemon }, Store] = useTreble();
 
 Store.update(action, dispatchValue);
@@ -142,8 +168,8 @@ Store.update(action, dispatchValue);
 Store.update('updatePokemon', 'Pikachu')
 //render: Pikachu is my favorite Pokemon!
                   `}
-                </code>
-              </pre>
+                  </code>
+                </pre>
               </div>
             </div>
 
@@ -156,7 +182,7 @@ Store.update('updatePokemon', 'Pikachu')
               </div>
               <h5 className='pt-3 text-center'>Want to Support this Project?</h5>
               <div className='d-flex justify-content-center'>
-                <Button className='px-4 py-2 mt-3' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}><a href='https://github.com/hjrdave/treble-gsm' target='_blank' style={{color: 'white', textDecoration: 'none'}}>Contribute</a></Button>
+                <Button className='px-4 py-2 mt-3' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}><a href='https://github.com/hjrdave/treble-gsm' target='_blank' style={{ color: 'white', textDecoration: 'none' }}>Contribute</a></Button>
               </div>
               {/* </ContentCard> */}
             </div>
