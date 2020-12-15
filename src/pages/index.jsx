@@ -97,7 +97,7 @@ function HomePage() {
           </div>
           {/* <div className='row my-4' style={{border: '1px solid grey'}}></div> */}
         </PageContent>
-        <PageContent style={{ marginTop: '-75px' }}>
+        <PageContent bkDark style={{ marginTop: '-75px' }}>
           <div className='three-steps-row row pt-4 mt-4'>
             <div className='col-12 col-lg-6 pt-4'>
               <h3 className='text-center text-lg-left'>Create Store</h3>
@@ -108,7 +108,6 @@ function HomePage() {
                 <pre>
                   <code>
                     {`
-import { createStore } from 'treble-gsm';
 const Store = createStore([
     {
         action: 'updatePokemon',
@@ -128,9 +127,6 @@ const Store = createStore([
                 <pre>
                   <code>
                     {`
-import  Treble  from  'treble-gsm';
-import  Store  from  './Store';
-
 const App = () => {
     return (
         <Treble store={Store}>
@@ -176,9 +172,9 @@ Store.update('updatePokemon', 'Pikachu')
 
           </div>
         </PageContent>
-        <PageContent bkGradient>
+        <PageContent bkGradient style={{ marginTop: '-75px' }}>
           <div className='row pt-4 mt-4 mb-4 d-flex justify-content-center'>
-            <div className='col-8 col-lg-12'>
+            <div className='col-8 col-lg-12 pt-4'>
               {/* <ContentCard> */}
               <div className='home-logo-github d-flex justify-content-center'>
                 <Image name={'logoGithub'} />
