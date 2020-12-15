@@ -82,6 +82,38 @@ const Image = ({ name }) => {
         }
       }
     }
+
+    iconScoped: file(relativePath: { eq: "crosshairs-solid.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    iconOptimized: file(relativePath: { eq: "rocket-solid.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    iconExtendable: file(relativePath: { eq: "cubes-solid.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    iconScalable: file(relativePath: { eq: "layer-group-solid.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
    
   }`);
 

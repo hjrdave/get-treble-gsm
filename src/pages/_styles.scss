@@ -48,4 +48,29 @@
             font-size: $font-size-base - .1rem!important ;
           }
     }
+
+    .bk-gradient{
+        background: rgb(23,90,157);
+        background: -moz-linear-gradient(78deg, rgba(23,90,157,1) 0%, rgba(87,192,156,1) 100%);
+        background: -webkit-linear-gradient(78deg, rgba(23,90,157,1) 0%, rgba(87,192,156,1) 100%);
+        background: linear-gradient(78deg, rgba(23,90,157,1) 0%, rgba(87,192,156,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#175a9d",endColorstr="#57c09c",GradientType=1);
+    }
+
+    .bk-dark{
+        
+        background-color: #282B33;
+        .three-steps-row{
+            
+        }
+        h3{
+            color: white;
+        }
+        p{
+            color: white;
+        }
+        pre{
+            background: #20222A;
+        }
+    }
     

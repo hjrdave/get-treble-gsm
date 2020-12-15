@@ -39,11 +39,12 @@ function HomePage() {
             <div className='row d-flex justify-content-center'>
 
               <div className='pt-3'>
-                <Link to={'./api/introduction'}><Button className='px-4 py-2' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}>Getting Started</Button></Link>
+                <Link to={'./api/introduction'}><Button className='px-4 py-2 bk-gradient' style={{ borderColor: '#175b9d', borderRadius: '25px' }}>Getting Started</Button></Link>
               </div>
             </div>
           </div>
         </div>
+
         <PageContent>
           <div className='row py-4 home-card-row'>
             <div className='col-12 col-lg-4'>
@@ -56,14 +57,14 @@ function HomePage() {
             <div className='col-12 col-lg-4 pt-4 pt-lg-0'>
 
               <InfoCard
-                iconName={'iconGlobal'}
+                iconName={'iconOptimized'}
                 title={'Optimized'}
-                bodyText={'Double checks state agianst the previous state to prevent unnessary re-renders.'}
+                bodyText={'Compares state agianst the previous state to prevent unnessary re-renders.'}
               />
             </div>
             <div className='col-12 col-lg-4 pt-4 pt-lg-0'>
               <InfoCard
-                iconName={'iconApi'}
+                iconName={'iconScalable'}
                 title={'Scalable'}
                 bodyText={"Organize your state into multiple Stores and subscribe as if they were one."}
               />
@@ -81,27 +82,28 @@ function HomePage() {
             </div>
             <div className='col-12 col-lg-4 pt-4 pt-lg-0'>
               <InfoCard
-                iconName={'iconApi'}
+                iconName={'iconScoped'}
                 title={'Scoped State'}
                 bodyText={"Create high powered components with their own private global state."}
               />
             </div>
             <div className='col-12 col-lg-4 pt-4 pt-lg-0'>
               <InfoCard
-                iconName={'iconSetup'}
+                iconName={'iconExtendable'}
                 title={'Extendable'}
                 bodyText={'Extend TrebleGSM functionility with Treble Modules or create your own.'}
               />
             </div>
           </div>
           {/* <div className='row my-4' style={{border: '1px solid grey'}}></div> */}
-
-          <div className='row pt-4 mt-4'>
-            <div className='col-12 col-lg-6'>
+        </PageContent>
+        <PageContent style={{ marginTop: '-75px' }}>
+          <div className='three-steps-row row pt-4 mt-4'>
+            <div className='col-12 col-lg-6 pt-4'>
               <h3 className='text-center text-lg-left'>Create Store</h3>
               <p className='pt-3 pt-lg-0'>Create a file in your folder structure called <code>Store.js</code>. Import <code>createStore</code> from treble-gsm and assign it to a variable called Store. The Store variable will store an array of objects. Each object will have an action and state property.  The <code>action</code> property will be a string that is used to tell Treble which state to update.  The <code>state</code> property will hold the global state.</p>
             </div>
-            <div className='col-12 col-lg-6'>
+            <div className='col-12 col-lg-6 pt-lg-4'>
               <div className='language-javascript'>
                 <pre>
                   <code>
@@ -147,7 +149,6 @@ const App = () => {
             </div>
 
           </div>
-
           <div className='row pt-4 mt-4'>
             <div className='col-12 col-lg-6'>
               <h3 className='text-center text-lg-left'>Subscribe and Update</h3>
@@ -174,6 +175,8 @@ Store.update('updatePokemon', 'Pikachu')
             </div>
 
           </div>
+        </PageContent>
+        <PageContent bkGradient>
           <div className='row pt-4 mt-4 mb-4 d-flex justify-content-center'>
             <div className='col-8 col-lg-12'>
               {/* <ContentCard> */}
@@ -182,7 +185,7 @@ Store.update('updatePokemon', 'Pikachu')
               </div>
               <h5 className='pt-3 text-center'>Want to Support this Project?</h5>
               <div className='d-flex justify-content-center'>
-                <Button className='px-4 py-2 mt-3' style={{ backgroundColor: '#175b9d', borderColor: '#175b9d', borderRadius: '25px' }}><a href='https://github.com/hjrdave/treble-gsm' target='_blank' style={{ color: 'white', textDecoration: 'none' }}>Contribute</a></Button>
+                <Button className='px-4 py-2 mt-3' style={{ backgroundColor: '#20222A', borderColor: '#20222A', borderRadius: '25px', }}><a href='https://github.com/hjrdave/treble-gsm' target='_blank' style={{ color: 'white', textDecoration: 'none' }}>Contribute</a></Button>
               </div>
               {/* </ContentCard> */}
             </div>
