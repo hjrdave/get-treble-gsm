@@ -1,0 +1,33 @@
+@import '../../../components/variables';
+
+.search-form{
+  .input-group-prepend{
+    i{
+      color: rgba(0, 0, 0, .7);
+    }
+    .input-group-text{
+      //border-radius: $input-border-radius-right;
+      background-color: white;
+     
+    }
+  }
+  .form-control{
+    padding: 1.50rem 0 1.50rem 0;
+    border-left: none;
+   // border-radius: $input-border-radius-left;
+    &:focus{
+      outline: none !important;
+      box-shadow: none;
+      //border-color: $input-border-color
+    }
+    &:active{
+      outline: none !important;
+      box-shadow: none;
+      //border-color: $input-border-color;
+    }
+
+  }
+  a{
+    //color: $black;
+  }
+}
