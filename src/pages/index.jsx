@@ -43,9 +43,10 @@ function HomePage() {
               </div>
             </div>
           </div>
-        </div>
 
-        <PageContent>
+        </div>
+        <div className='home-banner-skewed'></div>
+        <PageContent style={{ position: 'relative', zIndex: 1 }}>
           <div className='row py-4 home-card-row'>
             <div className='col-12 col-lg-4'>
               <InfoCard
@@ -76,7 +77,7 @@ function HomePage() {
               <InfoCard
                 iconName={'iconGlobal'}
                 title={'Middleware'}
-                bodyText={'Automate tasks and pre process state before it reaches the Store.'}
+                bodyText={'Automate tasks and centralize complex state logic before state is updated.'}
               />
 
             </div>
@@ -84,23 +85,52 @@ function HomePage() {
               <InfoCard
                 iconName={'iconScoped'}
                 title={'Scoped State'}
-                bodyText={"Create high powered components with their own private global state."}
+                bodyText={"Create and maintain high powered components with private global state."}
               />
             </div>
             <div className='col-12 col-lg-4 pt-4 pt-lg-0'>
               <InfoCard
                 iconName={'iconExtendable'}
                 title={'Extendable'}
-                bodyText={'Extend TrebleGSM functionility with Treble Modules or create your own.'}
+                bodyText={'Extend TrebleGSM functionality with Treble Modules or create your own modules.'}
               />
             </div>
           </div>
           {/* <div className='row my-4' style={{border: '1px solid grey'}}></div> */}
         </PageContent>
-        <PageContent bkDark style={{ marginTop: '-75px' }}>
+        <div className='home-install-row-skewed'></div>
+        <PageContent bkGradient style={{ height: '550px', marginTop: '-50px' }} >
+
+          <div className='three-steps-row row pt-4 mt-2'>
+            <div className='col-12 pt-4 mt-4'>
+              <h3 className='text-center text-lg-left pt-4'>Install Package</h3>
+            </div>
+            <div className='col-12 '>
+              <div className='language-javascript'>
+                <pre>
+                  <code>
+                    {`npm install treble-gsm`}
+                  </code>
+                </pre>
+              </div>
+            </div>
+            <div className='col-12 pt-lg-4'>
+              <div className='language-javascript'>
+                <pre>
+                  <code>
+                    {`yarn add treble-gsm`}
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </PageContent>
+        <div className='home-row-skewed'></div>
+        <PageContent bkDark style={{ marginTop: '-100px', position: 'relative', zIndex: 0 }}>
+
           <div className='three-steps-row row pt-4 mt-4'>
             <div className='col-12 col-lg-6 pt-4'>
-              <h3 className='text-center text-lg-left'>Create Store</h3>
+              <h3 className='text-center text-lg-left'>Create a Store</h3>
               <p className='pt-3 pt-lg-0'>Create a file in your folder structure called <code>Store.js</code>. Import <code>createStore</code> from treble-gsm and assign it to a variable called Store. The Store variable will store an array of objects. Each object will have an action and state property.  The <code>action</code> property will be a string that is used to tell Treble which state to update.  The <code>state</code> property will hold the global state.</p>
             </div>
             <div className='col-12 col-lg-6 pt-lg-4'>
@@ -140,7 +170,7 @@ const App = () => {
               </div>
             </div>
             <div className='col-12 col-lg-6'>
-              <h3 className='text-center text-lg-left'>Treble Container</h3>
+              <h3 className='text-center text-lg-left'>Wrap Components with Provider</h3>
               <p className='pt-3 pt-lg-0'>Import the <code>Treble</code> provider component and <code>Store</code> components into your App.js or Index.js.  The <code>Treble</code> provider gives access to the Store for all children components.  The provider component has a <code>store</code> prop that consumes the <code>Store</code> component. Your app now has Global state. Easy as Sugar Creme Pie!</p>
             </div>
 
@@ -171,8 +201,15 @@ Store.update('updatePokemon', 'Pikachu')
             </div>
 
           </div>
+          <div className='row d-flex justify-content-center pt-4'>
+
+            <div className='py-4'>
+              <Link to={'./api/introduction'}><Button className='px-4 py-2 bk-gradient' style={{ borderColor: '#175b9d', borderRadius: '25px' }}>Learn More</Button></Link>
+            </div>
+          </div>
         </PageContent>
-        <PageContent bkGradient style={{ marginTop: '-75px' }}>
+        <div className='home-row-skewed-bottom'></div>
+        <PageContent>
           <div className='row pt-4 mt-4 mb-4 d-flex justify-content-center'>
             <div className='col-8 col-lg-12 pt-4'>
               {/* <ContentCard> */}
