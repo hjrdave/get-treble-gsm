@@ -22,10 +22,10 @@ function Navigation({ navItems }) {
               )
             })
           }
-          
-          <a href='https://github.com/hjrdave/treble-gsm' target='_blank' className='nav-link'><i class="fab fa-github"></i></a>
-          <a href='https://mediafish.io' className='nav-link' target='_blank'><Image name={'logoMediafishIconOnly'}/></a>
-          
+
+          <a href='https://github.com/hjrdave/treble-gsm' target='_blank' className='nav-link'><i className="fab fa-github"></i></a>
+          <a href='https://mediafish.io' className='nav-link' target='_blank'><Image name={'logoMediafishIconOnly'} /></a>
+
           {/* <Search /> */}
         </Nav>
       </Navbar>
