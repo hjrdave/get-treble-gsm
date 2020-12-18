@@ -33,7 +33,7 @@ function HomePage() {
             </div>
             <div className='row d-flex justify-content-center'>
               <div className='col-12 col-lg-4'>
-                <p className='text-center' style={{ opacity: '.7' }}>Simple Global State for React.js Apps</p>
+                <p className='text-center' style={{ opacity: '.7' }}>Global State Management for React.js Apps</p>
               </div>
             </div>
             <div className='row d-flex justify-content-center'>

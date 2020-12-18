@@ -1,13 +1,16 @@
 import React from 'react';
 import { Form, InputGroup, FormControl } from 'react-bootstrap';
 import { useInput, useDebounce } from '../hooks';
+import { useSearchAPIStore } from './Store';
 
 const CustomToggle = React.forwardRef(({ onClick }, ref) => {
 
-    const { value, bind, setValue } = useInput('');
+    const [, Store] = useSearchAPIStore();
+
+    const { value, bind } = useInput('');
 
     const handleOnKeyPress = useDebounce((event, value) => {
-        console.log(value)
+        Store.update('updateSearchQuery', value);
         if (event.key === "Enter") {
             event.preventDefault();
         }

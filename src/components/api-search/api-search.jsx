@@ -1,28 +1,38 @@
 import React from "react";
-import { navigate } from "gatsby";
+import { withTreble } from 'treble-gsm';
+import { Store } from './Store';
 import { Dropdown } from "react-bootstrap";
 import CustomToggle from './custom-toggle';
+import SearchResults from './search-results';
+import { useSearchAPIStore } from './Store';
 import './styles.scss';
 
-function APISearch() {
+function APISearchComp() {
 
+  const [{ searchQuery }] = useSearchAPIStore();
+  const [results, setResults] = React.useState([]);
 
+  React.useEffect(() => {
+    if (window.__LUNR__) {
+      window.__LUNR__.__loaded.then(lunr => {
+        const refs = lunr.en.index.search(searchQuery)
+        const posts = refs.map(({ ref }) => lunr.en.store[ref])
+        setResults(posts)
+      })
+    }
+  }, [searchQuery]);
 
   return (
     <>
       <Dropdown>
         <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components" />
         <Dropdown.Menu>
-          <Dropdown.Item eventKey="1">Red</Dropdown.Item>
-          <Dropdown.Item eventKey="2">Blue</Dropdown.Item>
-          <Dropdown.Item eventKey="3" active>
-            Orange
-          </Dropdown.Item>
-          <Dropdown.Item eventKey="1">Red-Orange</Dropdown.Item>
+          <SearchResults results={results} />
         </Dropdown.Menu>
       </Dropdown>
     </>
   )
 }
 
-export default APISearch
+const APISearch = withTreble(APISearchComp, { store: Store });
+export default APISearch;
