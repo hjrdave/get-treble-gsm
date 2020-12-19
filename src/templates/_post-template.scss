@@ -1,25 +1,34 @@
-@import '../components//variables';
+@import '../components/variables';
 @import '~bootstrap/scss/_functions';
 @import '~bootstrap/scss/_variables';
 @import '~bootstrap/scss/mixins/breakpoints';
 
-.doc-post-content{
-    
+.api-doc-pages{
+    background-color: $dark-3;
     h1{
+        color: lighten($dark-3, 65%);
         @include media-breakpoint-down(md) {
             font-size: $h1-font-size - 1rem;
         }
     }
+   
+.doc-post-content{
+  
+    
+    
     h2{
+        color: lighten($dark-3, 65%);
         margin-top: 2rem;
         @include media-breakpoint-down(md) {
             font-size: $h2-font-size - .5rem;
         }
     }
     h3{
+        color: lighten($dark-3, 65%);
         margin-top: 2rem;
     }
     p{
+        color: lighten($dark-3, 65%);
         margin-top: 1rem;
         @include media-breakpoint-down(md) {
             font-size: $font-size-base + .10rem;
@@ -33,3 +42,5 @@
         }
     }
 }
+}
+

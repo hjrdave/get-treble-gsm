@@ -5,9 +5,10 @@
 .api-nav-items{
     
     width: 300px;
-    background-color: white;
-    border-right: 1px solid #dee2e6;
-    
+    border-right: 1px solid $dark-1;
+  
+        background-color: $dark-3;
+
     // box-shadow: $shadow-3;
     
     @include media-breakpoint-down(md) {

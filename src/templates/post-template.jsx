@@ -22,7 +22,7 @@ export default function Template({ data, location }) {
         title={title}
         description={excerpt}
       />
-      <PageContainer activePath={location}>
+      <PageContainer activePath={location} className={'api-doc-pages'}>
         <div className='d-lg-flex'>
           <APINav />
           <PageContent docs={true}>
@@ -35,7 +35,7 @@ export default function Template({ data, location }) {
                 />
               </div>
               <div className='col-3 d-none d-lg-block'>
-                <DocPostMenu subMenu={subMenu} path={path}/>
+                <DocPostMenu subMenu={subMenu} path={path} />
               </div>
             </div>
 

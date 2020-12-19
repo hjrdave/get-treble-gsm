@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useTreble, updateStore } from 'treble-gsm';
 
-function PageContainer({ children, title, id, activePath }) {
+function PageContainer({ children, title, id, activePath, className }) {
 
   const [{ }, Store] = useTreble();
 
@@ -12,7 +12,7 @@ function PageContainer({ children, title, id, activePath }) {
 
   return (
     <>
-      <div id={id}>
+      <div id={id} className={className}>
         {children}
       </div>
     </>
