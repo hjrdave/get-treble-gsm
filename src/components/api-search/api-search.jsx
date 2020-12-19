@@ -26,7 +26,7 @@ function APISearchComp() {
     <>
       <Dropdown>
         <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components" />
-        <Dropdown.Menu>
+        <Dropdown.Menu className={'dropdown-custom-menu'}>
           <SearchResults results={results} />
         </Dropdown.Menu>
       </Dropdown>
