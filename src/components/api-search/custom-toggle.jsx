@@ -32,7 +32,7 @@ const CustomToggle = React.forwardRef(({ onClick }, ref) => {
                         aria-label="Search"
                         aria-describedby="basic-addon1"
                         {...bind}
-                        onKeyPress={(e) => { e.persist(); handleOnKeyPress(e, value) }}
+                        onKeyDown={(e) => { e.persist(); handleOnKeyPress(e, value) }}
                         onClick={(e) => {
                             e.preventDefault();
                             onClick(e);

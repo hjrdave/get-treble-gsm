@@ -11,7 +11,7 @@ export default function DocPostMenu({ subMenu, path }) {
             <div className='doc-post-menu pl-lg-4 d-none d-lg-flex'>
                 <ListGroup className='py-4'>
                     <Sticky enabled={true} top={40}>
-                        <ListGroup.Item>Table of Contents</ListGroup.Item>
+                        <ListGroup.Item><h6>Table of Contents</h6></ListGroup.Item>
                         {
                             subMenu.map((item) => {
                                 return (

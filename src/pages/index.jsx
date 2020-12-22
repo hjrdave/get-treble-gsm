@@ -52,7 +52,7 @@ function HomePage() {
               <InfoCard
                 iconName={'iconApi'}
                 title={'Simple API'}
-                bodyText={"An easy to learn, and robust API to start managing your App's state with confidence."}
+                bodyText={"No reducers and complicated boilerplate. Subscribe and update state with a simple Hook."}
               />
             </div>
             <div className='col-12 col-lg-4 pt-4 pt-lg-0'>
