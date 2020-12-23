@@ -1,8 +1,9 @@
 import React, { useEffect, Fragment } from 'react';
-import Nav from 'react-bootstrap/Nav';
+import { Nav, Accordion, Card, Button } from 'react-bootstrap';
+import CustomToggle from './custom-toggle';
 import { Link } from 'gatsby';
-import './_api-nav-items.scss';
 import Sticky from 'react-stickynode';
+import styles from './styles.module.scss';
 import { useTreble } from 'treble-gsm';
 import APISearch from '../api-search';
 import uniqid from 'uniqid';
@@ -16,6 +17,10 @@ export default function APINavItems({ navItems }) {
         Store.update('updateMobileDocNavState', false);
     }, [activeNavPath]);
 
+    React.useEffect(() => {
+        console.log(navItems);
+    }, [navItems])
+
     return (
         <>
             <div className='api-nav-items mr-4 pb-4'>
@@ -23,15 +28,33 @@ export default function APINavItems({ navItems }) {
                     <Nav className="flex-column pl-4 pt-4">
                         <APISearch size={'sm'} />
                         {
-                            navItems.map(({ path, text, section }) => {
+                            navItems.map(({ section, menuItems }) => {
                                 return (
                                     <Fragment key={uniqid()}>
-                                        {
-                                            (section) ?
-                                                (path) ? <Link to={path} className='api-nav-items-section font-weight-bold pt-3 mb-0'>{text}</Link>
-                                                    : <div className='api-nav-items-section font-weight-bold pt-3 mb-0'>{text}</div>
-                                                : <Link to={path} className='pt-1'>{text}</Link>
-                                        }
+                                        <Accordion className={styles.apiNavItems}>
+
+
+                                            <CustomToggle section={section} />
+
+                                            <Accordion.Collapse eventKey="0">
+
+                                                <>
+                                                    <div className='pb-3'>
+                                                        {
+                                                            menuItems?.map((item) => {
+                                                                return (
+                                                                    <>
+                                                                        <p className='text-left mb-2'>{item.text}</p>
+                                                                    </>
+                                                                )
+                                                            })
+                                                        }
+                                                    </div>
+                                                </>
+
+                                            </Accordion.Collapse>
+
+                                        </Accordion>
                                     </Fragment>
                                 )
                             })
@@ -45,7 +68,7 @@ export default function APINavItems({ navItems }) {
                         </div>
                     </div>
                 </Sticky>
-                <div className={`api-nav-items-mobile-menu ${(mobileDocNavState) ? 'api-nav-items-mobile-menu-open' : ''}`}>
+                {/* <div className={`api-nav-items-mobile-menu ${(mobileDocNavState) ? 'api-nav-items-mobile-menu-open' : ''}`}>
                     <div className='d-flex justify-content-between align-items-center'>
                         <h4 className='pt-4 pl-4'>Treble Docs</h4>
                         <i className="fas fa-times pt-4 pr-4" onClick={() => Store.update('updateMobileDocNavState', false)}></i>
@@ -66,7 +89,7 @@ export default function APINavItems({ navItems }) {
                             })
                         }
                     </Nav>
-                </div>
+                </div> */}
             </div>
 
         </>

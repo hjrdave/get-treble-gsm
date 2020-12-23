@@ -1,0 +1,23 @@
+@import '../variables';
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+.apiNavItems{
+    p{
+        color: lighten($dark-3, 65%);
+        font-size: $font-size-base;
+        
+        &:hover{
+            color: white;
+            cursor: pointer;
+        }
+    }
+    .btnLink{
+        color: lighten($dark-3, 65%);
+        text-decoration: none!important;
+        &:hover{
+            color:lighten($dark-3, 65%);
+        }
+    }
+}
