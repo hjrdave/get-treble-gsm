@@ -30,24 +30,75 @@ export default function APINav() {
             ]
           },
           {
-            section: 'Extend Treble',
+            section: 'Middleware',
             menuItems: [
               {
-                text: 'Introduction to Modules',
+                text: 'Introduction',
+                path: './'
+              },
+              {
+                text: 'Payload Listeners',
+                path: './'
+              },
+              {
+                text: 'Log',
+                path: './'
+              },
+              {
+                text: 'Run',
+                path: './'
+              },
+              ,
+              {
+                text: 'Check',
+                path: './'
+              },
+              {
+                text: 'Process',
+                path: './'
+              },
+              {
+                text: 'Callback',
+                path: './'
+              }
+            ]
+          },
+          {
+            section: 'Modules',
+            menuItems: [
+              {
+                text: 'Introduction',
                 path: './'
               },
               {
                 text: 'Create a Module',
                 path: './'
-              },
-              {
-                text: 'Store Features',
-                path: './'
-              },
+              }
             ]
           },
           {
-            section: 'API Reference',
+            section: 'Features',
+            menuItems: [
+              {
+                text: 'Scaling Stores',
+                path: './'
+              },
+              {
+                text: 'Scoped Stores',
+                path: './'
+              },
+              {
+                text: 'Persisting State',
+                path: './'
+              },
+              {
+                text: 'List Management',
+                path: './'
+              }
+            ]
+          },
+          {
+            section: 'API References',
             menuItems: [
               {
                 text: 'Dispatchers',
