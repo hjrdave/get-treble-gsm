@@ -14,10 +14,10 @@
         }
     }
     .btnLink{
-        color: lighten($dark-3, 65%);
+        color: lighten(#175a9d, 25%);
         text-decoration: none!important;
         &:hover{
-            color:lighten($dark-3, 65%);
+            color:lighten(#175a9d, 25%);
         }
     }
 }

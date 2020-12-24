@@ -6,7 +6,7 @@
 .api-doc-pages{
     background-color: $dark-3;
     h1{
-        color: lighten($dark-3, 65%);
+        color: lighten(#175a9d, 25%);
         @include media-breakpoint-down(md) {
             font-size: $h1-font-size - 1rem;
         }
@@ -17,14 +17,14 @@
     
     
     h2{
-        color: lighten($dark-3, 65%);
+        color: lighten(#175a9d, 25%);
         margin-top: 2rem;
         @include media-breakpoint-down(md) {
             font-size: $h2-font-size - .5rem;
         }
     }
     h3, h4{
-        color: lighten($dark-3, 65%);
+        color: lighten(#175a9d, 25%);
         margin-top: 2rem;
     }
     p{

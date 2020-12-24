@@ -44,7 +44,7 @@ export default function APINavItems({ navItems }) {
                                                             menuItems?.map((item) => {
                                                                 return (
                                                                     <>
-                                                                        <p className='text-left mb-2'>{item.text}</p>
+                                                                        <p className='text-left mb-2' style={{ color: '#4e9ae5' }}>{item.text}</p>
                                                                     </>
                                                                 )
                                                             })
