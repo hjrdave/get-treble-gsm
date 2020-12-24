@@ -23,7 +23,7 @@ export default function APINavItems({ navItems }) {
 
     return (
         <>
-            <div className='api-nav-items mr-4 pb-4'>
+            <div className={`${styles.apiNavItemsContainer} mr-4 pb-4`}>
                 <Sticky enabled={true} top={0}>
                     <Nav className="flex-column pl-4 pt-4">
                         <APISearch size={'sm'} />
@@ -39,12 +39,12 @@ export default function APINavItems({ navItems }) {
                                             <Accordion.Collapse eventKey="0">
 
                                                 <>
-                                                    <div className='pb-3'>
+                                                    <div className={`pb-3  `}>
                                                         {
                                                             menuItems?.map((item) => {
                                                                 return (
                                                                     <>
-                                                                        <p className='text-left mb-2' style={{ color: '#4e9ae5' }}>{item.text}</p>
+                                                                        <p className={`${styles.apiListItem} text-left mb-2`}>{item.text}</p>
                                                                     </>
                                                                 )
                                                             })

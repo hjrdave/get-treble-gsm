@@ -3,9 +3,11 @@
 @import '~bootstrap/scss/_variables';
 @import '~bootstrap/scss/mixins/breakpoints';
 
-.apiNavItems{
+.apiNavItemsContainer{
+    border-right: 1px solid $dark-1;
+    .apiNavItems{
     p{
-        color: lighten($dark-3, 65%);
+        color: $content-color-base;
         font-size: $font-size-base;
         
         &:hover{
@@ -14,10 +16,20 @@
         }
     }
     .btnLink{
-        color: lighten(#175a9d, 25%);
+        color: $blue-2;
         text-decoration: none!important;
         &:hover{
-            color:lighten(#175a9d, 25%);
+            color:$blue-2;
         }
     }
+    .apiListItem{
+        color: $blue-2;
+        text-decoration: none!important;
+        &:hover{
+            color:$blue-2;
+        }
+        
+    }
 }
+}
+

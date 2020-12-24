@@ -5,24 +5,21 @@ import PageContent from '../components/page-content';
 import APINav from '../widgets/api-nav';
 import DocPostMenu from '../components/doc-post-menu';
 import SEO from '../components/seo';
-import './_post-template.scss';
+import styles from './styles.module.scss';
 
 
-export default function Template({ data, location }) {
-  const { markdownRemark } = data; // data.markdownRemark holds your post data
+export default function APIDocsTemplate({ data, location }) {
+  const { markdownRemark } = data;
   const { frontmatter, html, excerpt } = markdownRemark;
   const { title, date, path, subMenu } = frontmatter;
 
-  useEffect(() => {
-
-  }, [])
   return (
     <>
       <SEO
         title={title}
         description={excerpt}
       />
-      <PageContainer activePath={location} className={'api-doc-pages'}>
+      <PageContainer activePath={location} className={styles.apiDocsTemplate}>
         <div className='d-lg-flex'>
           <APINav />
           <PageContent docs={true}>
@@ -30,7 +27,7 @@ export default function Template({ data, location }) {
               <div className='col-12 col-lg-9'>
                 <h1 className='pt-4'>{title}</h1>
                 <div
-                  className="doc-post-content pr-lg-4"
+                  className={`${styles.apiDocsContent} pr-lg-4`}
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
               </div>
@@ -38,9 +35,7 @@ export default function Template({ data, location }) {
                 <DocPostMenu subMenu={subMenu} path={path} />
               </div>
             </div>
-
           </PageContent>
-
         </div>
       </PageContainer>
     </>
