@@ -16,7 +16,11 @@ export default function APINav() {
             section: 'Introduction',
             menuItems: [
               {
-                text: 'Why Global State?',
+                text: 'What is TrebleGSM?',
+                path: './'
+              },
+              {
+                text: 'Core Concepts',
                 path: './'
               },
               {
@@ -27,13 +31,38 @@ export default function APINav() {
                 text: 'Managing State',
                 path: './'
               },
+              {
+                text: 'Class Support',
+                path: './'
+              }
+            ]
+          },
+          {
+            section: 'Advanced Features',
+            menuItems: [
+              {
+                text: 'Extending Stores',
+                path: './'
+              },
+              {
+                text: 'Scoping Stores',
+                path: './'
+              },
+              {
+                text: 'Persisting State',
+                path: './'
+              },
+              {
+                text: 'Managing Lists',
+                path: './'
+              }
             ]
           },
           {
             section: 'Middleware',
             menuItems: [
               {
-                text: 'Introduction',
+                text: 'What is Middleware?',
                 path: './'
               },
               {
@@ -67,49 +96,82 @@ export default function APINav() {
             section: 'Modules',
             menuItems: [
               {
-                text: 'Introduction',
+                text: 'What are Modules?',
+                path: './'
+              },
+              {
+                text: 'Installing Modules',
                 path: './'
               },
               {
                 text: 'Create a Module',
                 path: './'
+              },
+              {
+                text: 'Troubleshooting',
+                path: './'
               }
             ]
           },
           {
-            section: 'Features',
+            section: 'Typescript',
             menuItems: [
               {
-                text: 'Scaling Stores',
+                text: 'What is TrebleGSM?',
                 path: './'
               },
-              {
-                text: 'Scoped Stores',
-                path: './'
-              },
-              {
-                text: 'Persisting State',
-                path: './'
-              },
-              {
-                text: 'List Management',
-                path: './'
-              }
             ]
           },
           {
             section: 'API References',
             menuItems: [
               {
-                text: 'Dispatchers',
+                text: 'Treble Provider',
                 path: './'
               },
               {
-                text: 'Utilities',
+                text: 'useTreble',
                 path: './'
               },
               {
-                text: 'Store Features',
+                text: 'useScopedTreble',
+                path: './'
+              },
+              {
+                text: 'getTreble',
+                path: './'
+              },
+              {
+                text: 'withTreble',
+                path: './'
+              },
+              {
+                text: 'createStore',
+                path: './'
+              },
+              {
+                text: 'createModule',
+                path: './'
+              },
+              {
+                text: 'reducerActionKeys',
+                path: './'
+              },
+            ]
+          },
+          {
+            section: 'Module References',
+            menuItems: [
+              {
+                text: 'treble-list-manager',
+                path: './'
+              },
+              {
+                text: 'treble-persist',
+                path: './'
+              },
+              {
+                text: 'treble-fetch',
                 path: './'
               },
             ]
