@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { useTreble, updateStore } from 'treble-gsm';
+import React from "react";
+import { useTreble } from 'treble-gsm';
 
-function PageContainer({ children, title, id, activePath, className }) {
+function PageContainer({ children, id, activePath, className }) {
 
-  const [{ }, Store] = useTreble();
+  const [, Store] = useTreble();
 
   //updates page path to global state for navigation active list items
-  useEffect(() => {
+  React.useEffect(() => {
     Store.update('updateActiveNavPath', activePath?.pathname);
   }, [activePath]);
 

@@ -22,10 +22,6 @@ function APISearchComp() {
     }
   }, [searchQuery]);
 
-  React.useEffect(() => {
-    console.log(searchQuery);
-  }, [searchQuery]);
-
   return (
     <>
       <Dropdown>

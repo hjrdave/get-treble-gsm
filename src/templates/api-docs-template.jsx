@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import { graphql } from "gatsby";
-import PageContainer from '../components/page-container';
-import PageContent from '../components/page-content';
+import PageContainer from '../components/organisms/page-container';
+import PageContent from '../components/organisms/page-content';
 import { Button } from 'react-bootstrap';
 import APINav from '../widgets/api-nav';
 import Image from '../images/register';

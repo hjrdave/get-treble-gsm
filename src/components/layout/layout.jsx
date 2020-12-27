@@ -7,8 +7,8 @@
 
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Header from "../header";
-import Footer from "../footer";
+import Header from "../organisms/header";
+import Footer from "../organisms/footer";
 import "./_layout.scss";
 import SEO from '../seo';
 
@@ -25,13 +25,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <SEO/>
+      <SEO />
       <Header siteTitle={'Get Treble GSM'} />
       <main>
         {children}
       </main>
       <Footer />
-      
+
     </>
   )
 }

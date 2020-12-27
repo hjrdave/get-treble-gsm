@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, InputGroup, FormControl } from 'react-bootstrap';
-import { useInput, useDebounce } from '../hooks';
+import { useInput, useDebounce } from '../../hooks';
 import { useSearchAPIStore } from './Store';
 
 const CustomToggle = React.forwardRef(({ onClick }, ref) => {

@@ -1,12 +1,9 @@
-@import '../variables';
+@import '../../variables';
 
-header{
-  
+.container{
   background-color: #20222A;
   height: 60px;
-  // box-shadow: $shadow-2;
-  .header-logo{
-    //border: 1px solid red;
+  .logo{
     width: 35px;
     height: auto;
     margin-top: -15px;
@@ -14,7 +11,7 @@ header{
       margin-top: 0px;
     }
   }
-  .header-title{
+  .title{
     margin-top: -30px;
     a{
       h4{
@@ -24,11 +21,8 @@ header{
           opacity: 1;
         }
       }
-      
       color: white;
-      
       text-decoration: none;
-      
     }
   }
 }

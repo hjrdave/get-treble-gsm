@@ -1,19 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from 'gatsby';
-import PageContainer from '../components/page-container';
-import PageContent from '../components/page-content';
+import PageContainer from '../components/organisms/page-container';
+import PageContent from '../components/organisms/page-content';
 import Image from '../images/register';
 import Button from 'react-bootstrap/Button';
-import InfoCard from '../components/info-card';
+import InfoCard from '../components/organisms/info-card';
 import SEO from '../components/seo';
 import Prism from "prismjs";
 import './_styles.scss';
 
-function HomePage() {
-  useEffect(() => {
+export default function HomePage() {
+
+  React.useEffect(() => {
     // call the highlightAll() function to style our code blocks
-    Prism.highlightAll()
-  }, [])
+    Prism.highlightAll();
+  }, []);
+
   return (
     <>
       <SEO
@@ -227,7 +229,5 @@ Store.update('updatePokemon', 'Pikachu')
       </PageContainer>
     </>
   )
-}
+};
 
-
-export default HomePage;

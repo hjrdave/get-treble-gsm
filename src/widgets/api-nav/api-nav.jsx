@@ -4,7 +4,7 @@
 */
 
 import React from 'react';
-import APINavItems from '../../components/api-nav-items';
+import APINavItems from '../../components/organisms/api-nav-items';
 
 export default function APINav() {
 

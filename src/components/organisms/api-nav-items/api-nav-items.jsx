@@ -1,11 +1,13 @@
 import React, { useEffect, Fragment } from 'react';
 import { Nav, Accordion, Card, Button } from 'react-bootstrap';
-import CustomToggle from './custom-toggle';
+import SectionDropdown from '../../molecules/section-dropdown';
+import SectionCollapse from '../../atoms/section-collapse';
+import SectionContainer from '../../atoms/section-container';
 import { Link } from 'gatsby';
 import Sticky from 'react-stickynode';
 import styles from './styles.module.scss';
 import { useTreble } from 'treble-gsm';
-import APISearch from '../api-search';
+import APISearch from '../../api-search';
 import uniqid from 'uniqid';
 
 export default function APINavItems({ navItems }) {
@@ -17,10 +19,6 @@ export default function APINavItems({ navItems }) {
         Store.update('updateMobileDocNavState', false);
     }, [activeNavPath]);
 
-    React.useEffect(() => {
-        console.log(navItems);
-    }, [navItems])
-
     return (
         <>
             <div className={`${styles.apiNavItemsContainer} mr-4 pb-4`}>
@@ -31,30 +29,20 @@ export default function APINavItems({ navItems }) {
                             navItems.map(({ section, menuItems }) => {
                                 return (
                                     <Fragment key={uniqid()}>
-                                        <Accordion className={styles.apiNavItems}>
-
-
-                                            <CustomToggle section={section} />
-
-                                            <Accordion.Collapse eventKey="0">
-
-                                                <>
-                                                    <div className={`pb-3  `}>
-                                                        {
-                                                            menuItems?.map((item) => {
-                                                                return (
-                                                                    <>
-                                                                        <p className={`${styles.apiListItem} text-left mb-2`}>{item.text}</p>
-                                                                    </>
-                                                                )
-                                                            })
-                                                        }
-                                                    </div>
-                                                </>
-
-                                            </Accordion.Collapse>
-
-                                        </Accordion>
+                                        <SectionContainer className={styles.apiNavItems}>
+                                            <SectionDropdown section={section} />
+                                            <SectionCollapse>
+                                                {
+                                                    menuItems?.map((item) => {
+                                                        return (
+                                                            <>
+                                                                <p className={`${styles.apiListItem} text-left mb-2`}>{item.text}</p>
+                                                            </>
+                                                        )
+                                                    })
+                                                }
+                                            </SectionCollapse>
+                                        </SectionContainer>
                                     </Fragment>
                                 )
                             })

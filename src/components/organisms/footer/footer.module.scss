@@ -1,6 +1,6 @@
-@import '../variables';
+@import '../../variables';
 
-footer{
+.container{
   background-color: #292B32;
   p{
     color: white;
@@ -10,9 +10,9 @@ footer{
 
     }
   }
-  .footer-content{
+  .content{
     height: 125px;
-    .footer-social-media{
+    .socialMedia{
       a{
         color: white;
         opacity: .5;
@@ -26,7 +26,7 @@ footer{
       }
     }
   }
-  .footer-copyright{
+  .copyright{
     background-color: #20222A;
     font-size: $font-size-base - .2rem;
     a{

@@ -1,4 +1,4 @@
-@import '../variables';
+@import '../../variables';
 @import '~bootstrap/scss/_functions';
 @import '~bootstrap/scss/_variables';
 @import '~bootstrap/scss/mixins/breakpoints';
@@ -16,13 +16,7 @@
             cursor: pointer;
         }
     }
-    .btnLink{
-        color: $blue-2;
-        text-decoration: none!important;
-        &:hover{
-            color:$blue-2;
-        }
-    }
+    
     .apiListItem{
         color: $blue-2;
         text-decoration: none!important;
