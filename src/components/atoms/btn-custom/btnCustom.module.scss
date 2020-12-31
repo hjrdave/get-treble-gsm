@@ -1,6 +1,36 @@
 @import '../../variables';
 
 .btnCustom{
-    border-color: #175b9d;
+    border-color: $blue;
     border-radius: 25px;
+    opacity: 1;
+    transition: opacity .3;
+    &:hover{
+        opacity: .75;
+    }
+    &:visited{
+        background-color: $blue;
+    }
+    &:focus{
+        background-color: $blue;
+    }
+    &:active{
+        background-color: $blue;
+    }
+}
+
+.btnDark{
+    background-color: $dark-1;
+    &:hover{
+        background-color: $dark-1;
+    }
+    &:visited{
+        background-color: $dark-1;
+    }
+    &:focus{
+        background-color: $dark-1;
+    }
+    &:active{
+        background-color: $dark-1;
+    }
 }

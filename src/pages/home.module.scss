@@ -7,41 +7,26 @@
     .homeBanner{
         height: 650px;
         background-color: #282B33;
-        //transform: skew(-10deg);
-        //width: 100%;
         .homeBannerLogo{
-            //border: 1px solid red;
             margin-top: -75px;
             h1{
                 color: white;
                 font-size: 3.5rem;
             }
-           
         }
         p{
             color: white;
             font-size: 1.4rem;
             font-weight: 200;
-            
         }
-        
     }
-    .homeBannerSkewed{
-        margin-top: -100px;
-        height: 150px;
-        background-color: #282B33;
-        transform: skewY(3deg);
-    }
+    
     .homeCardRow{
         position: relative;
         z-index: 10;
         margin-top: -100px;
     }
-    .homeLogoGithub{
-        .gatsby-image-wrapper{
-            width: 300px!important;
-        }
-    }
+    
     h3{
         font-size: $h3-font-size;
         @include media-breakpoint-down(lg) {
@@ -59,33 +44,13 @@
           }
     }
 
-    .homeRowSkewed{
-        //margin-top: 100px;
-        height: 150px;
-        margin-top: -150px;
-        background-color: #282B33;
-        transform: skewY(-3deg);
+    .installRow{
+        margin-top: 9rem;
+        padding-bottom: 6rem;
     }
-    .homeRowSkewedBottom{
-        //margin-top: 100px;
-        position: relative;
-        z-index: -1;
-        height: 150px;
-        margin-top: -100px;
-        background-color: #282B33;
-        transform: skewY(-3deg);
-    }
-    .homeInstallRowSkewed{
-
-         height: 100px;
-       margin-top: -150px;
-        background-color: #F2F3F3;
-        transform: skewY(3deg);
-        
-    }
+  
     .threeStepsRow{
         margin-top: 10rem;
-        padding-bottom: 6rem;
     }
 
     

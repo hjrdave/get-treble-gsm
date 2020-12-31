@@ -4,6 +4,7 @@ import PageContainer from '../components/organisms/page-container';
 import PageContent from '../components/organisms/page-content';
 import ButtonCustom from '../components/atoms/btn-custom';
 import SkewedBorder from '../components/atoms/skewed-border';
+import SupportRow from '../components/organisms/support-row';
 import Image from '../images/register';
 import { Button, Row, Col } from 'react-bootstrap';
 import InfoCard from '../components/organisms/info-card';
@@ -103,7 +104,7 @@ export default function HomePage() {
         <SkewedBorder left white style={{ marginTop: '-280px', marginBottom: '-130px', height: '200px' }} />
         <PageContent bkGradient style={{ marginTop: '-50px' }}>
           <Row className={`pt-4 mt-2`}>
-            <Col className={`${styles.threeStepsRow} pt-4`}>
+            <Col className={`${styles.installRow} pt-4`}>
               <h3 className='text-center text-lg-left pt-4'>Install Package</h3>
               <div className='language-javascript mt-4'>
                 <pre>
@@ -201,21 +202,9 @@ Store.update('updatePokemon', 'Pikachu')
             </Col>
           </Row>
         </PageContent>
-        <div className='home-row-skewed-bottom'></div>
+        <SkewedBorder left dark style={{ marginTop: '-100px', position: 'relative', zIndex: '-1' }} />
         <PageContent>
-          <Row className='pt-4 mt-4 mb-4 d-flex justify-content-center'>
-            <Col sm='8' lg='12' className='pt-4'>
-              {/* <ContentCard> */}
-              <div className='home-logo-github d-flex justify-content-center'>
-                <Image name={'logoGithub'} />
-              </div>
-              <h5 className='pt-3 text-center'>Want to Support this Project?</h5>
-              <div className='d-flex justify-content-center'>
-                <Button className='px-4 py-2 mt-3' style={{ backgroundColor: '#20222A', borderColor: '#20222A', borderRadius: '25px', }}><a href='https://github.com/hjrdave/treble-gsm' target='_blank' style={{ color: 'white', textDecoration: 'none' }}>Contribute</a></Button>
-              </div>
-              {/* </ContentCard> */}
-            </Col>
-          </Row>
+          <SupportRow />
         </PageContent>
       </PageContainer>
     </>
