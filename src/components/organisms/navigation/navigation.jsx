@@ -1,18 +1,16 @@
-import React, { Fragment } from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import React from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from "gatsby";
-import Image from '../../images/register';
+import Image from '../../../images/register';
 import uniqid from 'uniqid';
-import './_navigation.scss';
-// import Search from '../searchContainer.js'
+import navigation from './navigation.module.scss';
 
 function Navigation({ navItems }) {
 
   return (
     <>
-      <Navbar className='navigation'>
-        <Nav className="mr-auto">
+      <Navbar className={navigation.navigation}>
+        <Nav className={`${navigation.navbarNav} mr-auto`}>
           {
             navItems?.map((item) => {
               return (
@@ -24,7 +22,7 @@ function Navigation({ navItems }) {
           }
 
           <a href='https://github.com/hjrdave/treble-gsm' target='_blank' className='nav-link'><i className="fab fa-github"></i></a>
-          <a href='https://mediafish.io' className='nav-link' target='_blank'><Image name={'logoMediafishIconOnly'} /></a>
+          <a href='https://mediafish.io' className='nav-link' target='_blank'><Image name={'logoMediafishIconOnly'} className={navigation.gatsbyImageWrapper} /></a>
 
           {/* <Search /> */}
         </Nav>

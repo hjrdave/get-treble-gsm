@@ -1,22 +1,19 @@
-@import '../variables';
+@import '../../variables';
 
-.api-search{
+.apiSearch{
   padding-bottom: 0px;
   margin-bottom: 0px;
 
-
-  
-  .input-group-prepend{
-    
+  .inputGroupPrepend{
     i{
       color: lighten($dark-3, 65%);
     }
-    .input-group-text{
+    .inputGroupText{
       background-color: $dark-1;
       border-color: lighten($dark-3, 10%);
     }
   }
-  .form-control{
+  .formControl{
     padding: 1.2rem 0 1.2rem 0 !important;
     border-color: lighten($dark-3, 10%);
     border-left: none;
@@ -38,7 +35,7 @@
 
   }
 }
-.dropdown-custom-menu{
+.dropdownCustomMenu{
   background-color: $dark-1;
   border-color: lighten($dark-3, 10%);
   max-height: 400px;

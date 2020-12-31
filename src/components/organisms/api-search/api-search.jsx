@@ -5,7 +5,7 @@ import { Dropdown } from "react-bootstrap";
 import CustomToggle from './custom-toggle';
 import SearchResults from './search-results';
 import { useSearchAPIStore } from './Store';
-import './styles.scss';
+import apiSearchStyles from './apiSearch.module.scss';
 
 function APISearchComp() {
 
@@ -26,7 +26,7 @@ function APISearchComp() {
     <>
       <Dropdown>
         <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components" />
-        <Dropdown.Menu className={'dropdown-custom-menu'}>
+        <Dropdown.Menu className={apiSearchStyles.dropdownCustomMenu}>
           <SearchResults results={results} />
         </Dropdown.Menu>
       </Dropdown>

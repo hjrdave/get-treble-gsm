@@ -1,5 +1,5 @@
 import React, { useEffect, Fragment } from 'react';
-import { Nav, Accordion, Card, Button } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 import SectionDropdown from '../../molecules/section-dropdown';
 import SectionCollapse from '../../atoms/section-collapse';
 import SectionContainer from '../../atoms/section-container';
@@ -7,7 +7,7 @@ import { Link } from 'gatsby';
 import Sticky from 'react-stickynode';
 import styles from './styles.module.scss';
 import { useTreble } from 'treble-gsm';
-import APISearch from '../../api-search';
+import APISearch from '../api-search';
 import uniqid from 'uniqid';
 
 export default function APINavItems({ navItems }) {

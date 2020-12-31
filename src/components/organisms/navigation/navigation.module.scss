@@ -1,7 +1,7 @@
-@import '../variables';
+@import '../../variables';
 
 .navigation{
-  .navbar-nav{
+  .navbarNav{
     margin-top: -5px;
     a{
       color: white !important;
@@ -13,7 +13,7 @@
         color: white;
         opacity: 1;
       }
-        .gatsby-image-wrapper{
+        .gatsbyImageWrapper{
           width: 28px;
           margin-top: -6px;
         }

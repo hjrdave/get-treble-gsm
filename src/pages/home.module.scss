@@ -4,12 +4,12 @@
 @import '~bootstrap/scss/mixins/breakpoints';
 
 
-    .home-banner{
+    .homeBanner{
         height: 650px;
         background-color: #282B33;
         //transform: skew(-10deg);
         //width: 100%;
-        .home-banner-logo{
+        .homeBannerLogo{
             //border: 1px solid red;
             margin-top: -75px;
             h1{
@@ -26,17 +26,18 @@
         }
         
     }
-    .home-banner-skewed{
+    .homeBannerSkewed{
         margin-top: -100px;
         height: 150px;
         background-color: #282B33;
         transform: skewY(3deg);
     }
-    .home-card-row{
+    .homeCardRow{
+        position: relative;
         z-index: 10;
         margin-top: -100px;
     }
-    .home-logo-github{
+    .homeLogoGithub{
         .gatsby-image-wrapper{
             width: 300px!important;
         }
@@ -58,14 +59,14 @@
           }
     }
 
-    .home-row-skewed{
+    .homeRowSkewed{
         //margin-top: 100px;
         height: 150px;
         margin-top: -150px;
         background-color: #282B33;
         transform: skewY(-3deg);
     }
-    .home-row-skewed-bottom{
+    .homeRowSkewedBottom{
         //margin-top: 100px;
         position: relative;
         z-index: -1;
@@ -74,7 +75,7 @@
         background-color: #282B33;
         transform: skewY(-3deg);
     }
-    .home-install-row-skewed{
+    .homeInstallRowSkewed{
 
          height: 100px;
        margin-top: -150px;
@@ -82,29 +83,12 @@
         transform: skewY(3deg);
         
     }
-
-    .bk-gradient{
-        background: rgb(23,90,157);
-        background: -moz-linear-gradient(78deg, rgba(23,90,157,1) 0%, rgba(87,192,156,1) 100%);
-        background: -webkit-linear-gradient(78deg, rgba(23,90,157,1) 0%, rgba(87,192,156,1) 100%);
-        background: linear-gradient(78deg, rgba(23,90,157,1) 0%, rgba(87,192,156,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#175a9d",endColorstr="#57c09c",GradientType=1);
+    .threeStepsRow{
+        margin-top: 10rem;
+        padding-bottom: 6rem;
     }
 
-    .bk-dark{
-        
-        background-color: #282B33;
-        .three-steps-row{
-            
-        }
-        h3{
-            color: white;
-        }
-        p{
-            color: white;
-        }
-        pre{
-            background: #20222A;
-        }
-    }
+    
+
+    
     

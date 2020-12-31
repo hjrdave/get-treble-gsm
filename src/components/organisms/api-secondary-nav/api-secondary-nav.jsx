@@ -3,20 +3,20 @@ import Sticky from 'react-stickynode';
 import { ListGroup } from 'react-bootstrap';
 import { Link } from "gatsby";
 import uniqid from 'uniqid';
-import './_doc-post-menu.scss';
+import apiSecondaryNav from './apiSecondaryNav.module.scss';
 
-export default function DocPostMenu({ subMenu, path }) {
+export default function APISecondaryNav({ subMenu, path }) {
     return (
         <>
-            <div className='doc-post-menu pl-lg-4 d-none d-lg-flex'>
-                <ListGroup className='py-4'>
+            <div className={`${apiSecondaryNav.menuItems} pl-lg-4 d-none d-lg-flex`}>
+                <ListGroup className={`${apiSecondaryNav.listGroup} py-4`}>
                     <Sticky enabled={true} top={40}>
-                        <ListGroup.Item><h6>Table of Contents</h6></ListGroup.Item>
+                        <ListGroup.Item className={apiSecondaryNav.listGroup}><h6>Table of Contents</h6></ListGroup.Item>
                         {
                             subMenu.map((item) => {
                                 return (
                                     <Fragment key={uniqid()}>
-                                        <ListGroup.Item><Link to={`${path}${item.path}`}>{item.text}</Link></ListGroup.Item>
+                                        <ListGroup.Item className={apiSecondaryNav.listGroup}><Link to={`${path}${item.path}`}>{item.text}</Link></ListGroup.Item>
                                     </Fragment>
                                 )
                             })

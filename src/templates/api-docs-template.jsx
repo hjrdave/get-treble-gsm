@@ -1,11 +1,11 @@
-import React, { Fragment, useEffect } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import PageContainer from '../components/organisms/page-container';
 import PageContent from '../components/organisms/page-content';
 import { Button } from 'react-bootstrap';
 import APINav from '../widgets/api-nav';
 import Image from '../images/register';
-import DocPostMenu from '../components/doc-post-menu';
+import APISecondaryNav from '../components/organisms/api-secondary-nav';
 import SEO from '../components/seo';
 import styles from './styles.module.scss';
 
@@ -40,7 +40,7 @@ export default function APIDocsTemplate({ data, location }) {
                 </div>
               </div>
               <div className='col-3 d-none d-lg-block'>
-                <DocPostMenu subMenu={subMenu} path={path} />
+                <APISecondaryNav subMenu={subMenu} path={path} />
               </div>
             </div>
 

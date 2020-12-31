@@ -4,7 +4,7 @@
 */
 
 import React from 'react';
-import Navigation from '../../components/navigation';
+import Navigation from '../../components/organisms/navigation';
 
 function MainNav() {
 
