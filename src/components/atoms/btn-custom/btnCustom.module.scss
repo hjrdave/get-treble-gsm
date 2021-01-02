@@ -5,6 +5,7 @@
     border-radius: 25px;
     opacity: 1;
     transition: opacity .3;
+    
     &:hover{
         opacity: .75;
     }
@@ -19,8 +20,13 @@
     }
 }
 
+.gradient{
+    color: white;
+}
+
 .btnDark{
     background-color: $dark-1;
+    color: white;
     &:hover{
         background-color: $dark-1;
     }

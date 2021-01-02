@@ -9,8 +9,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import LargeSocialImage from './../../images/og-image-treble-gsm-lg.png';
-import socialImage from './../../images/og-image-treble-gsm.png';
+import LargeSocialImage from '../../../images/og-image-treble-gsm-lg.png';
+import socialImage from '../../../images/og-image-treble-gsm.png';
 
 function SEO({ description, lang, meta, title, thumbnail, path, homePage }) {
   const { site } = useStaticQuery(

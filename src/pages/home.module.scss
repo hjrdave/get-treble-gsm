@@ -26,23 +26,6 @@
         z-index: 10;
         margin-top: -100px;
     }
-    
-    h3{
-        font-size: $h3-font-size;
-        @include media-breakpoint-down(lg) {
-            font-size: $h3-font-size + .3rem;
-          }
-    }
-    p{
-        @include media-breakpoint-down(md) {
-            font-size: $font-size-base + .1rem!important ;
-          }
-    }
-    pre{
-        @include media-breakpoint-down(md) {
-            font-size: $font-size-base - .1rem!important ;
-          }
-    }
 
     .installRow{
         margin-top: 9rem;

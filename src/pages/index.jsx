@@ -8,16 +8,12 @@ import SupportRow from '../components/organisms/support-row';
 import Image from '../images/register';
 import { Button, Row, Col } from 'react-bootstrap';
 import InfoCard from '../components/organisms/info-card';
-import SEO from '../components/seo';
-import Prism from "prismjs";
+import CodeBlock from '../components/atoms/code-block';
+import SEO from '../components/atoms/seo';
+// import Prism from "prismjs";
 import styles from './home.module.scss';
 
 export default function HomePage() {
-
-  React.useEffect(() => {
-    // call the highlightAll() function to style our code blocks
-    Prism.highlightAll();
-  }, []);
 
   return (
     <>
@@ -106,20 +102,12 @@ export default function HomePage() {
           <Row className={`pt-4 mt-2`}>
             <Col className={`${styles.installRow} pt-4`}>
               <h3 className='text-center text-lg-left pt-4'>Install Package</h3>
-              <div className='language-javascript mt-4'>
-                <pre>
-                  <code>
-                    {`npm install treble-gsm`}
-                  </code>
-                </pre>
-              </div>
-              <div className='language-javascript mt-4'>
-                <pre>
-                  <code>
-                    {`yarn add treble-gsm`}
-                  </code>
-                </pre>
-              </div>
+              <CodeBlock>
+                {`npm install treble-gsm`}
+              </CodeBlock>
+              <CodeBlock className='mt-4'>
+                {`yarn add treble-gsm`}
+              </CodeBlock>
             </Col>
           </Row>
         </PageContent>
@@ -131,10 +119,8 @@ export default function HomePage() {
               <p className='pt-3 pt-lg-0 text-white'>Create a file in your folder structure called <code>Store.js</code>. Import <code>createStore</code> from treble-gsm and assign it to a variable called Store. The Store variable will store an array of objects. Each object will have an action and state property.  The <code>action</code> property will be a string that is used to tell Treble which state to update.  The <code>state</code> property will hold the global state.</p>
             </Col>
             <Col lg='6' className='pt-lg-4'>
-              <div className='language-javascript'>
-                <pre>
-                  <code>
-                    {`
+              <CodeBlock>
+                {`
 const Store = createStore([
     {
         action: 'updatePokemon',
@@ -142,18 +128,13 @@ const Store = createStore([
     }
 ],);
                   `}
-
-                  </code>
-                </pre>
-              </div>
+              </CodeBlock>
             </Col>
           </Row>
           <Row className='pt-4 mt-4 flex-column-reverse flex-lg-row'>
             <Col lg='6'>
-              <div className='language-javascript'>
-                <pre>
-                  <code>
-                    {`
+              <CodeBlock>
+                {`
 const App = () => {
     return (
         <Treble store={Store}>
@@ -162,9 +143,7 @@ const App = () => {
     );
 }
                     `}
-                  </code>
-                </pre>
-              </div>
+              </CodeBlock>
             </Col>
             <Col lg='6'>
               <h3 className='text-center text-lg-left text-white'>Wrap Components with Provider</h3>
@@ -177,10 +156,8 @@ const App = () => {
               <p className='pt-3 pt-lg-0 text-white'>Import the <code>useTreble</code> hook into your component and get access to Store state objects and Store subscribe methods.  Destructure both from the <code>useTreble</code> hook. Use <code>Store.update</code> to target the desired state in the Store by its action and dispatch the new value to the Store. Tada! That is it, you can now manage global state in your app like a boss!</p>
             </Col>
             <Col lg='6'>
-              <div className='language-javascript'>
-                <pre>
-                  <code>
-                    {`
+              <CodeBlock>
+                {`
 const [{ pokemon }, Store] = useTreble();
 
 Store.update(action, dispatchValue);
@@ -191,9 +168,7 @@ Store.update(action, dispatchValue);
 Store.update('updatePokemon', 'Pikachu')
 //render: Pikachu is my favorite Pokemon!
                   `}
-                  </code>
-                </pre>
-              </div>
+              </CodeBlock>
             </Col>
           </Row>
           <Row className='d-flex justify-content-center pt-4'>

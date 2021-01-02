@@ -7,6 +7,10 @@
     border-right: 1px solid $dark-1;
     width: 300px;
     .apiNavItems{
+        
+        &:hover{
+            text-decoration: none;
+        }
     p{
         color: $content-color-base;
         font-size: $font-size-base;
@@ -15,13 +19,17 @@
             color: white;
             cursor: pointer;
         }
+        a{
+            text-decoration: none;
+            color: $content-color-base;
+        }
     }
     
     .apiListItem{
-        color: $blue-2;
-        text-decoration: none!important;
+        //color: $blue-2;
+        text-decoration: none;
         &:hover{
-            color:$blue-2;
+            //color:$blue-2;
         }
         
     }

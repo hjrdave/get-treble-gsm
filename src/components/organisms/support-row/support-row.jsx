@@ -15,8 +15,7 @@ export default function SupportRow() {
                         <Image name={'logoGithub'} className={styles.homeLogoGithub} />
                     </div>
                     <h5 className='pt-3 text-center'>Want to Support this Project?</h5>
-                    <div className='d-flex justify-content-center'>
-                        {/* <Button className='px-4 py-2 mt-3' style={{ backgroundColor: '#20222A', borderColor: '#20222A', borderRadius: '25px', }}><a href='https://github.com/hjrdave/treble-gsm' target='_blank' style={{ color: 'white', textDecoration: 'none' }}>Contribute</a></Button> */}
+                    <div className='d-flex justify-content-center pt-3'>
                         <a href={'https://github.com/hjrdave/treble-gsm'} target={'_blank'} style={{ color: 'white', textDecoration: 'none' }}>
                             <ButtonCustom dark>Contribute</ButtonCustom>
                         </a>

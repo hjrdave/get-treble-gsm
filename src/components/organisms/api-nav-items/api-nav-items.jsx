@@ -1,11 +1,11 @@
-import React, { useEffect, Fragment } from 'react';
+import React from 'react';
+import { Link } from 'gatsby';
 import { Nav } from 'react-bootstrap';
 import SectionDropdown from '../../molecules/section-dropdown';
 import SectionCollapse from '../../atoms/section-collapse';
 import SectionContainer from '../../atoms/section-container';
-import { Link } from 'gatsby';
 import Sticky from 'react-stickynode';
-import styles from './styles.module.scss';
+import styles from './apiNavItems.module.scss';
 import { useTreble } from 'treble-gsm';
 import APISearch from '../api-search';
 import uniqid from 'uniqid';
@@ -15,9 +15,21 @@ export default function APINavItems({ navItems }) {
     const [{ mobileDocNavState, activeNavPath }, Store] = useTreble();
 
     //if page changes mobilenav will be closed
-    useEffect(() => {
+    React.useEffect(() => {
         Store.update('updateMobileDocNavState', false);
     }, [activeNavPath]);
+
+    React.useEffect(() => {
+        let postData = [];
+        navItems.map((item) => {
+            postData = [...postData, ...item.menuItems]
+        });
+        Store.update('updateAPINavPostData', postData.filter((item) => {
+            if (item) {
+                return item;
+            }
+        }));
+    }, []);
 
     return (
         <>
@@ -28,22 +40,26 @@ export default function APINavItems({ navItems }) {
                         {
                             navItems.map(({ section, menuItems }) => {
                                 return (
-                                    <Fragment key={uniqid()}>
+                                    <React.Fragment key={uniqid()}>
                                         <SectionContainer className={styles.apiNavItems}>
                                             <SectionDropdown section={section} />
                                             <SectionCollapse>
                                                 {
                                                     menuItems?.map((item) => {
                                                         return (
-                                                            <>
-                                                                <p className={`${styles.apiListItem} text-left mb-2`}>{item.text}</p>
-                                                            </>
+                                                            <React.Fragment key={uniqid()}>
+                                                                <p className={`${styles.apiListItem} text-left mb-2`}>
+                                                                    <Link to={item.path}>
+                                                                        {item.text}
+                                                                    </Link>
+                                                                </p>
+                                                            </React.Fragment>
                                                         )
                                                     })
                                                 }
                                             </SectionCollapse>
                                         </SectionContainer>
-                                    </Fragment>
+                                    </React.Fragment>
                                 )
                             })
                         }

@@ -8,6 +8,12 @@ const Store = createStore([
     {
         action: 'updateMobileDocNavState',
         state: { mobileDocNavState: false }
+    },
+    {
+        action: 'updateAPINavPostData',
+        state: {
+            apiNavPostData: []
+        }
     }
 ]);
 

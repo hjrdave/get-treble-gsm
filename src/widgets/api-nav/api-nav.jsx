@@ -5,8 +5,15 @@
 
 import React from 'react';
 import APINavItems from '../../components/organisms/api-nav-items';
+import { useTreble } from 'treble-gsm';
 
 export default function APINav() {
+
+  const [{ apiNavPostData }] = useTreble();
+
+  React.useEffect(() => {
+    console.log(apiNavPostData);
+  }, [apiNavPostData]);
 
   return (
     <>
@@ -17,7 +24,7 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'What is TrebleGSM?',
-                path: './'
+                path: './api/class-components'
               },
               {
                 text: 'Core Concepts',
