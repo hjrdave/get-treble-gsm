@@ -24,23 +24,23 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'What is TrebleGSM?',
-                path: './api/what-is-treblegsm'
+                path: './api/introduction/what-is-treblegsm'
               },
               {
                 text: 'Core Concepts',
-                path: './'
+                path: './api/introduction/core-concepts'
               },
               {
                 text: 'Getting Started',
-                path: './'
+                path: './api/introduction/getting-started'
               },
               {
                 text: 'Managing State',
-                path: './'
+                path: './api/introduction/managing-state'
               },
               {
                 text: 'Class Support',
-                path: './'
+                path: './api/introduction/class-support'
               }
             ]
           },
@@ -49,19 +49,19 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'Extending Stores',
-                path: './'
+                path: './api/advanced-features/extending-stores'
               },
               {
                 text: 'Scoping Stores',
-                path: './'
+                path: './api/advanced-features/scoping-stores'
               },
               {
                 text: 'Persisting State',
-                path: './'
+                path: './api/advanced-features/persisting-state'
               },
               {
                 text: 'Managing Lists',
-                path: './'
+                path: './api/advanced-features/managing-lists'
               }
             ]
           },
@@ -70,32 +70,32 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'What is Middleware?',
-                path: './'
+                path: './api/middleware/what-is-middleware'
               },
               {
                 text: 'Payload Listeners',
-                path: './'
+                path: './api/middleware/payload-listeners'
               },
               {
                 text: 'Log',
-                path: './'
+                path: './api/middleware/log'
               },
               {
                 text: 'Run',
-                path: './'
+                path: './api/middleware/run'
               },
               ,
               {
                 text: 'Check',
-                path: './'
+                path: './api/middleware/check'
               },
               {
                 text: 'Process',
-                path: './'
+                path: './api/middleware/process'
               },
               {
                 text: 'Callback',
-                path: './'
+                path: './api/middleware/callback'
               }
             ]
           },
@@ -104,19 +104,19 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'What are Modules?',
-                path: './'
+                path: './api/modules/what-are-modules'
               },
               {
                 text: 'Installing Modules',
-                path: './'
+                path: './api/modules/installing-modules'
               },
               {
                 text: 'Create a Module',
-                path: './'
+                path: './api/modules/'
               },
               {
                 text: 'Troubleshooting',
-                path: './'
+                path: './api/modules/'
               }
             ]
           },
@@ -125,7 +125,7 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'What is TrebleGSM?',
-                path: './'
+                path: './api/typescript/'
               },
             ]
           },
@@ -134,35 +134,35 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'Treble Provider',
-                path: './'
+                path: './api/references/'
               },
               {
                 text: 'useTreble',
-                path: './'
+                path: './api/references/'
               },
               {
                 text: 'useScopedTreble',
-                path: './'
+                path: './api/references/'
               },
               {
                 text: 'getTreble',
-                path: './'
+                path: './api/references/'
               },
               {
                 text: 'withTreble',
-                path: './'
+                path: './api/references/'
               },
               {
                 text: 'createStore',
-                path: './'
+                path: './api/references/'
               },
               {
                 text: 'createModule',
-                path: './'
+                path: './api/references/'
               },
               {
                 text: 'reducerActionKeys',
-                path: './'
+                path: './api/references/'
               },
             ]
           },
@@ -171,16 +171,16 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'treble-list-manager',
-                path: './'
+                path: './api/module-references/'
               },
               {
                 text: 'treble-persist',
-                path: './'
+                path: './api/module-references/'
               },
               {
                 text: 'treble-fetch',
-                path: './'
-              },
+                path: './api/module-references/'
+              }
             ]
           }
         ]}
