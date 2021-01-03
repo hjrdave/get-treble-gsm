@@ -1,9 +1,8 @@
 ---
-path: "/api/run"
+path: "/api/get-treble"
 date: "2021-01-01"
-title: "Run"
+title: "getTreble"
 subMenu: 
     - text: ''
       path: '#'
 ---
-

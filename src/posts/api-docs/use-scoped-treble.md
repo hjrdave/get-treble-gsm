@@ -1,9 +1,8 @@
 ---
-path: "/api/run"
+path: "/api/use-scoped-treble"
 date: "2021-01-01"
-title: "Run"
+title: "useScopedTreble"
 subMenu: 
     - text: ''
       path: '#'
 ---
-

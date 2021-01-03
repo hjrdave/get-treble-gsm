@@ -1,9 +1,8 @@
 ---
-path: "/api/run"
+path: "/api/reducer-action-keys"
 date: "2021-01-01"
-title: "Run"
+title: "reducerActionKeys"
 subMenu: 
     - text: ''
       path: '#'
 ---
-
