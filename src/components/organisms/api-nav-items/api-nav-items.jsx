@@ -33,7 +33,7 @@ export default function APINavItems({ navItems }) {
 
     return (
         <>
-            <div className={`${styles.apiNavItemsContainer} mr-4 pb-4`}>
+            <div className={`${styles.apiNavItemsContainer} pb-4`}>
                 <Sticky enabled={true} top={0} bottomBoundary={'#api-docs-skewed-row'}>
                     <Nav className="flex-column pl-4 pt-4">
                         <APISearch size={'sm'} />

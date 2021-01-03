@@ -2,14 +2,17 @@
 
 .menuItems{
     height: 100%;
+     border-left:1px solid rgba(0, 0, 0, 0.125);
     .listGroup{
         background: none;
         border: none;
-        border-left:1px solid rgba(0, 0, 0, 0.125);
+       padding: .5rem .5rem .25rem .5rem;
         height: 100%;
+        
         //width: 250px;
         color: lighten($dark-3, 65%);
         .listGroupItem{
+            
             background: none;
             border: none;
             padding: .25rem 0px .25rem 1.5rem;

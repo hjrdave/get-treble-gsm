@@ -61,5 +61,12 @@
     .rowlogoGithub{
         padding-top: 3rem;
     }
+
+    .pageContent{
+        width: calc(100% - 550px);
+        @include media-breakpoint-down(md) {
+                width: 100%;
+            }
+    }
 }
 

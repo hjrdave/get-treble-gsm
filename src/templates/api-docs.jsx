@@ -24,22 +24,24 @@ export default function APIDocs({ data, location }) {
       />
       <PageContainer activePath={location} className={styles.apiDocsTemplate}>
         <div className={`d-lg-flex pb-4 ${styles.apiDocsContentRow}`}>
-          <APINav />
-          <PageContent docs={true} >
+          <div className='d-none d-lg-block'>
+            <APINav />
+          </div>
+          <div className={`px-4 ${styles.pageContent}`}>
             <Row>
-              <Col lg={'9'}>
+              <Col lg={'12'}>
                 <h1 className='pt-4'>{title}</h1>
                 <div
-                  className={`${styles.apiDocsContent} pr-lg-4`}
+                  className={`${styles.apiDocsContent}`}
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
                 <NextPrevBtnRow />
               </Col>
-              <Col sm={'3'} className='d-none d-lg-block'>
-                <APISecondaryNav subMenu={subMenu} path={path} />
-              </Col>
             </Row>
-          </PageContent>
+          </div>
+          <div className='d-none d-lg-block'>
+            <APISecondaryNav subMenu={subMenu} path={path} />
+          </div>
         </div>
         <div className={styles.rowSkewedBottom} id='api-docs-skewed-row'></div>
         <PageContent bkGradient style={{ marginTop: '-50px' }}>
