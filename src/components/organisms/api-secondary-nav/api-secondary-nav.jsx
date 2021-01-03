@@ -15,7 +15,7 @@ export default function APISecondaryNav({ subMenu, path }) {
                             <h6>Table of Contents</h6>
                         </ListGroup.Item>
                         {
-                            subMenu.map((item) => {
+                            subMenu?.map((item) => {
                                 return (
                                     <Fragment key={uniqid()}>
                                         <ListGroup.Item className={apiSecondaryNav.listGroup} >

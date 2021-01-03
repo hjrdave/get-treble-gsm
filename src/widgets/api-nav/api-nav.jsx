@@ -24,7 +24,7 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'What is TrebleGSM?',
-                path: './api/class-components'
+                path: './api/what-is-treblegsm'
               },
               {
                 text: 'Core Concepts',
