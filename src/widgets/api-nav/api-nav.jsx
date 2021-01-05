@@ -9,12 +9,6 @@ import { useTreble } from 'treble-gsm';
 
 export default function APINav() {
 
-  const [{ apiNavPostData }] = useTreble();
-
-  React.useEffect(() => {
-    console.log(apiNavPostData);
-  }, [apiNavPostData]);
-
   return (
     <>
       <APINavItems
@@ -24,23 +18,23 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'What is TrebleGSM?',
-                path: './api/introduction/what-is-treblegsm'
+                path: '/api/introduction/what-is-treblegsm'
               },
               {
                 text: 'Core Concepts',
-                path: './api/introduction/core-concepts'
+                path: '/api/introduction/core-concepts'
               },
               {
                 text: 'Getting Started',
-                path: './api/introduction/getting-started'
+                path: '/api/introduction/getting-started'
               },
               {
                 text: 'Managing State',
-                path: './api/introduction/managing-state'
+                path: '/api/introduction/managing-state'
               },
               {
                 text: 'Class Support',
-                path: './api/introduction/class-support'
+                path: '/api/introduction/class-support'
               }
             ]
           },
@@ -49,19 +43,19 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'Extending Stores',
-                path: './api/advanced-features/extending-stores'
+                path: '/api/advanced-features/extending-stores'
               },
               {
                 text: 'Scoping Stores',
-                path: './api/advanced-features/scoping-stores'
+                path: '/api/advanced-features/scoping-stores'
               },
               {
                 text: 'Persisting State',
-                path: './api/advanced-features/persisting-state'
+                path: '/api/advanced-features/persisting-state'
               },
               {
                 text: 'Managing Lists',
-                path: './api/advanced-features/managing-lists'
+                path: '/api/advanced-features/managing-lists'
               }
             ]
           },
@@ -70,32 +64,32 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'What is Middleware?',
-                path: './api/middleware/what-is-middleware'
+                path: '/api/middleware/what-is-middleware'
               },
               {
                 text: 'Payload Listeners',
-                path: './api/middleware/payload-listeners'
+                path: '/api/middleware/payload-listeners'
               },
               {
                 text: 'Log',
-                path: './api/middleware/log'
+                path: '/api/middleware/log'
               },
               {
                 text: 'Run',
-                path: './api/middleware/run'
+                path: '/api/middleware/run'
               },
               ,
               {
                 text: 'Check',
-                path: './api/middleware/check'
+                path: '/api/middleware/check'
               },
               {
                 text: 'Process',
-                path: './api/middleware/process'
+                path: '/api/middleware/process'
               },
               {
                 text: 'Callback',
-                path: './api/middleware/callback'
+                path: '/api/middleware/callback'
               }
             ]
           },
@@ -104,19 +98,19 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'What are Modules?',
-                path: './api/modules/what-are-modules'
+                path: '/api/modules/what-are-modules'
               },
               {
                 text: 'Installing Modules',
-                path: './api/modules/installing-modules'
+                path: '/api/modules/installing-modules'
               },
               {
                 text: 'Create a Module',
-                path: './api/modules/'
+                path: '/api/modules/'
               },
               {
                 text: 'Troubleshooting',
-                path: './api/modules/'
+                path: '/api/modules/'
               }
             ]
           },
@@ -125,7 +119,7 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'What is TrebleGSM?',
-                path: './api/typescript/'
+                path: '/api/typescript/'
               },
             ]
           },
@@ -134,35 +128,35 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'Treble Provider',
-                path: './api/references/'
+                path: '/api/references/'
               },
               {
                 text: 'useTreble',
-                path: './api/references/'
+                path: '/api/references/'
               },
               {
                 text: 'useScopedTreble',
-                path: './api/references/'
+                path: '/api/references/'
               },
               {
                 text: 'getTreble',
-                path: './api/references/'
+                path: '/api/references/'
               },
               {
                 text: 'withTreble',
-                path: './api/references/'
+                path: '/api/references/'
               },
               {
                 text: 'createStore',
-                path: './api/references/'
+                path: '/api/references/'
               },
               {
                 text: 'createModule',
-                path: './api/references/'
+                path: '/api/references/'
               },
               {
                 text: 'reducerActionKeys',
-                path: './api/references/'
+                path: '/api/references/'
               },
             ]
           },
@@ -171,15 +165,15 @@ export default function APINav() {
             menuItems: [
               {
                 text: 'treble-list-manager',
-                path: './api/module-references/'
+                path: '/api/module-references/'
               },
               {
                 text: 'treble-persist',
-                path: './api/module-references/'
+                path: '/api/module-references/'
               },
               {
                 text: 'treble-fetch',
-                path: './api/module-references/'
+                path: '/api/module-references/'
               }
             ]
           }

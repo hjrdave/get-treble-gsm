@@ -12,7 +12,7 @@ import uniqid from 'uniqid';
 
 export default function APINavItems({ navItems }) {
 
-    const [{ mobileDocNavState, activeNavPath }, Store] = useTreble();
+    const [{ mobileDocNavState, activeNavPath, apiNavItemState }, Store] = useTreble();
 
     //if page changes mobilenav will be closed
     React.useEffect(() => {
@@ -31,6 +31,10 @@ export default function APINavItems({ navItems }) {
         }));
     }, []);
 
+    // React.useEffect(() => {
+    //     console.log(apiNavItemState);
+    // }, [apiNavItemState]);
+
     return (
         <>
             <div className={`${styles.apiNavItemsContainer} pb-4`}>
@@ -41,7 +45,7 @@ export default function APINavItems({ navItems }) {
                             navItems.map(({ section, menuItems }) => {
                                 return (
                                     <React.Fragment key={uniqid()}>
-                                        <SectionContainer className={styles.apiNavItems}>
+                                        <SectionContainer className={styles.apiNavItems} section={section} open={(apiNavItemState.activeSection === section) ? '0' : '1'}>
                                             <SectionDropdown section={section} />
                                             <SectionCollapse>
                                                 {
@@ -49,7 +53,10 @@ export default function APINavItems({ navItems }) {
                                                         return (
                                                             <React.Fragment key={uniqid()}>
                                                                 <p className={`${styles.apiListItem} text-left mb-2`}>
-                                                                    <Link to={item.path}>
+                                                                    <Link to={item.path} onClick={() => Store.update('updateAPINavItemState', {
+                                                                        activeSection: section,
+                                                                        activeItem: item.text
+                                                                    })} style={(apiNavItemState.activeItem === item.text) ? { color: '#4e9ae5' } : {}}>
                                                                         {item.text}
                                                                     </Link>
                                                                 </p>

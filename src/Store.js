@@ -14,6 +14,15 @@ const Store = createStore([
         state: {
             apiNavPostData: []
         }
+    },
+    {
+        action: 'updateAPINavItemState',
+        state: {
+            apiNavItemState: {
+                activeSection: '',
+                activeItem: ''
+            }
+        }
     }
 ]);
 

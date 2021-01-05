@@ -10,9 +10,9 @@ export default function NextPrevBtnRow() {
 
     const location = useLocation();
 
-    React.useEffect(() => {
-        console.log(apiNavPostData);
-    }, [apiNavPostData]);
+    // React.useEffect(() => {
+    //     console.log(apiNavPostData);
+    // }, [apiNavPostData]);
 
     return (
         <>
