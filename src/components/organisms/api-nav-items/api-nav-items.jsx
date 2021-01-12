@@ -31,10 +31,6 @@ export default function APINavItems({ navItems }) {
         }));
     }, []);
 
-    // React.useEffect(() => {
-    //     console.log(apiNavItemState);
-    // }, [apiNavItemState]);
-
     return (
         <>
             <div className={`${styles.apiNavItemsContainer} pb-4`}>
@@ -46,17 +42,19 @@ export default function APINavItems({ navItems }) {
                                 return (
                                     <React.Fragment key={uniqid()}>
                                         <SectionContainer className={styles.apiNavItems} section={section} open={(apiNavItemState.activeSection === section) ? '0' : '1'}>
-                                            <SectionDropdown section={section} />
+                                            <SectionDropdown section={section} menuItems={menuItems} />
                                             <SectionCollapse>
                                                 {
                                                     menuItems?.map((item) => {
                                                         return (
                                                             <React.Fragment key={uniqid()}>
-                                                                <p className={`${styles.apiListItem} text-left mb-2`}>
+                                                                <p className={`${styles.apiListItem} text-left mb-2 ml-3`}>
                                                                     <Link to={item.path} onClick={() => Store.update('updateAPINavItemState', {
                                                                         activeSection: section,
                                                                         activeItem: item.text
-                                                                    })} style={(apiNavItemState.activeItem === item.text) ? { color: '#4e9ae5' } : {}}>
+                                                                    })}
+                                                                        className={(apiNavItemState.activeItem === item.text) ? styles.active : ''}
+                                                                    >
                                                                         {item.text}
                                                                     </Link>
                                                                 </p>
