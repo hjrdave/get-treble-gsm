@@ -1,15 +1,14 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
+import { useTreble } from 'treble-gsm';
 
-export default function SectionContainer({ children, className, section, open }) {
+export default function SectionContainer({ children, className, section }) {
 
-    React.useEffect(() => {
-        console.log(open)
-    }, []);
+    const [{ activeAPINavSections }, Store] = useTreble();
 
     return (
         <>
-            <Accordion className={className} defaultActiveKey={open}>
+            <Accordion className={className} activeKey={(activeAPINavSections.includes(section)) ? '0' : '1'}>
                 {children}
             </Accordion>
         </>

@@ -12,24 +12,25 @@ import uniqid from 'uniqid';
 
 export default function APINavItems({ navItems }) {
 
-    const [{ mobileDocNavState, activeNavPath, apiNavItemState }, Store] = useTreble();
+    const [{ }, Store] = useTreble();
+
+    const navItemRef = React.useRef(null);
 
     //if page changes mobilenav will be closed
-    React.useEffect(() => {
-        Store.update('updateMobileDocNavState', false);
-    }, [activeNavPath]);
+    // React.useEffect(() => {
+    //     Store.update('updateMobileDocNavState', false);
+    // }, [activeNavPath]);
 
     React.useEffect(() => {
         let postData = [];
         navItems.map((item) => {
             postData = [...postData, ...item.menuItems]
         });
-        Store.update('updateAPINavPostData', postData.filter((item) => {
-            if (item) {
-                return item;
-            }
-        }));
     }, []);
+
+    React.useEffect(() => {
+        console.log(navItemRef);
+    }, [navItemRef])
 
     return (
         <>
@@ -41,7 +42,7 @@ export default function APINavItems({ navItems }) {
                             navItems.map(({ section, menuItems }) => {
                                 return (
                                     <React.Fragment key={uniqid()}>
-                                        <SectionContainer className={styles.apiNavItems} section={section} open={(apiNavItemState.activeSection === section) ? '0' : '1'}>
+                                        <SectionContainer className={styles.apiNavItems} section={section} open={'1'}>
                                             <SectionDropdown section={section} menuItems={menuItems} />
                                             <SectionCollapse>
                                                 {
@@ -49,12 +50,7 @@ export default function APINavItems({ navItems }) {
                                                         return (
                                                             <React.Fragment key={uniqid()}>
                                                                 <p className={`${styles.apiListItem} text-left mb-2 ml-3`}>
-                                                                    <Link to={item.path} onClick={() => Store.update('updateAPINavItemState', {
-                                                                        activeSection: section,
-                                                                        activeItem: item.text
-                                                                    })}
-                                                                        className={(apiNavItemState.activeItem === item.text) ? styles.active : ''}
-                                                                    >
+                                                                    <Link innerRef={navItemRef} to={item.path} activeClassName={styles.active}>
                                                                         {item.text}
                                                                     </Link>
                                                                 </p>

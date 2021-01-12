@@ -2,32 +2,26 @@ import React from 'react';
 import SectionToggle from '../../atoms/section-toggle';
 import SectionTitle from '../../atoms/section-title';
 import { useTreble } from 'treble-gsm';
-import { useNonInitialEffect } from '../../../hooks';
-import { Store } from '../../organisms/api-search/Store';
 
-export default function SectionDropdown({ section, menuItems }) {
+export default function SectionDropdown({ section }) {
 
-    const [{ apiNavItemState }, Store] = useTreble();
+    const [{ activeAPINavSections: activeSections }, Store] = useTreble();
 
-    const [toggleState, setToggleState] = React.useState((apiNavItemState.activeSection === section) ? true : false);
+    //const activeSections = Array.from(new Set([...activeAPINavSections, section]));
 
-    useNonInitialEffect(() => {
-        Store.update('updateAPINavItemState', {
-            activeSection: section,
-            activeItem: menuItems[0]
-        });
-    }, [toggleState]);
+    const handleSectionToggle = () => {
+        if (activeSections.includes(section)) {
+            const removeActiveSections = activeSections.filter((item) => item !== section);
+            Store.update('setActiveAPINavSections', removeActiveSections);
+        } else {
+            Store.update('setActiveAPINavSections', [...activeSections, section]);
+        }
+    }
 
     return (
         <>
-            <SectionToggle>
-                <SectionTitle section={section} onClick={() => {
-                    setToggleState((toggleState) ? setToggleState(false) : setToggleState(true));
-                    Store.update('updateAPINavItemState', {
-                        activeSection: section,
-                        activeItem: menuItems[0]
-                    });
-                }} />
+            <SectionToggle onClick={() => handleSectionToggle()}>
+                <SectionTitle section={section} />
             </SectionToggle>
         </>
     )

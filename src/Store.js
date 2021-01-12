@@ -16,12 +16,9 @@ const Store = createStore([
         }
     },
     {
-        action: 'updateAPINavItemState',
+        action: 'setActiveAPINavSections',
         state: {
-            apiNavItemState: {
-                activeSection: '',
-                activeItem: ''
-            }
+            activeAPINavSections: []
         }
     }
 ]);
