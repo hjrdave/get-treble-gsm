@@ -7,8 +7,6 @@ export default function SectionDropdown({ section }) {
 
     const [{ activeAPINavSections: activeSections }, Store] = useTreble();
 
-    //const activeSections = Array.from(new Set([...activeAPINavSections, section]));
-
     const handleSectionToggle = () => {
         if (activeSections.includes(section)) {
             const removeActiveSections = activeSections.filter((item) => item !== section);

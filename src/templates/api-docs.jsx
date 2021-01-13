@@ -35,7 +35,7 @@ export default function APIDocs({ data, location }) {
                   className={`${styles.apiDocsContent}`}
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
-                <NextPrevBtnRow />
+                {/* <NextPrevBtnRow /> */}
               </Col>
             </Row>
           </div>
