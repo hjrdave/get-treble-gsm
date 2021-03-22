@@ -28,7 +28,7 @@ export default function HomePage() {
               <Col sm='6' md='4' lg='2'>
                 <div className={styles.homeBannerLogo}>
                   <Image name={'logoTrebleGsm'} />
-                  <h1 className='text-center' style={{ opacity: '.7' }}>Treble</h1>
+                  <h1 className='text-center' style={{ opacity: '.7' }}>TrebleGSM</h1>
                 </div>
               </Col>
             </Row>

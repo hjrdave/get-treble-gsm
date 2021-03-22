@@ -67,29 +67,8 @@ export default function APINav() {
                 path: '/api/middleware/what-is-middleware'
               },
               {
-                text: 'Payload Listeners',
-                path: '/api/middleware/payload-listeners'
-              },
-              {
-                text: 'Log',
-                path: '/api/middleware/log'
-              },
-              {
-                text: 'Run',
-                path: '/api/middleware/run'
-              },
-              ,
-              {
-                text: 'Check',
-                path: '/api/middleware/check'
-              },
-              {
-                text: 'Process',
-                path: '/api/middleware/process'
-              },
-              {
-                text: 'Callback',
-                path: '/api/middleware/callback'
+                text: 'Middleware Data Object',
+                path: '/api/middleware/middleware-data-object'
               }
             ]
           },
@@ -106,7 +85,7 @@ export default function APINav() {
               },
               {
                 text: 'Create a Module',
-                path: '/api/modules/'
+                path: '/api/modules/create-a-module'
               },
               {
                 text: 'Troubleshooting',

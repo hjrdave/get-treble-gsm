@@ -11,7 +11,7 @@ const Header = () => (
         <Link to="/" ><Image name={'logoTrebleGsm'} /></Link>
       </div>
       <div className={styles.title}>
-        <Link to="/" ><h4 className='pl-2'>Treble</h4></Link>
+        <Link to="/" ><h4 className='pl-2'>TrebleGSM</h4></Link>
       </div>
     </div>
     <MainNav />
