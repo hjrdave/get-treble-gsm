@@ -114,6 +114,14 @@ const Image = ({ name, className }) => {
         }
       }
     }
+
+    crsInfoGraphic: file(relativePath: { eq: "crs-infographic.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
    
   }`);
 

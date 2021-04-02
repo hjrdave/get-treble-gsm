@@ -5,3 +5,19 @@
 
 //main styles scss
 @import '../styles.scss';
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+.crsInfoGraphic{
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-image: url("https://bn1301files.storage.live.com/y4mT5IIbTkAagbbPZ4XTZ7iEYpuNI-W0MSvv45nYN1WvJz9fzV0UR8UqOD65n-sUymCgzCGDKGkB2GsZXtYpl_XwXvnkC6W4jaB_eeiYSTQ_SHxf1w9hSc0KGCFKRFHDvX5N2byHzCI4rKTRska06benHm80pvS41dlSml7A-_jCsAWPSobFUACLF7XEwLkOrqT?width=1024&height=727&cropmode=none");
+    width: 100%;
+    height: 500px;
+
+    // @include media-breakpoint-down(md) {
+            
+    //     }
+}

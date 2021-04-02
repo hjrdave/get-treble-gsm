@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import './styles.global.scss';
 
 
 export default function HTML(props) {
@@ -23,7 +24,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-       
+
       </body>
     </html>
   )
