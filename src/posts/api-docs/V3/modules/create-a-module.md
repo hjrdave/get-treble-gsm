@@ -9,8 +9,3 @@ subMenu:
 
 Creating TrebleGSM Modules is an advanced area of TrebleGSM. Please read the entire article below.
 
-In order to successfully create a TrebleGSM Module it is necessary to understand some fundamental mechanics on how TrebleGSM works. 
-<div class='crsInfoGraphic'>
-</div>
-
-###Dispatchers

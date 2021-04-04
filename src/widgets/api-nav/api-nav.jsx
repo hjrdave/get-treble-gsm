@@ -21,6 +21,10 @@ export default function APINav() {
                 path: '/api/introduction/what-is-treblegsm'
               },
               {
+                text: 'How TrebleGSM Works',
+                path: '/api/introduction/how-treble-gsm-works'
+              },
+              {
                 text: 'Core Concepts',
                 path: '/api/introduction/core-concepts'
               },
@@ -69,6 +73,10 @@ export default function APINav() {
               {
                 text: 'Middleware Data Object',
                 path: '/api/middleware/middleware-data-object'
+              },
+              {
+                text: 'API Reference',
+                path: '/api/middleware/api-reference'
               }
             ]
           },
