@@ -88,10 +88,6 @@ export default function APINav() {
                 path: '/api/modules/what-are-modules'
               },
               {
-                text: 'Installing Modules',
-                path: '/api/modules/installing-modules'
-              },
-              {
                 text: 'Create a Module',
                 path: '/api/modules/create-a-module'
               },
