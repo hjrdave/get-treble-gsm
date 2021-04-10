@@ -23,30 +23,38 @@ const Store = createStore();
 ```
 Scoped Stores can be namespaced by their component.
 
+```javascript
 const widgetStore = createStore()
+```
 
-Store Actions – These should always be an action word that describes the subscribe action when manipulating Store state. Example: ‘updateFruitName’ or ‘appendListItem’.
+*Store Actions* – These should always be an action word that describes the subscribe action when manipulating Store state. Example: ‘updateFruitName’ or ‘appendListItem’.
 
-Treble Hook Methods - The useTreble hook returns an array of 3 items, current state, a subscribe method, and an utilities method. When destructering the array you technically can name each item anything you want. For the sake of consistency each item should follow a specific naming convention.
+*Treble Hook Methods* - The useTreble hook returns an array of 3 items, current state, a subscribe method, and an utilities method. When destructering the array you technically can name each item anything you want. For the sake of consistency each item should follow a specific naming convention.
 
-State => { //destructure state object }
-Subscribe Method => Store
-Utilities Method => Util
-[ { //state }, Store, Util ] = useTreble();
+```javascript
+//State is a destructured object
+//Store Method = Store
+//Utilities Method = Util
 
-Scoped Treble Hook Methods – The same pattern can be followed with scoped treble hooks, except with a namespace to differentiate between the global hook and the scoped hook.
+[ { /* Some State */ }, Store, Util ] = useTreble();
+```
 
-State => { //destructured state object }
-Subscribe Method => WidgetStore
-Utilities Method => WidgetUtil
+*Scoped Treble Hook Methods* – The same pattern can be followed with scoped treble hooks, except with a namespace to differentiate between the global hook and the scoped hook.
 
+```javascript
+//State is a destructured object
+//Store Method = widgetStore
+//Utilities Method = widgetUtil
+
+[ { /* Some State */ }, widgetStore, widgetUtil ] = useTreble();
+```
 ### Scoping a Store
 Scoped Stores allow complex components to use their own encapsulated GSM that cannot be accessed by outside components. Below are some best practices.
 
-Use only where it makes sense - Every Treble Store instance creates a new React Context and to many might create performance issues. In most cases though using a scoped Store for a very complex and nested component will increase performance of that component and make it easier to maintain, more predictable, and completely encapsulated.
+*Use only where it makes sense* - Every Treble Store instance creates a new React Context and to many might create performance issues. In most cases though using a scoped Store for a very complex and nested component will increase performance of that component and make it easier to maintain, more predictable, and completely encapsulated.
 
-Create custom subscribe hooks – A custom subscribe hook should be created when scoping a Store as the default useTreble hook always subscribes to the default app Store Context.
+*Create custom subscribe hooks* – A custom subscribe hook should be created when scoping a Store as the default useTreble hook always subscribes to the default app Store Context.
 
-3rd Party Libraries – Scoped stores really shine when creating third party javascript libraries as it can be used even if the project does not make use of the library itself. TrebleGSM has a light footprint and will not add much overhead to your library.
+*3rd Party Libraries* – Scoped stores really shine when creating third party javascript libraries as it can be used even if the project does not make use of the library itself. TrebleGSM has a light footprint and will not add much overhead to your library.
 
 
