@@ -21,7 +21,7 @@ There are many global state management (GSM) libraries in the wild. Each have a 
 
 TrebleGSM has a light footprint, is highly extendable, can be used in simple applications, in enterprise level applications, it is easily integrated into applications with other GSM solutions, and can be used to build widgets in standalone libraries.
 
-All of this so you can manage state with confidence!
+All of this so you can manage state with confidence! 👍
 
 
 
