@@ -58,8 +58,15 @@ em{
     color: #4e9ae5;
 }
 
+
 .language-text{
-    font-size: $font-size-base!important;
-    background-color: $dark-1!important;
+        font-size: $font-size-base!important;
+    background-color: $dark-4!important;
     color: #c9ccd6!important;
+    }
+.gatsby-highlight{
+    
+    .language-text{
+    background-color: $dark-1!important;
+}
 }
