@@ -1,5 +1,5 @@
 ---
-path: "/api/introduction/how-treble-gsm-works"
+path: "/api/advanced/how-treble-gsm-works"
 date: "2021-01-01"
 title: "How TrebleGSM Works"
 subMenu: 

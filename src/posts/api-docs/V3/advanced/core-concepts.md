@@ -1,5 +1,5 @@
 ---
-path: "/api/introduction/core-concepts"
+path: "/api/advanced/core-concepts"
 date: "2021-01-01"
 title: "Core Concepts"
 subMenu: 

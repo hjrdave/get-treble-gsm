@@ -21,45 +21,45 @@ export default function APINav() {
                 path: '/api/introduction/what-is-treblegsm'
               },
               {
-                text: 'How TrebleGSM Works',
-                path: '/api/introduction/how-treble-gsm-works'
-              },
-              {
-                text: 'Core Concepts',
-                path: '/api/introduction/core-concepts'
-              },
-              {
                 text: 'Getting Started',
                 path: '/api/introduction/getting-started'
               },
               {
                 text: 'Managing State',
                 path: '/api/introduction/managing-state'
-              },
-              {
-                text: 'Class Support',
-                path: '/api/introduction/class-support'
               }
             ]
           },
           {
-            section: 'Advanced Features',
+            section: 'Advanced',
             menuItems: [
               {
+                text: 'How TrebleGSM Works',
+                path: '/api/advanced/how-treble-gsm-works'
+              },
+              {
+                text: 'Core Concepts',
+                path: '/api/advanced/core-concepts'
+              },
+              {
                 text: 'Extending Stores',
-                path: '/api/advanced-features/extending-stores'
+                path: '/api/advanced/extending-stores'
               },
               {
                 text: 'Scoping Stores',
-                path: '/api/advanced-features/scoping-stores'
+                path: '/api/advanced/scoping-stores'
               },
               {
                 text: 'Persisting State',
-                path: '/api/advanced-features/persisting-state'
+                path: '/api/advanced/persisting-state'
               },
               {
                 text: 'Managing Lists',
-                path: '/api/advanced-features/managing-lists'
+                path: '/api/advanced/managing-lists'
+              },
+              {
+                text: 'Class Support',
+                path: '/api/advanced/class-support'
               }
             ]
           },

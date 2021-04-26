@@ -1,5 +1,5 @@
 ---
-path: "/api/advanced-features/managing-lists"
+path: "/api/advanced/managing-lists"
 date: "2021-01-01"
 title: "Managing Lists"
 subMenu: 

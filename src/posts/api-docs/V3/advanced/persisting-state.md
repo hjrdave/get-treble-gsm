@@ -1,5 +1,5 @@
 ---
-path: "/api/advanced-features/persisting-state"
+path: "/api/advanced/persisting-state"
 date: "2021-01-01"
 title: "Persisting State"
 subMenu: 
