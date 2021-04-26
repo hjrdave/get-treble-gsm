@@ -69,4 +69,9 @@ em{
     .language-text{
     background-color: $dark-1!important;
 }
+ h3{
+            .language-text{
+                font-size: $h3-font-size + 1rem!important;
+            }
+        }
 }

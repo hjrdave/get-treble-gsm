@@ -73,10 +73,6 @@ export default function APINav() {
               {
                 text: 'Middleware Data Object',
                 path: '/api/middleware/middleware-data-object'
-              },
-              {
-                text: 'API Reference',
-                path: '/api/middleware/api-reference'
               }
             ]
           },

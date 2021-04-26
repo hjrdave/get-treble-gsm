@@ -1,0 +1,6 @@
+@use './components/variables' as *;
+h3{
+    .language-text{
+        font-size: $font-size-h3 + .2rem!important;
+    }
+}
