@@ -7,16 +7,26 @@ subMenu:
       path: '#'
 ---
 
-Modules are an easy way to extend TrebleGSM’s functionality by 3rd party code. In fact, TrebleGSM’s Dispatchers, re-render protection, and default state objects are all included in the library by the built-in Treble-Core module. You can literally say TrebleGSM is modular at its core. 
+Modules are an easy way to extend TrebleGSM’s functionality by 3rd party code. In fact, TrebleGSM’s dispatchers, re-render protection, and default state objects are all included in the library by the built-in Treble-Core module. You can literally say TrebleGSM is modular at its core! 🤓 
 
-How to Add a Module
+### How to Add a Module 
+First install a module with npm.
+```
+npm install treble-list-manager
+``` 
 
-Modules are imported into a TrebleGSM Store.
+Then import the module into a TrebleGSM Store.
+```javascript
+import { TrebleListManager } from 'treble-list-manager';
+```
 
-Import the module into the Store file.
+The createStore function has an option property called `modules`. This property takes an array of modules. The imported module can be added to this property to be used by the Store.
+```javascript
+const Store = createStore([
+    //...state items
+],{
+    modules: [ TrebleListManager ]
+});
+```
 
-[code]
-
-The createStore function takes has an options property called modules. This property takes an array of modules. The module can be added to this property to be used by the Store.
-
-And that is it. Extending TrebleGSM is super easy!
+And that is it. Extending TrebleGSM is super easy! 👌👌
