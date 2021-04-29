@@ -88,6 +88,10 @@ export default function APINav() {
                 path: '/api/modules/create-a-module'
               },
               {
+                text: 'API Reference',
+                path: '/api/modules/api-reference'
+              },
+              {
                 text: 'Troubleshooting',
                 path: '/api/modules/'
               }
