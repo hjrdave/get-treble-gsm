@@ -41,6 +41,32 @@ dispatchers?: {
     [key: string]: (...params: any) => void 
 }
 ```
+### `reducerActions`
+```typescript
+reducerActions?: { [key: string]: (middlewareData: MiddlewareData) => any }
+```
+
+### `middleware`
+```typescript
+middleware: {
+  log: (moduleData) => void,
+  run: (moduleData) => void,
+  check: (moduleData) => boolean,
+  process: (moduleData) => any,
+  callback: (moduleData) => void,
+  payloadListener: () => void
+}
+```
+### `renderComponent`
+```typescript
+renderComponent?: React.ReactNode
+```
+
+### `importModules`
+```typescript
+importModules?: ModuleData[]
+```
+
 
 
  
