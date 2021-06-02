@@ -91,10 +91,10 @@ export default function APINav() {
                 text: 'API Reference',
                 path: '/api/modules/api-reference'
               },
-              {
-                text: 'Troubleshooting',
-                path: '/api/modules/'
-              }
+              // {
+              //   text: 'Troubleshooting',
+              //   path: '/api/modules/'
+              // }
             ]
           },
           {

@@ -3,27 +3,27 @@
 .menuItems{
     height: 100%;
      border-left:1px solid rgba(0, 0, 0, 0.125);
-     width: 400px;
-    .listGroup{
-        background: none;
-        border: none;
-       padding: .5rem .5rem .25rem .5rem;
-        height: 100%;
+     //width: 400px;
+    // .listGroup{
+    //     background: none;
+    //     border: none;
+    //    padding: .5rem .5rem .25rem .5rem;
+    //     height: 100%;
         
-        //width: 250px;
-       // width: 350px;
-        color: lighten($dark-3, 65%);
-        .listGroupItem{
+    //     //width: 250px;
+    //    // width: 350px;
+    //     color: lighten($dark-3, 65%);
+    //     .listGroupItem{
             
-            background: none;
-            border: none;
-            padding: .25rem 0px .25rem 1.5rem;
-            font-size: $font-size-base - .1rem;
-            color: lighten($dark-3, 65%);
-            a{
-                color: lighten($dark-3, 65%);
-                text-decoration: none;
-            }
-        }
-    }
+    //         background: none;
+    //         border: none;
+    //         padding: .25rem 0px .25rem 1.5rem;
+    //         font-size: $font-size-base - .1rem;
+    //         color: lighten($dark-3, 65%);
+    //         a{
+    //             color: lighten($dark-3, 65%);
+    //             text-decoration: none;
+    //         }
+    //     }
+    // }
 }

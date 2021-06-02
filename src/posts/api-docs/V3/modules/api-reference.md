@@ -17,7 +17,7 @@ const ModuleName = createModule({ /*module properties*/ });
 
 #### Module Properties
 
-### `name`
+`name`  
 This is the name of the module. This should be the same name of the npm package if the module is published to the npm registry. This is a required property.
 ```Typescript
 name: string
