@@ -1,7 +1,7 @@
 ---
-path: "/api/module-references/use-treble"
+path: "/api/references/treble-gsm"
 date: "2021-01-01"
-title: "useTreble"
+title: "TrebleGSM"
 subMenu: 
     - text: ''
       path: '#'

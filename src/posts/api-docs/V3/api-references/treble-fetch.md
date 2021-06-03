@@ -1,7 +1,7 @@
 ---
-path: "/api/references/get-treble"
+path: "/api/references/treble-fetch"
 date: "2021-01-01"
-title: "getTreble"
+title: "Treble Fetch"
 subMenu: 
     - text: ''
       path: '#'

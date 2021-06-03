@@ -1,7 +1,7 @@
 ---
-path: "/api/references/use-scoped-treble"
+path: "/api/references/treble-core"
 date: "2021-01-01"
-title: "useScopedTreble"
+title: "Treble Core"
 subMenu: 
     - text: ''
       path: '#'

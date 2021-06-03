@@ -91,72 +91,28 @@ export default function APINav() {
                 text: 'API Reference',
                 path: '/api/modules/api-reference'
               },
-              // {
-              //   text: 'Troubleshooting',
-              //   path: '/api/modules/'
-              // }
+
             ]
           },
-          {
-            section: 'Typescript',
-            menuItems: [
-              {
-                text: 'What is TrebleGSM?',
-                path: '/api/typescript/'
-              },
-            ]
-          },
+
           {
             section: 'API References',
             menuItems: [
               {
-                text: 'Treble Provider',
-                path: '/api/references/'
+                text: 'TrebleGSM',
+                path: '/api/references/treble-gsm'
               },
               {
-                text: 'useTreble',
-                path: '/api/references/'
+                text: 'Treble Core',
+                path: '/api/references/treble-core'
               },
               {
-                text: 'useScopedTreble',
-                path: '/api/references/'
+                text: 'Treble Persist',
+                path: '/api/references/treble-persist'
               },
               {
-                text: 'getTreble',
-                path: '/api/references/'
-              },
-              {
-                text: 'withTreble',
-                path: '/api/references/'
-              },
-              {
-                text: 'createStore',
-                path: '/api/references/'
-              },
-              {
-                text: 'createModule',
-                path: '/api/references/'
-              },
-              {
-                text: 'reducerActionKeys',
-                path: '/api/references/'
-              },
-            ]
-          },
-          {
-            section: 'Module References',
-            menuItems: [
-              {
-                text: 'treble-list-manager',
-                path: '/api/module-references/'
-              },
-              {
-                text: 'treble-persist',
-                path: '/api/module-references/'
-              },
-              {
-                text: 'treble-fetch',
-                path: '/api/module-references/'
+                text: 'Treble List Manager',
+                path: '/api/references/treble-list-manager'
               }
             ]
           }
