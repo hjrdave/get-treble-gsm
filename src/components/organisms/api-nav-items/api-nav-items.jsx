@@ -21,6 +21,10 @@ export default function APINavItems({ navItems }) {
         return pageArray[pageArray.length - 1]
     }
 
+    React.useEffect(() => {
+        Store.update('setNavItemList', navItems);
+    }, []);
+
     return (
         <>
             <div className={`${styles.apiNavItemsContainer} pb-4`}>

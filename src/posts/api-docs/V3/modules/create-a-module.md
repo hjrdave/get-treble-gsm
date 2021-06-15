@@ -7,7 +7,7 @@ subMenu:
       path: '#'
 ---
 
-Creating TrebleGSM module development is an advanced area of TrebleGSM. Please review the [How TrebleGSM Works](/api/advanced/how-treble-gsm-works) article before you proceed reading.
+TrebleGSM module development is an advanced area of TrebleGSM. Please review the [How TrebleGSM Works](/api/advanced/how-treble-gsm-works) article before you proceed reading.
 ### Create a Basic Module
 To create a module, import the `createModule()` function.
 ```javascript

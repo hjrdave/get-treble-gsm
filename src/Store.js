@@ -20,6 +20,12 @@ const Store = createStore([
         state: {
             activeAPINavSections: []
         }
+    },
+    {
+        action: 'setNavItemList',
+        state: {
+            navItemList: []
+        }
     }
 ]);
 

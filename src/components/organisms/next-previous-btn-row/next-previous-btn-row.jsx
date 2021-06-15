@@ -1,35 +1,41 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { useLocation } from '@reach/router';
+import { useLocation, Link } from '@reach/router';
 import ButtonCustom from '../../atoms/btn-custom';
 import { useTreble } from 'treble-gsm';
 
-export default function NextPrevBtnRow() {
+export default function NextPrevBtnRow({ path, text }) {
 
-    const [{ apiNavPostData }] = useTreble();
+    const [{ navItemList }] = useTreble();
 
     const location = useLocation();
 
-    // React.useEffect(() => {
-    //     console.log(apiNavPostData);
-    // }, [apiNavPostData]);
+    const apiDocPages = navItemList.map((section) => section.menuItems).map((menuItem) => menuItem).reduce((a, b) => a.concat(b), []);
+    const currentPageIndex = apiDocPages.findIndex((item) => { if (item.path === location.pathname) { return true } });
+
 
     return (
         <>
             <Row className='pt-4'>
                 <Col className='d-flex justify-content-between'>
-                    <ButtonCustom outline>
-                        <p className='mb-0'>
-                            {/* <i className="fas fa-chevron-double-left pr-3 text-primary"></i> */}
-                            {apiNavPostData[0]?.text}
-                        </p>
-                    </ButtonCustom>
-                    <ButtonCustom outline>
-                        <p className='mb-0'>
-                            {apiNavPostData[1]?.text}
-                            {/* <i className="fas fa-chevron-double-right pl-3 text-primary"></i> */}
-                        </p>
-                    </ButtonCustom>
+                    {
+                        (currentPageIndex !== 0) ?
+                            <ButtonCustom outline>
+                                <p className='mb-0'>
+                                    <a href={apiDocPages[currentPageIndex - 1]?.path || ''}>&lt;&lt;&nbsp; {apiDocPages[currentPageIndex - 1]?.text}</a>
+                                </p>
+                            </ButtonCustom> : <div></div>
+                    }
+                    {
+                        (currentPageIndex !== (apiDocPages.length - 1)) ?
+                            <ButtonCustom outline>
+                                <p className='mb-0'>
+                                    <a href={apiDocPages[currentPageIndex + 1]?.path || ''}>{apiDocPages[currentPageIndex + 1]?.text} &nbsp;&gt;&gt;</a>
+                                </p>
+                            </ButtonCustom> : <div></div>
+                    }
+
+
                 </Col>
             </Row>
         </>

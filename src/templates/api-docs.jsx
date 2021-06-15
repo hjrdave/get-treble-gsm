@@ -2,8 +2,9 @@ import React from "react";
 import { graphql } from "gatsby";
 import PageContainer from '../components/organisms/page-container';
 import PageContent from '../components/organisms/page-content';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Button } from 'react-bootstrap';
 import APINav from '../widgets/api-nav';
+import { useTreble } from 'treble-gsm';
 import SupportRow from '../components/organisms/support-row';
 import APISecondaryNav from '../components/organisms/api-secondary-nav';
 import SEO from '../components/atoms/seo';
@@ -15,6 +16,8 @@ export default function APIDocs({ data, location }) {
   const { markdownRemark } = data;
   const { frontmatter, html, excerpt } = markdownRemark;
   const { title, date, path, subMenu } = frontmatter;
+
+
 
   return (
     <>
@@ -35,7 +38,7 @@ export default function APIDocs({ data, location }) {
                   className={`${styles.apiDocsContent}`}
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
-                {/* <NextPrevBtnRow /> */}
+                {/* <NextPrevBtnRow title={title} path={path} /> */}
               </Col>
             </Row>
           </div>

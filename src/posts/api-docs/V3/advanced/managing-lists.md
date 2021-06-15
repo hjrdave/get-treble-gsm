@@ -13,7 +13,7 @@ First install the Treble List Manager module.
 ```javascript
 npm install treble-list-manager
 ```
-### Import the module into your Store.
+### Import the module into your Store
 
 After the Treble List Manager module is installed and imported into your Store you will have access to a number of Dispatcher methods and Store features that will help you manage lists with ease.
 ```javascript
