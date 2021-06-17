@@ -32,7 +32,6 @@ A Hook that exposes the TrebleGSM store state and store dispatchers to the compo
 ```javascript
 useTreble(context);
 ```
-
 ### `useScopedTreble`
 Creates a new TrebleGSM context for scoping stores.
 ```javascript
