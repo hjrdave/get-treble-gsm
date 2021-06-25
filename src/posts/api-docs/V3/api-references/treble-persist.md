@@ -8,12 +8,12 @@ subMenu:
 ---
 
 ## API Reference
-Treble-Persist is a TrebleGSM module that can be imported into a TrebleGSM Store to add state persistence features.
+Treble Persist is a TrebleGSM module that can be imported into a TrebleGSM Store to add state persistence features.
 
-### Feature Flags
+### Feature Keys
 
 #### `features.persist`
-The feature flag `persist` can be set to true in a Store state object to save state to local storage.
+The feature key `persist` can be set to true in a Store state object to save state to local storage.
 ```javascript
 {
     //state object
@@ -25,7 +25,7 @@ The feature flag `persist` can be set to true in a Store state object to save st
 ```
 
 #### `features.persistTimeout`
-The feature flag `persistTimeout` a number of hours can be set to refresh the persist after a given time.
+The feature key `persistTimeout` a number of hours can be set to refresh the persist after a given time.
 ```javascript
 {
     //state object
