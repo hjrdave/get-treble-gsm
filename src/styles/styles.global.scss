@@ -8,12 +8,12 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 
 //Global SCSS Variables
-@import './components/variables';
+@import './variables';
 
 //Fonts
-@import './components/fonts';
+@import './fonts';
 
 //Custom Global Styles and Bootstrap Overrides
-@import './components/custom';
+@import './custom';
 
 

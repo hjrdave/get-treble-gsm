@@ -9,7 +9,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Header from "../components/organisms/header";
 import Footer from "../components/organisms/footer";
-import "../styles.global.scss";
+import "../styles/styles.global.scss";
 import SEO from '../components/atoms/seo';
 
 const Layout = ({ children }) => {
