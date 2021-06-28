@@ -1,4 +1,4 @@
-@import '../components/variables';
+@use '../components/variables' as *;
 @import '~bootstrap/scss/_functions';
 @import '~bootstrap/scss/_variables';
 @import '~bootstrap/scss/mixins/breakpoints';

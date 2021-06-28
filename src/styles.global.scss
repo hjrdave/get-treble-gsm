@@ -1,6 +1,19 @@
-@use './components/variables' as *;
-h3{
-    .language-text{
-        font-size: $font-size-h3 + .2rem!important;
-    }
-}
+
+/* 
+  Styles SCSS
+  External CSS should in imported into here.
+*/
+
+//Bootstrap 4 (node-module)
+@import '~bootstrap/dist/css/bootstrap.css';
+
+//Global SCSS Variables
+@import './components/variables';
+
+//Fonts
+@import './components/fonts';
+
+//Custom Global Styles and Bootstrap Overrides
+@import './components/custom';
+
+

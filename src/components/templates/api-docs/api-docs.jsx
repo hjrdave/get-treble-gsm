@@ -1,15 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
-import PageContainer from '../components/organisms/page-container';
-import PageContent from '../components/organisms/page-content';
+import PageContainer from '../../organisms/page-container';
+import PageContent from '../../organisms/page-content';
 import { Col, Row, Button } from 'react-bootstrap';
-import APINav from '../widgets/api-nav';
-import { useTreble } from 'treble-gsm';
-import SupportRow from '../components/organisms/support-row';
-import APISecondaryNav from '../components/organisms/api-secondary-nav';
-import SEO from '../components/atoms/seo';
-import NextPrevBtnRow from '../components/organisms/next-previous-btn-row';
-import styles from './styles.module.scss';
+import APINav from '../../../widgets/api-nav';
+//import { useTreble } from 'treble-gsm';
+import SupportRow from '../../organisms/support-row';
+import APISecondaryNav from '../../organisms/api-secondary-nav';
+import SEO from '../../atoms/seo';
+//import NextPrevBtnRow from '../../organisms/next-previous-btn-row';
+import styles from './apiDocs.module.scss';
 
 
 export default function APIDocs({ data, location }) {

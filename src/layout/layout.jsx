@@ -7,10 +7,10 @@
 
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Header from "../organisms/header";
-import Footer from "../organisms/footer";
-import "./_layout.scss";
-import SEO from '../atoms/seo';
+import Header from "../components/organisms/header";
+import Footer from "../components/organisms/footer";
+import "../styles.global.scss";
+import SEO from '../components/atoms/seo';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,7 +31,6 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <Footer />
-
     </>
   )
 }

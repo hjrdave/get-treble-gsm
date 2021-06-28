@@ -1,4 +1,4 @@
-@import '../../variables';
+@use '../../variables' as *;
 
 .active{
     color: $blue-2!important;
