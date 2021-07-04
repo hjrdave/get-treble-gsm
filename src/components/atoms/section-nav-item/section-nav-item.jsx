@@ -6,19 +6,19 @@ import { useTreble } from 'treble-gsm';
 export default function SectionNavItem({ children, path, currentPage, section }) {
     const navItemRef = React.useRef(null);
 
-    const [{ activeAPINavSections: activeSections }, Store] = useTreble();
+    // const [{ activeAPINavSections: activeSections }, Store] = useTreble();
 
-    const getPageName = () => {
-        const pageArray = path.split('/');
-        return pageArray[pageArray.length - 1]
-    }
+    // const getPageName = () => {
+    //     const pageArray = path.split('/');
+    //     return pageArray[pageArray.length - 1]
+    // }
 
-    React.useEffect(() => {
-        const thisPage = getPageName();
-        if (currentPage === thisPage) {
-            navItemRef.current.ariaCurrent = 'page';
-        }
-    }, []);
+    // React.useEffect(() => {
+    //     const thisPage = getPageName();
+    //     if (currentPage === thisPage) {
+    //         navItemRef.current.ariaCurrent = 'page';
+    //     }
+    // }, []);
 
 
 

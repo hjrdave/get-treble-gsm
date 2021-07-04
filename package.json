@@ -58,9 +58,9 @@
   "scripts": {
     "build": "sudo gatsby build",
     "develop": "sudo gatsby develop --open",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages"
+    "format": "sudo prettier --write \"**/*.{js,jsx,json,md}\"",
+    "clean": "sudo gatsby clean",
+    "deploy": "sudo gatsby build --prefix-paths && gh-pages -d public -b gh-pages"
   },
   "repository": {
     "type": "git",

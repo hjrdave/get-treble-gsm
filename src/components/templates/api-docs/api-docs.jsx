@@ -2,21 +2,20 @@ import React from "react";
 import { graphql } from "gatsby";
 import PageContainer from '../../organisms/page-container';
 import PageContent from '../../organisms/page-content';
-import { Col, Row, Button } from 'react-bootstrap';
-import APINav from '../../../widgets/api-nav';
-//import { useTreble } from 'treble-gsm';
+import { Col, Row } from 'react-bootstrap';
+import APINav from '../../organisms/api-nav-items';
 import SupportRow from '../../organisms/support-row';
 import APISecondaryNav from '../../organisms/api-secondary-nav';
 import SEO from '../../atoms/seo';
-//import NextPrevBtnRow from '../../organisms/next-previous-btn-row';
+import NextPrevBtnRow from '../../organisms/next-previous-btn-row';
 import styles from './apiDocs.module.scss';
 
 
 export default function APIDocs({ data, location }) {
-  const { markdownRemark } = data;
+  const { markdownRemark, site } = data;
+  const { apiNavLinks } = site?.siteMetadata;
   const { frontmatter, html, excerpt } = markdownRemark;
-  const { title, date, path, subMenu } = frontmatter;
-
+  const { title, path, subMenu } = frontmatter;
 
 
   return (
@@ -28,7 +27,7 @@ export default function APIDocs({ data, location }) {
       <PageContainer activePath={location} className={styles.apiDocsTemplate}>
         <div className={`d-lg-flex pb-4 ${styles.apiDocsContentRow}`}>
           <div className='d-none d-lg-block'>
-            <APINav />
+            <APINav menuData={apiNavLinks} />
           </div>
           <div className={`px-4 ${styles.pageContent}`}>
             <Row>
@@ -38,7 +37,7 @@ export default function APIDocs({ data, location }) {
                   className={`${styles.apiDocsContent}`}
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
-                {/* <NextPrevBtnRow title={title} path={path} /> */}
+                <NextPrevBtnRow menuData={apiNavLinks} location={location} />
               </Col>
             </Row>
           </div>
@@ -58,6 +57,19 @@ export default function APIDocs({ data, location }) {
 //graphQL query
 export const pageQuery = graphql`
   query($path: String!) {
+    site {
+    siteMetadata {
+      apiNavLinks {
+        id
+        menuItems {
+          id
+          path
+          text
+        }
+        section
+      }
+    }
+  }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       excerpt

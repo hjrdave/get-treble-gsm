@@ -1,3 +1,3 @@
-import APINavItems from './api-nav-items';
+import APINav from './api-nav-items';
 
-export default APINavItems;
+export default APINav;

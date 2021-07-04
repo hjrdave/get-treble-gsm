@@ -4,7 +4,136 @@ module.exports = {
     description: `Treble is a global state management library built on React Hooks and Context API. Treble's goal is to provide a simple way to manage global state in your React app by providing an easy setup, little boilerplate, and a straight forward API.`,
     siteUrl: "https://treblegsm.org",
     author: `David A. Sanders`,
-    twitterHandler: '@hjr_dave'
+    twitterHandler: '@hjr_dave',
+    apiNavLinks: [
+      {
+        id: 0,
+        section: 'Introduction',
+        menuItems: [
+          {
+            id: 0,
+            text: 'What is TrebleGSM?',
+            path: '/api/introduction/what-is-treblegsm'
+          },
+          {
+            id: 1,
+            text: 'Getting Started',
+            path: '/api/introduction/getting-started'
+          },
+          {
+            id: 2,
+            text: 'Managing State',
+            path: '/api/introduction/managing-state'
+          }
+        ]
+      },
+      {
+        id: 1,
+        section: 'Advanced',
+        menuItems: [
+          {
+            id: 3,
+            text: 'How TrebleGSM Works',
+            path: '/api/advanced/how-treble-gsm-works'
+          },
+          {
+            id: 4,
+            text: 'Core Concepts',
+            path: '/api/advanced/core-concepts'
+          },
+          {
+            id: 5,
+            text: 'Extending Stores',
+            path: '/api/advanced/extending-stores'
+          },
+          {
+            id: 6,
+            text: 'Scoping Stores',
+            path: '/api/advanced/scoping-stores'
+          },
+          {
+            id: 7,
+            text: 'Persisting State',
+            path: '/api/advanced/persisting-state'
+          },
+          {
+            id: 8,
+            text: 'Managing Lists',
+            path: '/api/advanced/managing-lists'
+          },
+          {
+            id: 9,
+            text: 'Class Support',
+            path: '/api/advanced/class-support'
+          }
+        ]
+      },
+      {
+        id: 2,
+        section: 'Middleware',
+        menuItems: [
+          {
+            id: 10,
+            text: 'What is Middleware?',
+            path: '/api/middleware/what-is-middleware'
+          },
+          {
+            id: 11,
+            text: 'Middleware Data Object',
+            path: '/api/middleware/middleware-data-object'
+          }
+        ]
+      },
+      {
+        id: 3,
+        section: 'Modules',
+        menuItems: [
+          {
+            id: 12,
+            text: 'What are Modules?',
+            path: '/api/modules/what-are-modules'
+          },
+          {
+            id: 13,
+            text: 'Create a Module',
+            path: '/api/modules/create-a-module'
+          },
+          {
+            id: 14,
+            text: 'API Reference',
+            path: '/api/modules/api-reference'
+          },
+
+        ]
+      },
+
+      {
+        id: 4,
+        section: 'API References',
+        menuItems: [
+          {
+            id: 15,
+            text: 'TrebleGSM',
+            path: '/api/references/treble-gsm'
+          },
+          {
+            id: 16,
+            text: 'Treble Core',
+            path: '/api/references/treble-core'
+          },
+          {
+            id: 17,
+            text: 'Treble Persist',
+            path: '/api/references/treble-persist'
+          },
+          {
+            id: 18,
+            text: 'Treble List Manager',
+            path: '/api/references/treble-list-manager'
+          }
+        ]
+      }
+    ]
   },
   //pathPrefix: `get-treble-gsm`,
   plugins: [

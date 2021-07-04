@@ -1,17 +1,43 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { useLocation, Link } from '@reach/router';
+import { Link } from 'gatsby';
 import ButtonCustom from '../../atoms/btn-custom';
-import { useTreble } from 'treble-gsm';
 
-export default function NextPrevBtnRow({ path, text }) {
+export default function NextPrevBtnRow({ menuData, location }) {
 
-    const [{ navItemList }] = useTreble();
+    const normalizeMenuItems = (data) => {
+        let items = {};
+        data.forEach((section) => {
+            section.menuItems.map((item) => {
+                items = { ...items, [item.path]: item };
+            })
+        });
+        return items;
+    }
+    const allMenuItems = normalizeMenuItems(menuData);
+    const currentIndex = allMenuItems[location.pathname].id;
+    const getPrevPostData = () => {
+        const data = Object.values(allMenuItems).find((item) => {
+            if (item.id === (currentIndex - 1)) {
+                return item
+            }
+        });
+        return data;
+    }
+    const getNextPostData = () => {
+        const data = Object.values(allMenuItems).find((item) => {
+            if (item.id === (currentIndex + 1)) {
+                return item
+            }
+        });
+        return data;
+    }
+    const prevPost = (currentIndex > 0) ? getPrevPostData() : false;
+    const nextPost = ((Object.values(allMenuItems).length - 1) > currentIndex) ? getNextPostData() : false;
 
-    const location = useLocation();
-
-    const apiDocPages = navItemList.map((section) => section.menuItems).map((menuItem) => menuItem).reduce((a, b) => a.concat(b), []);
-    const currentPageIndex = apiDocPages.findIndex((item) => { if (item.path === location.pathname) { return true } });
+    React.useEffect(() => {
+        console.log(allMenuItems.length);
+    }, []);
 
 
     return (
@@ -19,23 +45,23 @@ export default function NextPrevBtnRow({ path, text }) {
             <Row className='pt-4'>
                 <Col className='d-flex justify-content-between'>
                     {
-                        (currentPageIndex !== 0) ?
+                        (prevPost) ?
                             <ButtonCustom outline>
                                 <p className='mb-0'>
-                                    <a href={apiDocPages[currentPageIndex - 1]?.path || ''}>&lt;&lt;&nbsp; {apiDocPages[currentPageIndex - 1]?.text}</a>
+                                    <Link to={prevPost.path}>&lt;&lt;&nbsp; {prevPost.text}</Link>
                                 </p>
-                            </ButtonCustom> : <div></div>
+                            </ButtonCustom>
+                            : <div></div>
                     }
                     {
-                        (currentPageIndex !== (apiDocPages.length - 1)) ?
+                        (nextPost) ?
                             <ButtonCustom outline>
                                 <p className='mb-0'>
-                                    <a href={apiDocPages[currentPageIndex + 1]?.path || ''}>{apiDocPages[currentPageIndex + 1]?.text} &nbsp;&gt;&gt;</a>
+                                    <Link to={nextPost.path}>{nextPost.text} &nbsp;&gt;&gt;</Link>
                                 </p>
-                            </ButtonCustom> : <div></div>
+                            </ButtonCustom>
+                            : <div></div>
                     }
-
-
                 </Col>
             </Row>
         </>
