@@ -25,7 +25,7 @@ export default function HomePage() {
         <div className={`${styles.homeBanner} d-flex align-items-center`}>
           <Col>
             <Row className='d-flex justify-content-center'>
-              <Col sm='6' md='4' lg='2'>
+              <Col sm='6' md='4' lg='2' className={'d-flex justify-content-center'}>
                 <div className={styles.homeBannerLogo}>
                   <Image name={'logoTrebleGsm'} />
                   <h1 className='text-center' style={{ opacity: '.7' }}>TrebleGSM</h1>
