@@ -14,7 +14,7 @@ export default function SectionContainer({ children, className, section }) {
             const sectionItems = sectionRef?.current?.childNodes[1]?.childNodes[0]?.childNodes;
             sectionItems.forEach((item) => {
                 if (item[`childNodes`][0]['ariaCurrent'] === 'page') {
-                    //Store.update('setActiveAPINavSections', [section])
+                    Store.update('setActiveAPINavSections', [section])
                 }
             });
         }

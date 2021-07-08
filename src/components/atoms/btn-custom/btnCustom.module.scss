@@ -18,7 +18,24 @@
     &:active{
         background-color: $blue;
     }
+
 }
+
+.btnCustomOutline{
+    p{
+        a{
+            color: $blue!important;
+            text-decoration: none;
+            &:hover{
+                color: $dark-1!important;
+            }
+        }
+        &:hover{
+                color: $dark-1!important;
+            }
+    }
+}
+
 
 .gradient{
     color: white;
