@@ -12,7 +12,7 @@ Treble Persist is a TrebleGSM module that can be imported into a TrebleGSM Store
 
 ### Feature Keys
 
-#### `features.persist`
+### `features.persist`
 The feature key `persist` can be set to true in a Store state object to save state to local storage.
 ```javascript
 {
@@ -24,7 +24,7 @@ The feature key `persist` can be set to true in a Store state object to save sta
 }
 ```
 
-#### `features.persistTimeout`
+### `features.persistTimeout`
 The feature key `persistTimeout` a number of hours can be set to refresh the persist after a given time.
 ```javascript
 {
@@ -38,7 +38,7 @@ The feature key `persistTimeout` a number of hours can be set to refresh the per
 
 ### Dispatchers
 
-#### `Store.clearPersist`
+### `Store.clearPersist`
 Targets a specified Store state object and clears the item from local storage.
 ```javascript
 Store.clearPersist(actionKey);

@@ -7,6 +7,10 @@
 /*Global Custom Styles*/
 body{
     background-color: #F2F3F3;
+    a{
+        color: $blue-2;
+    }
+   
     main{
         
         p{
@@ -34,6 +38,12 @@ body{
 
 h4{
     margin-top: 1.5rem;
+}
+
+h3{
+    .language-text{
+    font-size: $font-size-base + .1rem!important;
+    }
 }
 
 strong{

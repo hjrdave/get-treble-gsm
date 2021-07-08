@@ -15,6 +15,10 @@ function MainNav() {
           {
             path: '/api/introduction/what-is-treblegsm',
             text: 'API'
+          },
+          {
+            path: '/',
+            text: 'Tutorials'
           }
         ]}
       />

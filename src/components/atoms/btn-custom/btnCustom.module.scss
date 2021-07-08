@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as *;
 
 .btnCustom{
-    border-color: $blue;
+    border-color: $blue-2;
     border-radius: 25px;
     opacity: 1;
     transition: opacity .3;
@@ -10,13 +10,13 @@
         opacity: .75;
     }
     &:visited{
-        background-color: $blue;
+        background-color: $blue-2;
     }
     &:focus{
-        background-color: $blue;
+        background-color: $blue-2;
     }
     &:active{
-        background-color: $blue;
+        background-color: $blue-2;
     }
 
 }
@@ -24,7 +24,7 @@
 .btnCustomOutline{
     p{
         a{
-            color: $blue!important;
+            color: $blue-2!important;
             text-decoration: none;
             &:hover{
                 color: $dark-1!important;

@@ -16,31 +16,31 @@ These Dispatchers are built into the Treble Core module and are accessible by th
 const [,Store] = useTreble();
 ```
 
-#### `Store.update`
+### `Store.update`
 This is the most commonly used dispatcher for TrebleGSM. It updates the current state with the dispatched value.
 ```javascript
 Store.update(actionKey, dispatchValue, options)
 ```
 
-#### `Store.toggle`
+### `Store.toggle`
 Toggles a Store state from from `true` to `false` and vice versa.
 ```javascript
 Store.toggle(actionKey, options)
 ```
 
-#### `Store.reset`
+### `Store.reset`
 Selects a certain Store state and resets it to its initial value.
 ```javascript
 Store.reset(actionKey, options)
 ```
 
-#### `Store.resetAll`
+### `Store.resetAll`
 Resets all Store state to their initial values.
 ```javascript
 Store.resetAll();
 ```
 
-#### `Store.run`
+### `Store.run`
 Targets a Store state objects `run` middleware. Basically you can fire Store middleware from anywhere in the application.
 ```javascript
 Store.run(actionKey, options);
