@@ -19,6 +19,7 @@
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-remark-autolink-headers": "^2.2.1",
+    "gatsby-remark-images": "^5.7.0",
     "gatsby-remark-prismjs": "^3.3.33",
     "gatsby-schema-field-absolute-path": "^1.1.1",
     "gatsby-source-filesystem": "^2.1.46",

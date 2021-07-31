@@ -10,6 +10,8 @@ subMenu:
 In order to successfully create a TrebleGSM Module it is necessary to understand some fundamental mechanics on how TrebleGSM works. See the infographic below.
 <div class='crsInfoGraphic'>
 </div>
+<!--crsInfoGraphic-->
+<!-- ![CRS Infographic](./crs-infographic.png) -->
 
 ####Components
 This is the most well known part of the TrebleGSM lifecycle. Components recieve state from the Store and dispatch payloads to the Reducer.
