@@ -12,7 +12,7 @@ I consider TrebleGSM an unopinionated GSM. Developers can use it in whatever way
 ### Global State is not for All State
 Some popular GSM's like React Redux encourage developers to centralize all component state. There are advantages to this method, but this comes with its own issues. It is often tedious to put every piece of component state into the GSM. It also defeats React’s component architecture. Having a self-contained component with all of the state, styling, logic, and markup is what makes component based front-ends so magnificent. When all state is put in the global state this breaks this design pattern and makes creating components tedious.
 
-It is of my opinion that state should only be put in the GSM when it makes sense to do so.  React manages local state very well, and if that state does not need to be used by other components then it should live within its host component. If state will be shared amongst many components then it should be put in the GSM to prevent prop drilling and lifting up state.
+It is of my <u>opinion</u> that state should only be put in the GSM when it makes sense to do so.  React manages local state very well, and if that state does not need to be used by other components then it should live within its host component. If state will be shared amongst many components then it should be put in the GSM to prevent prop drilling and lifting up state.
 
 This separation is important to enjoy the best parts of React, but also to have the added benefit and power of a GSM.
 
@@ -29,7 +29,7 @@ const widgetStore = createStore()
 
 *Store Actions* – These should always be an action word that describes the subscribe action when manipulating Store state. Example: ‘updateFruitName’ or ‘appendListItem’.
 
-*Treble Hook Methods* - The useTreble hook returns an array of 3 items, current state, a subscribe method, and an utilities method. When destructering the array you technically can name each item anything you want. For the sake of consistency each item should follow a specific naming convention.
+*Treble Hook Methods* - The useTreble hook returns an array of 3 items, current state, dispatcher methods, and an utilities method. When destructering the array you technically can name each item anything you want. For the sake of consistency each item should follow a specific naming convention.
 
 ```javascript
 //State is a destructured object
@@ -51,7 +51,7 @@ const widgetStore = createStore()
 ### Scoping a Store
 Scoped Stores allow complex components to use their own encapsulated GSM that cannot be accessed by outside components. Below are some best practices.
 
-*Use only where it makes sense* - Every Treble Store instance creates a new React Context and to many might create performance issues. In most cases though using a scoped Store for a very complex and nested component will increase performance of that component and make it easier to maintain, more predictable, and completely encapsulated.
+*Use only where it makes sense* - Every Treble Store instance creates a new React Context and too many might create performance issues. In most cases though using a scoped Store for a very complex and nested component will increase performance of that component and make it easier to maintain, more predictable, and completely encapsulated.
 
 *Create custom subscribe hooks* – A custom subscribe hook should be created when scoping a Store as the default useTreble hook always subscribes to the default app Store Context.
 

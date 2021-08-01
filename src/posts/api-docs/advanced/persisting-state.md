@@ -33,7 +33,7 @@ const Store = createStore([],{
 });
 ```
 
-Once this is done you TrebleGSM now has state persistence!
+Once this is done your TrebleGSM now has state persistence!
 
 ### Set State Persistence
 Add the `features` property to the Store item with the state you want to persist. Add the `persist` property to `features`. Set it to `true` to activate state persistence for that peticular state item. 
@@ -76,4 +76,4 @@ Store.clearPersist('userName');
 ```
 
 
-> Note about persisting state: Treble persist saves and instance of your state to local storage and then hydrates the Store when your app reloads. This is how state is able to survive during reloads.
+> Note about persisting state: Treble persist saves an instance of your state to local storage and then hydrates the Store when your app reloads. This is how state is able to survive during reloads.

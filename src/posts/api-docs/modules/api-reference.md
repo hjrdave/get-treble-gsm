@@ -7,7 +7,7 @@ subMenu:
       path: '#'
 ---
 
-Below is a documentation for the TrebleGSM module api.
+Below is documentation for the TrebleGSM module api.
 
 ### `createModule`
 The `createModule()` function is what is used to create TrebleGSM modules. It is an entry point for all module logic.
@@ -23,7 +23,7 @@ This is the name of the module. This should be the same name of the npm package 
 name: string
 ```
 ### `extendStore`
-Add a module specific `Store`. This allows a the module to extend an apps TrebleGSM Store with its own state items.
+Add a module specific `Store`. This allows the module to extend an app's TrebleGSM Store with its own state items.
 ```Typescript
 extendStore?: {
   data: StoreItem[],
@@ -36,17 +36,20 @@ Add state item feature keys. This allows the module to be aware of module specif
 featureKeys?: string[]
 ```
 ### `dispatchers`
+Allows for module specific dispatcher methods.
 ```typescript
 dispatchers?: { 
     [key: string]: (...params: any) => void 
 }
 ```
 ### `reducerActions`
+Creates reducer actions to pair with module dispatchers.
 ```typescript
 reducerActions?: { [key: string]: (middlewareData: MiddlewareData) => any }
 ```
 
 ### `middleware`
+Adds module specific middleware to each Store item.
 ```typescript
 middleware: {
   log: (moduleData) => void,
@@ -58,11 +61,13 @@ middleware: {
 }
 ```
 ### `renderComponent`
+Allows module specific components to be rendered at the top layer of the TrebleGSM Provider.
 ```typescript
 renderComponent?: React.ReactNode
 ```
 
 ### `importModules`
+Other 3rd party modules may be imported into a module.
 ```typescript
 importModules?: ModuleData[]
 ```

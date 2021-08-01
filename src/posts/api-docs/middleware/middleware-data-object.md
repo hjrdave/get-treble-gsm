@@ -45,4 +45,4 @@ Returns an array of current Store state.
 Returns an array of Store modules.
 
 #### `dispatchers`
-Allows middleware functions to access all Store dispatchers. This allows a middleware function to literally update Store state.
+Allows middleware functions to access all Store dispatchers. This allows a middleware function to literally update Store state by itself.

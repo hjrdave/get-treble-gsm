@@ -20,7 +20,7 @@ yarn add treble-gsm
 ```
 
 ### Create a Store
-Then create a `Store.js` at the top level of your app folder structure. In `Store.js` you will import the function `createStore()` from `treble-gsm`.  Assign `createStore()` to a variable called `Store`. Example Below.
+Create a `Store.js` at the top level of your app folder structure. In `Store.js` you will import the function `createStore()` from `treble-gsm`.  Assign `createStore()` to a variable called `Store`. Example Below.
 ```javascript
 import {createStore} from 'treble-gsm';
 

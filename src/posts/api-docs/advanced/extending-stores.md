@@ -10,7 +10,7 @@ subMenu:
 As Stores grow they can get hard to maintain. Instead of having one huge Jesus 🙏 Store, TrebleGSM allows a Store to be broken up into multiple Stores and then imported into a master Store.  
 
 ### Extending a Store
-First create a Store like you would normally create one. You can leave the first parameter of createStore as an empty array. 
+Create a Store like you would normally create one. You can leave the first parameter of createStore as an empty array. 
 ```javascript
 const Store = createStore([]);
 ``` 
@@ -26,11 +26,11 @@ const PokeDexStore = createStore([
     {
         action: 'updateBulbasaur',
         state: {
-                bulbasaur: {
-                    name: 'Bulbasaur',
-                    number: 001,
-                    description: 'A strange seed was planted on its back at birth...'
-                }
+            bulbasaur: {
+                name: 'Bulbasaur',
+                number: 001,
+                description: 'A strange seed was planted on its back at birth...'
+            }
         }
     },
     //...

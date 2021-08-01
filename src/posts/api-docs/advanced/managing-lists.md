@@ -36,7 +36,7 @@ Takes the current state array and appends another state item.
 Store.append(action: string, dispatchValue: any);
 ```
 ```javascript
-Store.append('updateTrainerList', { name: 'Gary Oak', personality: 'Jerk'});
+Store.append('updateTrainerList', { name: 'Gary Oak', personality: 'jerk'});
 ```
 ### `Store.prepend`
 Takes the current state array and prepends another state item.

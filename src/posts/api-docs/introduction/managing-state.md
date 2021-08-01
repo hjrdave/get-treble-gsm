@@ -10,7 +10,7 @@ subMenu:
 Once TrebleGSM  is setup in your app, we want our components to subscribe to the Store. TrebleGSM has a simple and straightforward API for subscribing to a Store.
 
 ### Subscribe with the `useTreble` Hook
-Every component that is nested in the `Treble` provider has access to the `useTreble` hook. This hook is used to read and update state in the Store. 
+Every component that is nested in the `Treble` provider has access to the `useTreble` hook. This hook is used to perform CRUD operations on Store state. 
 
 Import `useTreble` into your component.
 ```javascript
