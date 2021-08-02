@@ -11,18 +11,18 @@ subMenu:
 The API references below are methods that are built into the TrebleGSM library.
 
 ### `createStore`
-This method is used to create a new TrebleGSM store.
+Creates a new TrebleGSM store.
 ```javascript
 createStore(storeData, options);
 ```
 
 ### `createModule`
-Method used to create a TrebleGSM module.
+Creates a new TrebleGSM module.
 ```javascript
 createModule(moduleData);
 ```
 ### `withTreble`
-A function that is used to create higher order components that connect to a TrebleGSM store. It is also used to connect Class Components to a TrebleGSM store.
+Higher order function that allows components to connect to a TrebleGSM store. It is also used to connect Class Components to a TrebleGSM store.
 ```javascript
 withTreble(Component, options);
 ```

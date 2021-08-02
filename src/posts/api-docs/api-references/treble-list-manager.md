@@ -55,8 +55,8 @@ Store.removeBatch(actionKey, itemsToRemove);
 ```
 
 ### `Store.orderBy`
-Lorum Ipsum
+Sorts an object array by the specified order type.
 ```javascript
-Store.orderBy(actionKey, targetProp, orderType);
+Store.orderBy(actionKey, targetProp, 'desc' | 'asc');
 ```
 
