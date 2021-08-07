@@ -27,6 +27,8 @@ const Store = createStore([
             navItemList: []
         }
     }
-]);
+], {
+    //modules: [TreblePersist, TrebleListManager]
+});
 
 export default Store;

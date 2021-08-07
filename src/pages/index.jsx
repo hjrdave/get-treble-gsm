@@ -60,7 +60,7 @@ export default function HomePage() {
               <InfoCard
                 iconName={'iconOptimized'}
                 title={'Optimized'}
-                bodyText={'Compares state agianst the previous state to prevent unnessary re-renders.'}
+                bodyText={'Compares state agianst the previous state to prevent unnecessary re-renders.'}
               />
             </Col>
             <Col lg='4' className='pt-4 pt-lg-0'>

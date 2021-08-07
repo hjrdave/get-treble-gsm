@@ -15,7 +15,7 @@ export default function NextPrevBtnRow({ menuData, location }) {
         return items;
     }
     const allMenuItems = normalizeMenuItems(menuData);
-    const currentIndex = allMenuItems[location.pathname].id;
+    const currentIndex = allMenuItems[location.pathname]?.id || 0;
     const getPrevPostData = () => {
         const data = Object.values(allMenuItems).find((item) => {
             if (item.id === (currentIndex - 1)) {
