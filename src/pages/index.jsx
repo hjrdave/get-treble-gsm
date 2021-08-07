@@ -39,7 +39,7 @@ export default function HomePage() {
             </Row>
             <Row className='d-flex justify-content-center'>
               <Col className='d-flex justify-content-center pt-3'>
-                <Link to={'./api/introduction'}>
+                <Link to={'/api/introduction/what-is-treblegsm'}>
                   <ButtonCustom gradient>Getting Started</ButtonCustom>
                 </Link>
               </Col>
@@ -173,7 +173,7 @@ Store.update('updatePokemon', 'Pikachu')
           </Row>
           <Row className='d-flex justify-content-center pt-4'>
             <Col className='d-flex justify-content-center py-4'>
-              <Link to={'./api/introduction'}><Button className='px-4 py-2 bk-gradient' style={{ borderColor: '#175b9d', borderRadius: '25px' }}>Learn More</Button></Link>
+              <Link to={'/api/introduction/what-is-treblegsm'}><Button className='px-4 py-2 bk-gradient' style={{ borderColor: '#175b9d', borderRadius: '25px' }}>Learn More</Button></Link>
             </Col>
           </Row>
         </PageContent>
