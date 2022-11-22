@@ -22,7 +22,7 @@ function Navigation({ navItems }) {
           }
 
           <a href='https://github.com/hjrdave/treble-gsm' target='_blank' className='nav-link'><i className="fab fa-github"></i></a>
-          <a href='https://mediafish.io' className='nav-link' target='_blank'><Image name={'logoMediafishIconOnly'} className={navigation.gatsbyImageWrapper} /></a>
+          <a href='https://hjrdave.github.io/portfolio/' className='nav-link' target='_blank'><Image name={'logoMediafishIconOnly'} className={navigation.gatsbyImageWrapper} /></a>
 
           {/* <Search /> */}
         </Nav>
