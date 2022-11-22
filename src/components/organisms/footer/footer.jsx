@@ -15,7 +15,7 @@ function Footer() {
         <div className={`${styles.copyright} px-4 py-2 d-flex justify-content-between`}>
           <p className='mb-0 mt-0' style={{ opacity: '0' }}><small>mediafish.io</small></p>
           <p className='mb-0 mt-0'><small>© Copyright {new Date().getFullYear()}, David A. Sanders</small></p>
-          <p className='mb-0 mt-0'><small><a href='https://mediafish.io' target='_blank'>mediafish.io</a></small></p>
+          <p className='mb-0 mt-0'><small><a href='https://hjrdave.github.io/portfolio/' target='_blank'>mediafish.io</a></small></p>
         </div>
       </footer>
     </>
